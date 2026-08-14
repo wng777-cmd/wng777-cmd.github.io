@@ -1,0 +1,32 @@
+name: Patch social preview
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-og-preview.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add Open Graph metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          if 'property="og:image"' not in s:
+              anchor='<meta name="description" content="이민웅 Sales Consultant의 볼보 개인 상담 홈페이지">'
+              meta='''<meta property="og:type" content="website"><meta property="og:url" content="https://wng777-cmd.github.io/"><meta property="og:title" content="VOLVO PERSONAL GUIDE | 이민웅"><meta property="og:description" content="볼보 모델·트림·전기차·차량 비교와 서비스센터 정보를 한눈에 확인하세요."><meta property="og:image" content="https://wng777-cmd.github.io/assets/img01.webp?v=2"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="VOLVO PERSONAL GUIDE | 이민웅"><meta name="twitter:description" content="볼보 모델·트림·전기차·차량 비교와 서비스센터 정보를 한눈에 확인하세요."><meta name="twitter:image" content="https://wng777-cmd.github.io/assets/img01.webp?v=2">'''
+              s=s.replace(anchor, anchor+meta, 1)
+              p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Add social share preview image"
+          git push
