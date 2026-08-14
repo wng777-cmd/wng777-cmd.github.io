@@ -19,6 +19,19 @@ body{background:var(--paper);letter-spacing:-.02em;padding-bottom:78px}.top{heig
 
 /* MODEL-IMAGE-QUALITY-V1 */
 .model{background:#ecefed}.model img{object-fit:cover;object-position:center 52%;image-rendering:auto;filter:none;transform:none}.model:nth-child(6) img{object-position:center 58%}
+
+/* HERO-TYPE-FIX */
+@media (min-width:1051px){
+  .hero .copy{max-width:980px;padding-left:max(34px,7.4vw);padding-right:28px}
+  .hero .copy h1{font-size:clamp(46px,4.25vw,66px);line-height:1.12;letter-spacing:-.055em;max-width:760px;word-break:keep-all;overflow-wrap:normal}
+  .hero .copy p,.hero .copy .note{max-width:640px}
+}
+@media (min-width:1051px) and (max-width:1350px){
+  .hero .copy h1{font-size:50px;max-width:650px}
+}
+@media (max-width:700px){
+  .hero .copy h1{font-size:38px;line-height:1.14;letter-spacing:-.045em;word-break:keep-all}
+}
 </style></head><body><header class="top"><img src="assets/img02.webp" alt="VOLVO"><nav class="nav"><a href="#lineup">모델 라인업</a><a href="#tools">트림 & 옵션</a><a href="#tools">전기차</a><a href="#tools">비교하기</a><a href="#service">서비스센터</a><a href="#contact">상담 요청</a></nav><a class="cta" href="#contact">● 상담하기</a><button class="hamb" onclick="alert('아래로 스크롤하면 모든 메뉴를 이용할 수 있습니다.')">☰</button></header>
 <section class="hero"><div class="copy"><div class="ey">SAFETY · DESIGN · SUSTAINABILITY</div><h1>당신에게 맞는 볼보를<br>더 쉽게.</h1><p>복잡한 사양표보다, 내 생활에 맞는 선택이 먼저입니다.</p><p class="note">모델 선택부터 트림 비교, 시승과 출고 이후까지.<br>필요한 정보만 쉽고 정확하게 안내해드립니다.</p><div class="actions"><a class="btn light" href="#lineup">내게 맞는 볼보 찾기</a><a class="btn" href="http://qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-" target="_blank" rel="noopener">카카오톡 상담</a></div></div><aside class="profile compact-profile" id="contact"><img src="assets/img03.webp" alt="이민웅 Sales Consultant"><div class="pb"><small>VOLVO SALES CONSULTANT</small><h3>이민웅</h3><p>차를 고르는 순간부터 출고 이후까지,<br>필요한 내용을 쉽고 정확하게 안내합니다.</p><div class="profile-actions"><a class="contact" href="tel:01026503211">전화 상담</a><a class="contact kakao" href="http://qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-" target="_blank" rel="noopener">카카오톡</a></div></div></aside></section>
 <section class="section" id="lineup"><div class="line"><div class="intro"><div class="ey">MODEL LINEUP</div><h2>VOLVO LINEUP</h2><p>라이프스타일에 맞는 볼보를 찾아보세요.</p></div><div class="category-showcase" aria-label="볼보 바디타입 선택"><button class="category-card active" data-filter="suv" onclick="filterCategory('suv',this)"><span class="cat-kicker">VOLVO SUV</span><strong>SUV</strong><small>도심형 XC40부터 플래그십 XC90까지</small><span class="cat-arrow">차량 보기 →</span></button><button class="category-card" data-filter="electric" onclick="filterCategory('electric',this)"><span class="cat-kicker">PURE ELECTRIC</span><strong>ELECTRIC</strong><small>EX30 · EX90 · ES90, 전동화 라이프스타일</small><span class="cat-arrow">차량 보기 →</span></button><button class="category-card" data-filter="sedan" onclick="filterCategory('sedan',this)"><span class="cat-kicker">VOLVO SEDAN</span><strong>SEDAN</strong><small>정숙함과 편안함을 위한 S90</small><span class="cat-arrow">차량 보기 →</span></button></div><div class="model-list-head"><div><span>SELECTED MODELS</span><h3 id="selectedCategoryTitle">SUV 라인업</h3></div><button onclick="filterCategory('all',this)">전체 모델 보기</button></div><div class="models" id="modelGrid">
