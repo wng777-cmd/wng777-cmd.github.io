@@ -1,0 +1,30 @@
+name: Fix hero heading layout
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-hero-heading-layout.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch hero typography
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          css='''\n/* HERO-TYPE-FIX */\n@media (min-width:1051px){\n  .hero .copy{max-width:980px;padding-left:max(34px,7.4vw);padding-right:28px}\n  .hero .copy h1{font-size:clamp(46px,4.25vw,66px);line-height:1.12;letter-spacing:-.055em;max-width:760px;word-break:keep-all;overflow-wrap:normal}\n  .hero .copy p,.hero .copy .note{max-width:640px}\n}\n@media (min-width:1051px) and (max-width:1350px){\n  .hero .copy h1{font-size:50px;max-width:650px}\n}\n@media (max-width:700px){\n  .hero .copy h1{font-size:38px;line-height:1.14;letter-spacing:-.045em;word-break:keep-all}\n}\n'''
+          s=s.replace('</style>',css+'</style>',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Align and resize hero heading [skip ci]' || exit 0
+          git push
