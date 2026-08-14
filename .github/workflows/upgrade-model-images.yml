@@ -1,0 +1,43 @@
+name: Upgrade Volvo model images
+on:
+  push:
+    paths:
+      - '.github/workflows/upgrade-model-images.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace model card imagery with official high resolution sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          urls={
+            'img04.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt1187c111a71ae018/6849135314f6c3412c4cf5ee/Exterior-bento-front-4x5-XC40-mhev.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img05.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blta5244eb9a2809125/679283f5bd32fb9a7320d09b/Bento_r1-4x5.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img06.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltddba35a6985cb109/6878ec17715092ea4b75863c/Exterior-bento-front-4x5-XC90-PHEV.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img07.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltf5446230bc209e11/694150b2c519a8ed22f4547d/my27ex30-bento01-4-5.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img08.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltbc97baafd9dfaf84/6967951a15c4cd7f889433f5/bento1-1.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img09.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt20f7dc55547645fb/692060287d692e251dbdd9ef/_0007_TIM01065_3QFRONT_DRIVING.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+            'img10.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blt167372f32031a6f1/687a13e4715092336a758f44/Exterior-bento-front-4x5-S90-PHEV.jpg?branch=prod_alias&format=auto&iar=0&quality=90&w=1920',
+          }
+          for old,url in urls.items():
+              s=s.replace(f'src="assets/{old}"',f'src="{url.replace("&","&amp;")}" loading="lazy" decoding="async"')
+          # Keep each card to a single image and improve crop quality.
+          css='''\n/* MODEL-IMAGE-QUALITY-V1 */\n.model{background:#ecefed}.model img{object-fit:cover;object-position:center 52%;image-rendering:auto;filter:none;transform:none}.model:nth-child(6) img{object-position:center 58%}\n'''
+          if 'MODEL-IMAGE-QUALITY-V1' not in s:
+              s=s.replace('</style>',css+'</style>',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit image upgrade
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Upgrade model cards to official high-resolution images [skip ci]' || exit 0
+          git push
