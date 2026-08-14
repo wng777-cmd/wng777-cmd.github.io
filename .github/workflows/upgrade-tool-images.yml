@@ -1,0 +1,78 @@
+name: Upgrade Volvo tool images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/upgrade-tool-images.yml'
+permissions:
+  contents: write
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image tools
+        run: pip install pillow requests beautifulsoup4
+      - name: Download official Volvo high resolution images
+        run: |
+          python - <<'PY'
+          import requests, re
+          from bs4 import BeautifulSoup
+          from PIL import Image
+          from io import BytesIO
+          from pathlib import Path
+
+          pages = {
+            'img11.webp':'https://www.volvocars.com/kr/cars/xc90/interior-design/',
+            'img12.webp':'https://www.volvocars.com/intl/media/images/c843f4ef4ca64fcfa253b33e0043d7c5/',
+            'img13.webp':'https://www.volvocars.com/intl/media/images/b96d3370c6744f3f9162b33e0045199c/'
+          }
+          headers={'User-Agent':'Mozilla/5.0'}
+          Path('assets').mkdir(exist_ok=True)
+
+          def candidates(html, base):
+            soup=BeautifulSoup(html,'html.parser')
+            out=[]
+            for m in soup.find_all('meta'):
+              if m.get('property') in ('og:image','og:image:url') and m.get('content'):
+                out.append(m['content'])
+            for im in soup.find_all('img'):
+              for a in ('src','data-src'):
+                if im.get(a): out.append(im[a])
+              if im.get('srcset'):
+                out += [x.strip().split(' ')[0] for x in im['srcset'].split(',')]
+            return [u for u in out if u.startswith('http')]
+
+          for dest,page in pages.items():
+            r=requests.get(page,headers=headers,timeout=30); r.raise_for_status()
+            best=None
+            for u in candidates(r.text,page):
+              try:
+                rr=requests.get(u,headers=headers,timeout=30); rr.raise_for_status()
+                im=Image.open(BytesIO(rr.content)).convert('RGB')
+                w,h=im.size
+                if w < 1000 or h < 500: continue
+                score=w*h
+                if best is None or score>best[0]: best=(score,im,u)
+              except Exception: pass
+            if not best: raise RuntimeError(f'No suitable high-res image found for {page}')
+            im=best[1]
+            # crop to wide banner, keeping source resolution high
+            target=2.15
+            w,h=im.size
+            if w/h > target:
+              nw=int(h*target); left=(w-nw)//2; im=im.crop((left,0,left+nw,h))
+            else:
+              nh=int(w/target); top=(h-nh)//2; im=im.crop((0,top,w,top+nh))
+            if im.width>2200:
+              nh=round(im.height*2200/im.width); im=im.resize((2200,nh),Image.LANCZOS)
+            im.save('assets/'+dest,'WEBP',quality=91,method=6)
+            print(dest, im.size, best[2])
+          PY
+      - name: Commit upgraded images
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/img11.webp assets/img12.webp assets/img13.webp
+          git commit -m 'Upgrade feature tiles to high resolution Volvo imagery [skip ci]' || exit 0
+          git push
