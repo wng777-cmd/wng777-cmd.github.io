@@ -1,0 +1,34 @@
+name: Patch tool banners to Volvo CDN
+on:
+  push:
+    paths:
+      - '.github/workflows/patch-tool-cdn.yml'
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace low resolution banner sources
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          repl={
+            'assets/img11.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltddba35a6985cb109/6878ec17715092ea4b75863c/Exterior-bento-front-4x5-XC90-PHEV.jpg?branch=prod_alias&format=auto&iar=0&quality=95&w=2400',
+            'assets/img12.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/bltbc97baafd9dfaf84/6967951a15c4cd7f889433f5/bento1-1.jpg?branch=prod_alias&format=auto&iar=0&quality=95&w=2400',
+            'assets/img13.webp':'https://www.volvocars.com/images/cs/v3/assets/blt0feaa88e629251fc/blta5244eb9a2809125/679283f5bd32fb9a7320d09b/Bento_r1-4x5.jpg?branch=prod_alias&format=auto&iar=0&quality=95&w=2400'
+          }
+          for old,new in repl.items():
+            s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Use high resolution Volvo CDN images for feature banners [skip ci]' || exit 0
+          git push
