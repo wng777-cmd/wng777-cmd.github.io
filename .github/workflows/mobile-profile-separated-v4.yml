@@ -19,62 +19,52 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import re
-
           p=Path('index.html')
           s=p.read_text(encoding='utf-8')
-
-          # Remove previous v4 injection if workflow is ever re-run.
           s=re.sub(r'<style id="mobile-profile-v4">.*?</style>', '', s, flags=re.S)
           s=re.sub(r'<section class="mobile-profile" id="mobile-contact">.*?</section>', '', s, flags=re.S)
-
-          mobile_html='''<section class="mobile-profile" id="mobile-contact">
-  <div class="mp-top">
-    <img src="assets/img03.webp" alt="이민웅">
-    <div class="mp-copy">
-      <small>VOLVO SALES CONSULTANT</small>
-      <h3>이민웅</h3>
-      <p>고객님의 라이프스타일에 가장 잘 맞는 볼보를<br>진심을 담아 제안드립니다.</p>
-    </div>
-  </div>
-  <div class="mp-info">
-    <span>⌖ 볼보자동차 강남신사 전시장</span>
-    <strong>☎ 010-2650-3211</strong>
-  </div>
-  <div class="mp-actions">
-    <a class="mp-call" href="tel:01026503211">☎ 전화 상담</a>
-    <a class="mp-kakao" href="http://qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-">TALK 카카오톡 상담</a>
-  </div>
-</section>'''
-
+          mobile_html = (
+              '<section class="mobile-profile" id="mobile-contact">'
+              '<div class="mp-top">'
+              '<img src="assets/img03.webp" alt="이민웅">'
+              '<div class="mp-copy">'
+              '<small>VOLVO SALES CONSULTANT</small>'
+              '<h3>이민웅</h3>'
+              '<p>고객님의 라이프스타일에 가장 잘 맞는 볼보를<br>진심을 담아 제안드립니다.</p>'
+              '</div></div>'
+              '<div class="mp-info"><span>⌖ 볼보자동차 강남신사 전시장</span><strong>☎ 010-2650-3211</strong></div>'
+              '<div class="mp-actions">'
+              '<a class="mp-call" href="tel:01026503211">☎ 전화 상담</a>'
+              '<a class="mp-kakao" href="http://qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-">TALK 카카오톡 상담</a>'
+              '</div></section>'
+          )
           hero_close='</aside></section>'
           if hero_close not in s:
               raise SystemExit('hero profile closing target not found')
-          s=s.replace(hero_close, '</aside></section>'+mobile_html, 1)
-
-          css='''<style id="mobile-profile-v4">
-.mobile-profile{display:none}
-@media(max-width:700px){
-  .hero .profile{display:none!important}
-  .mobile-profile{display:block!important;margin:12px 14px 76px;background:#fff;color:#111;border-radius:18px;padding:13px;box-shadow:0 10px 28px rgba(0,0,0,.12)}
-  .mp-top{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center}
-  .mp-top img{width:62px;height:78px;object-fit:cover;border-radius:11px;background:#fff}
-  .mp-copy{min-width:0}
-  .mp-copy small{display:block;font-size:7px;letter-spacing:.04em;color:#71808a;margin-bottom:3px}
-  .mp-copy h3{font-size:21px;line-height:1;margin:0 0 7px;letter-spacing:-.04em}
-  .mp-copy p{font-size:9px;line-height:1.5;color:#59666e;margin:0}
-  .mp-info{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:10px;padding-top:9px;border-top:1px solid #e4e8ea;font-size:8px;color:#59666e}
-  .mp-info strong{font-size:10px;color:#111;white-space:nowrap}
-  .mp-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
-  .mp-actions a{min-height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}
-  .mp-call{border:1px solid #aeb8bd;background:#fff;color:#111}
-  .mp-kakao{background:#fee500;color:#111}
-}
-</style>'''
-          s=s.replace('</head>', css+'\n</head>', 1)
-
-          # Change mobile cache version so in-app browsers request the updated markup.
+          s=s.replace(hero_close, hero_close+mobile_html, 1)
+          css = (
+              '<style id="mobile-profile-v4">'
+              '.mobile-profile{display:none}'
+              '@media(max-width:700px){'
+              '.hero .profile{display:none!important}'
+              '.mobile-profile{display:block!important;margin:12px 14px 76px;background:#fff;color:#111;border-radius:18px;padding:13px;box-shadow:0 10px 28px rgba(0,0,0,.12)}'
+              '.mp-top{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center}'
+              '.mp-top img{width:62px;height:78px;object-fit:cover;border-radius:11px;background:#fff}'
+              '.mp-copy{min-width:0}'
+              '.mp-copy small{display:block;font-size:7px;letter-spacing:.04em;color:#71808a;margin-bottom:3px}'
+              '.mp-copy h3{font-size:21px;line-height:1;margin:0 0 7px;letter-spacing:-.04em}'
+              '.mp-copy p{font-size:9px;line-height:1.5;color:#59666e;margin:0}'
+              '.mp-info{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:10px;padding-top:9px;border-top:1px solid #e4e8ea;font-size:8px;color:#59666e}'
+              '.mp-info strong{font-size:10px;color:#111;white-space:nowrap}'
+              '.mp-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}'
+              '.mp-actions a{min-height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}'
+              '.mp-call{border:1px solid #aeb8bd;background:#fff;color:#111}'
+              '.mp-kakao{background:#fee500;color:#111}'
+              '}'
+              '</style>'
+          )
+          s=s.replace('</head>', css+'</head>', 1)
           s=s.replace('var v="20260815m2"', 'var v="20260815m4"')
-
           p.write_text(s,encoding='utf-8')
           PY
       - name: Commit changes
