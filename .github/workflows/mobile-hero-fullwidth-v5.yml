@@ -22,22 +22,9 @@ jobs:
 
           p = Path('index.html')
           s = p.read_text(encoding='utf-8')
-
           s = re.sub(r'<style id="mobile-hero-v5">.*?</style>', '', s, flags=re.S)
 
-          css = '''<style id="mobile-hero-v5">
-@media(max-width:700px){
-  .hero{
-    background-size:cover!important;
-    background-position:center 72%!important;
-    background-repeat:no-repeat!important;
-    background-color:#07131d!important;
-  }
-  .hero:after{
-    background:linear-gradient(180deg,rgba(7,19,29,.92) 0%,rgba(7,19,29,.74) 34%,rgba(7,19,29,.30) 62%,rgba(7,19,29,.60) 100%)!important;
-  }
-}
-</style>'''
+          css = "<style id=\"mobile-hero-v5\">\n@media(max-width:700px){\n.hero{background-size:cover!important;background-position:center 72%!important;background-repeat:no-repeat!important;background-color:#07131d!important;}\n.hero:after{background:linear-gradient(180deg,rgba(7,19,29,.92) 0%,rgba(7,19,29,.74) 34%,rgba(7,19,29,.30) 62%,rgba(7,19,29,.60) 100%)!important;}\n}\n</style>"
           s = s.replace('</head>', css + '\n</head>', 1)
           s = s.replace('var v="20260815m4"', 'var v="20260815m5"')
           p.write_text(s, encoding='utf-8')
