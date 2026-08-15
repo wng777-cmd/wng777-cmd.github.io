@@ -1,0 +1,38 @@
+name: Fix PC hero car position
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-pc-hero-car-position.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move hero vehicle upward on desktop only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          target = '@media(max-width:1050px){.nav{display:none}'
+          replacement = '@media(min-width:1051px){.hero{background-position:center 76%}}@media(max-width:1050px){.nav{display:none}'
+          if replacement in s:
+              raise SystemExit('desktop hero position already patched')
+          if target not in s:
+              raise SystemExit('desktop breakpoint target not found')
+          s = s.replace(target, replacement, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Fix desktop hero vehicle framing [skip ci]"
+          git push
