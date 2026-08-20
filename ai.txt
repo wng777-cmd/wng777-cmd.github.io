@@ -1,0 +1,11 @@
+# AI usage policy for VOLVO PERSONAL GUIDE
+
+Owner: Minwoong Lee (이민웅)
+Site: https://wng777-cmd.github.io/
+Policy-Version: 2026-08-20
+
+Automated systems may access this site only for ordinary end-user retrieval and search indexing where otherwise permitted. The owner does not grant permission for automated bulk copying, dataset creation, model training, fine-tuning, embedding-store replication, or generation of substantially similar sales-guide websites from the site's original layout, copy, code, curated structure, or original graphics.
+
+This policy does not restrict public factual vehicle information or third-party materials owned by their respective rights holders.
+
+Ownership marker: VPG-LMW-20260820-A7F3C9
