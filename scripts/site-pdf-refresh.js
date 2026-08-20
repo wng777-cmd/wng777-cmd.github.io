@@ -30,8 +30,8 @@ EX30:{year:'MY26',power:'Single Motor Extended Range · RWD',note:'Core는 실�
 ['CORE','3,991만 원','실속형',['272마력 싱글모터 · 후륜구동(RWD)','0→100km/h 약 5.3초','주요 안전기술은 기본 · 가격 경쟁력 중심']],
 ['ULTRA','4,479만 원','편의형',['272마력 싱글모터 · 후륜구동(RWD)','Core 대비 +488만 원','360° 카메라 · 파크 파일럿 · 하만카돈 · 파노라마 루프 등 편의사양 강화']]
 ]},
-EX30CC:{year:'MY26',power:'Twin Motor Performance AWD',note:'Ultra에서 한 단계 더 — AWD·428마력과 Cross Country 전용 구성을 갖춘 고성능 모델',trims:[
-['ULTRA','4,812만 원','고성능 AWD',['428마력 듀얼모터 · 사륜구동(AWD)','0→100km/h 3.7초 · EX30 Ultra 대비 +333만 원','높은 지상고 · Cross Country 전용 컴포트 섀시 · 견고한 외관']]
+EX30CC:{year:'MY26',power:'Twin Motor Performance AWD',note:'기본 골격은 EX30과 같지만, 차고를 높이고 AWD·고성능·Cross Country 전용 세팅을 더한 모델',trims:[
+['ULTRA','4,812만 원','고성능 AWD',['428마력 듀얼모터 · 사륜구동(AWD) · 0→100km/h 3.7초','전장·휠베이스 동일(4,233 / 2,650mm) · 지상고 190mm(EX30 171mm 대비 +19mm)','전용 컴포트 섀시 · 19인치 CC 휠 · 견고한 외관 · EX30 Ultra 대비 +333만 원']]
 ]},
 EX90:{year:'MY27',power:'Twin Motor / Twin Motor Performance',note:'6·7인승을 선택할 수 있는 대형 순수 전기 SUV',trims:[
 ['Twin Motor PLUS · 7-Seater','1억 620만 원','7인승',['Twin Motor','PLUS 구성','7인승']],
