@@ -26,12 +26,12 @@ S90:{year:'MY26',power:'B5 Mild Hybrid / T8 AWD Plug-in Hybrid',note:'안락함�
 V60CC:{year:'MY26',power:'B5 AWD Mild Hybrid',note:'세단의 승차감과 SUV 활용성을 섞은 크로스컨트리',trims:[
 ['B5 AWD ULTRA','6,450만 원','단일 트림',['B5 AWD 마일드 하이브리드','ULTRA 구성','Cross Country 전용 스타일']]
 ]},
-EX30:{year:'MY26',power:'Single Motor Extended Range',note:'작고 민첩한 도심형 순수 전기 SUV',trims:[
-['CORE','3,991만 원','기본형',['Single Motor Extended Range','순수 전기차','MY26']],
-['ULTRA','4,479만 원','상위형',['Single Motor Extended Range','ULTRA 구성','MY26']]
+EX30:{year:'MY26',power:'Single Motor Extended Range · RWD',note:'Core는 실속, Ultra는 편의·고급사양 강화 — 주행성능은 동일',trims:[
+['CORE','3,991만 원','실속형',['272마력 싱글모터 · 후륜구동(RWD)','0→100km/h 약 5.3초','주요 안전기술은 기본 · 가격 경쟁력 중심']],
+['ULTRA','4,479만 원','편의형',['272마력 싱글모터 · 후륜구동(RWD)','Core 대비 +488만 원','360° 카메라 · 파크 파일럿 · 하만카돈 · 파노라마 루프 등 편의사양 강화']]
 ]},
-EX30CC:{year:'MY26',power:'Twin Motor Performance AWD',note:'EX30의 크로스컨트리 스타일과 고성능 AWD',trims:[
-['ULTRA','4,812만 원','AWD',['Twin Motor Performance','순수 전기 AWD','Cross Country']]
+EX30CC:{year:'MY26',power:'Twin Motor Performance AWD',note:'Ultra에서 한 단계 더 — AWD·428마력과 Cross Country 전용 구성을 갖춘 고성능 모델',trims:[
+['ULTRA','4,812만 원','고성능 AWD',['428마력 듀얼모터 · 사륜구동(AWD)','0→100km/h 3.7초 · EX30 Ultra 대비 +333만 원','높은 지상고 · Cross Country 전용 컴포트 섀시 · 견고한 외관']]
 ]},
 EX90:{year:'MY27',power:'Twin Motor / Twin Motor Performance',note:'6·7인승을 선택할 수 있는 대형 순수 전기 SUV',trims:[
 ['Twin Motor PLUS · 7-Seater','1억 620만 원','7인승',['Twin Motor','PLUS 구성','7인승']],
