@@ -40,3 +40,85 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',patch); else patch();
 })();
+
+/* Lightweight anonymous traffic analytics for daily sales-site reporting.
+   Tracks page views, acquisition source and consultation clicks only.
+   Session recording is disabled and no customer name/phone is collected. */
+(function(){
+  if(window.__volvoTrafficAnalyticsV1)return;
+  window.__volvoTrafficAnalyticsV1=true;
+
+  const PROJECT_KEY='phc_kP2xKHroz8MSF5Y5Yhg7xG26vQE5vZtyHvbHBYDyicDp';
+  const API_HOST='https://us.i.posthog.com';
+
+  function normalizeExplicit(v){
+    v=(v||'').toLowerCase().trim();
+    if(!v)return null;
+    if(v.includes('kakao'))return '카카오';
+    if(v.includes('youtube')||v==='yt')return '유튜브';
+    if(v.includes('naver')&&v.includes('blog'))return '네이버 블로그';
+    if(v.includes('naver'))return '네이버';
+    if(v.includes('google'))return '구글 검색';
+    if(v.includes('daangn')||v.includes('karrot'))return '당근';
+    if(v.includes('instagram'))return '인스타그램';
+    if(v.includes('facebook')||v==='fb')return '페이스북';
+    if(v.includes('qr'))return 'QR';
+    return v;
+  }
+  function classifySource(){
+    const q=new URLSearchParams(location.search);
+    const explicit=normalizeExplicit(q.get('from')||q.get('utm_source'));
+    if(explicit)return {source:explicit,detail:'parameter'};
+    if(!document.referrer)return {source:'직접/출처없음',detail:'direct'};
+    try{
+      const h=new URL(document.referrer).hostname.toLowerCase();
+      if(h.includes('kakao'))return {source:'카카오',detail:h};
+      if(h.includes('youtube.com')||h.includes('youtu.be'))return {source:'유튜브',detail:h};
+      if(h.includes('blog.naver.com')||h.includes('m.blog.naver.com'))return {source:'네이버 블로그',detail:h};
+      if(h.includes('search.naver.com'))return {source:'네이버 검색',detail:h};
+      if(h.includes('naver.com'))return {source:'네이버',detail:h};
+      if(h.includes('google.'))return {source:'구글 검색',detail:h};
+      if(h.includes('daangn.com')||h.includes('karrotmarket.com'))return {source:'당근',detail:h};
+      if(h.includes('instagram.com'))return {source:'인스타그램',detail:h};
+      if(h.includes('facebook.com')||h.includes('fb.com'))return {source:'페이스북',detail:h};
+      return {source:'기타 추천',detail:h};
+    }catch(e){return {source:'기타 추천',detail:'unknown'};}
+  }
+  function start(){
+    if(!window.posthog||typeof window.posthog.init!=='function')return;
+    const src=classifySource();
+    posthog.init(PROJECT_KEY,{
+      api_host:API_HOST,
+      person_profiles:'identified_only',
+      capture_pageview:false,
+      capture_pageleave:true,
+      autocapture:false,
+      disable_session_recording:true,
+      persistence:'localStorage+cookie'
+    });
+    posthog.capture('$pageview',{
+      traffic_source:src.source,
+      traffic_source_detail:src.detail,
+      entry_referrer:document.referrer||'',
+      page_path:location.pathname,
+      report_timezone:'Asia/Seoul'
+    });
+    document.addEventListener('click',function(e){
+      const a=e.target&&e.target.closest?e.target.closest('a'):null;
+      if(!a)return;
+      const href=a.getAttribute('href')||'';
+      if(href.startsWith('tel:'))posthog.capture('consultation_click',{channel:'전화',traffic_source:src.source});
+      else if(href.includes('kakao.com')||href.includes('qr.kakao.com'))posthog.capture('consultation_click',{channel:'카카오톡',traffic_source:src.source});
+    },true);
+  }
+  function load(){
+    if(window.posthog&&typeof window.posthog.init==='function'){start();return;}
+    const s=document.createElement('script');
+    s.async=true;
+    s.src='https://us-assets.i.posthog.com/static/array.js';
+    s.onload=start;
+    s.onerror=function(){console.warn('Analytics unavailable');};
+    document.head.appendChild(s);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',load,{once:true}); else load();
+})();
