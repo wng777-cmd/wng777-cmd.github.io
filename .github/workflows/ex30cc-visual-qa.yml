@@ -1,0 +1,78 @@
+name: EX30CC Visual QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'scripts/site-final-polish-20260821.css'
+      - 'scripts/site-electric-range-20260821.js'
+      - '.github/workflows/ex30cc-visual-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject EX30CC visual probe
+        run: |
+          cat > qa-ex30cc.js <<'EOF'
+          (function(){
+            function go(){
+              try{
+                if(typeof filterCategory==='function') filterCategory('electric');
+                var card=document.querySelector('.model[data-model="EX30CC"]');
+                if(card){
+                  card.scrollIntoView({block:'center',inline:'center'});
+                  var img=card.querySelector('img');
+                  var mb=card.querySelector('.mb');
+                  var chip=card.querySelector('.electric-range-chip');
+                  var out={
+                    width:innerWidth,height:innerHeight,
+                    objectPosition:img?getComputedStyle(img).objectPosition:null,
+                    card:card.getBoundingClientRect().toJSON(),
+                    copy:mb?mb.getBoundingClientRect().toJSON():null,
+                    chip:chip?chip.getBoundingClientRect().toJSON():null,
+                    electricRange:document.documentElement.getAttribute('data-electric-range')
+                  };
+                  var p=document.createElement('pre');p.id='qa-ex30cc-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
+                }
+              }catch(e){var p=document.createElement('pre');p.id='qa-ex30cc-result';p.textContent=JSON.stringify({exception:String(e)});document.body.appendChild(p);}
+            }
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(go,1200)},{once:true});else setTimeout(go,1200);
+          })();
+          EOF
+          python3 - <<'PY'
+          p='index.html';s=open(p,encoding='utf-8').read();s=s.replace('</body>','<script src="qa-ex30cc.js"></script>\n</body>');open(p,'w',encoding='utf-8').write(s)
+          PY
+      - name: Start local site
+        run: |
+          python3 -m http.server 8000 >/tmp/ex30cc-server.log 2>&1 &
+          sleep 2
+      - name: Capture desktop and mobile
+        run: |
+          mkdir -p /tmp/ex30cc-qa
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          for spec in desktop:1440:1000 mobile:390:844; do
+            IFS=: read NAME W H <<< "$spec"
+            "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=7000 --screenshot="/tmp/ex30cc-qa/${NAME}.png" --dump-dom "http://127.0.0.1:8000/" > "/tmp/ex30cc-qa/${NAME}.html" 2> "/tmp/ex30cc-qa/${NAME}.log" || true
+          done
+          python3 - <<'PY'
+          import re,html,json,glob,os
+          report={}
+          for p in glob.glob('/tmp/ex30cc-qa/*.html'):
+              txt=open(p,encoding='utf-8',errors='ignore').read();m=re.search(r'<pre id="qa-ex30cc-result">(.*?)</pre>',txt,re.S)
+              report[os.path.basename(p)[:-5]]=json.loads(html.unescape(m.group(1))) if m else {'missing':True}
+          open('/tmp/ex30cc-qa/report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+      - name: Upload EX30CC screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: ex30cc-visual-qa
+          path: /tmp/ex30cc-qa
