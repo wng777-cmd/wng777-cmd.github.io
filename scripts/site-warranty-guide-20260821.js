@@ -4,6 +4,8 @@
 (function(){
   const OFFICIAL_WARRANTY='https://www.volvocars.com/kr/l/warranty-program/';
   const OFFICIAL_MAINT='https://www.volvocars.com/kr/l/free-service-warranty/';
+  const OFFICIAL_SERVICE='https://www.volvocars.com/kr/l/service-by-volvo/';
+  const OFFICIAL_PARTS='https://www.volvocars.com/kr/l/volvo-genuine-parts-extended-warranty/';
 
   function installStyle(){
     if(document.getElementById('warranty-guide-style'))return;
@@ -41,26 +43,26 @@
 
   function modalHTML(){
     return `
-      <div class="wg-note"><b>먼저 구분하세요.</b> 일반보증 5년/10만km와 소모품 무상교환 5년/10만km는 같은 제도가 아닙니다. 일반보증은 소모품을 제외한 제조·재질상 결함에 대한 보증이고, 소모품은 볼보 무상 소모품 서비스(Free Maintenance Coupon)에 따라 일부 지정 항목을 정해진 주기에 무상 제공하는 서비스입니다.</div>
+      <div class="wg-note"><b>먼저 구분하세요.</b> 일반보증 5년/10만km와 소모품 무상 서비스 5년/10만km는 같은 제도가 아닙니다. 일반보증은 소모품을 제외한 재질·제조상 결함에 대한 보증이며, 소모품은 볼보 무상 소모품 서비스(Free Maintenance Coupon)에 따라 일부 지정 항목을 정해진 주기에 제공하는 서비스입니다.</div>
       <div class="wg-key-grid">
-        <div class="wg-key"><small>일반 부품 보증</small><b>5년 또는 100,000km</b><p>소모품을 제외한 모든 부품. 정상 관리·사용 상태에서 재질 또는 제조상의 결함이 확인된 경우 무상 수리 또는 교환.</p></div>
-        <div class="wg-key accent"><small>소모품 무상 서비스</small><b>5년 또는 100,000km</b><p>일부 지정 소모품 무상 제공. 모든 소모품을 필요할 때마다 무제한 교환하는 제도가 아니며 모델·연식·정비주기에 따라 항목이 달라질 수 있음.</p></div>
-        <div class="wg-key"><small>고전압 배터리 보증</small><b>8년 또는 160,000km</b><p>하이브리드 및 순수 전기차의 고전압 배터리 보증. 기간과 주행거리 중 먼저 도래하는 시점까지 적용.</p></div>
-        <div class="wg-key"><small>12V 배터리 · 타이어</small><b>2년·40,000km / 제조사 기준</b><p>일반 배터리는 2년 또는 40,000km. 타이어는 해당 타이어 제조사의 보증기간을 적용.</p></div>
+        <div class="wg-key"><small>일반 부품 보증</small><b>5년 또는 100,000km</b><p>소모품을 제외한 모든 부품. 정상적으로 관리·사용한 상태에서 재질 또는 제조상의 결함이 확인된 경우 무상 수리 또는 교환.</p></div>
+        <div class="wg-key accent"><small>소모품 무상 서비스</small><b>5년 또는 100,000km</b><p>일부 지정 소모품 무상 제공. 모든 소모품의 무제한 교환이 아니며 세부 항목·횟수는 모델, 연식 및 서비스 가이드에 따라 달라질 수 있음.</p></div>
+        <div class="wg-key"><small>고전압 배터리 보증</small><b>8년 또는 160,000km</b><p>플러그인 하이브리드 및 순수 전기차의 고전압 배터리 보증. 기간과 주행거리 중 먼저 도래하는 시점까지 적용.</p></div>
+        <div class="wg-key"><small>일반 배터리 · 타이어</small><b>2년·40,000km / 제조사 기준</b><p>일반 배터리는 2년 또는 40,000km. 타이어는 해당 타이어 제조사의 보증기간을 적용.</p></div>
       </div>
       <div class="wg-details">
-        <details open><summary>배출가스 관련 부품 보증</summary><div class="wg-detail-body"><ul><li>배출가스 관련 부품: <b>5년 또는 80,000km</b></li><li>정화용 촉매, 매연 포집 필터, 엔진 컨트롤 유닛: <b>7년 또는 120,000km</b></li></ul></div></details>
-        <details><summary>보증에서 제외되는 대표 항목</summary><div class="wg-detail-body"><ul><li>정기점검 자체, 휠 얼라인먼트·밸런스·일반 브레이크 점검·조정 등</li><li>정기 교환이 필요한 소모성 부품과 유류 — 단, 별도 무상 소모품 서비스 대상 항목은 정해진 서비스 주기에 따라 무상 제공 가능</li><li>정비주기 미준수로 발생한 고장, 비규격 부품·케미컬 사용으로 발생한 고장</li><li>제조사 미승인 개조·외부장착물로 인한 고장, 사고·취급부주의·천재지변</li><li>불량·비지정 연료 사용으로 인한 고장, 교통·숙박·운휴손실 등 간접비용</li></ul></div></details>
-        <details><summary>보증수리·승계 시 알아둘 점</summary><div class="wg-detail-body"><ul><li>보증기간은 <b>신차 출고일</b>부터 적용되며 기간·주행거리 중 먼저 도래한 시점에 만료</li><li>보증수리는 볼보자동차 지정 서비스센터에서 실시하며 순정부품(재제조 부품 포함)을 사용</li><li>보증기간 내 소유자가 변경되면 잔여 보증기간 승계 가능</li><li>보증 내용과 소모성 부품 무상교환 프로그램은 대한민국 내에서 유효</li></ul></div></details>
-        <details><summary>추가 무상·부품 서비스</summary><div class="wg-detail-body"><ul><li>긴급출동 서비스: 출고 후 <b>5년 또는 100,000km</b>까지 안내</li><li>공식 서비스센터에서 유상 수리한 순정 부품에는 볼보의 <b>평생 부품 보증</b> 프로그램 운영</li><li>세부 적용 조건은 해당 서비스 정책과 차량별 서비스 가이드에 따라 최종 확인</li></ul></div></details>
+        <details open><summary>배출가스 관련 부품 보증</summary><div class="wg-detail-body"><ul><li>배출가스 관련 부품: <b>5년 또는 80,000km</b></li><li>정화용 촉매, 매연 포집 필터, 전자제어 장치(엔진 컨트롤 유닛만 적용): <b>7년 또는 120,000km</b></li></ul></div></details>
+        <details><summary>보증에서 제외되는 대표 항목</summary><div class="wg-detail-body"><ul><li>정기점검 자체, 전차륜 정렬, 휠 밸런스, 브레이크 점검·조정 등 일반 관리 항목</li><li>정기 교환이 필요한 소모성 부품과 유류 — 단, 별도 무상 소모품 서비스 대상 항목은 정해진 조건에 따라 제공 가능</li><li>정비주기 미준수, 비규격 부품·케미컬 사용, 공식 서비스센터 외 수리 등으로 인해 발생한 고장</li><li>제조사 미승인 개조·외부장착물로 인한 고장, 무리한 운행·취급부주의·사고·천재지변에 의한 고장</li><li>지정되지 않은 연료·불량연료 사용으로 인한 고장, 주행거리계 고장·변조로 정확한 주행거리 확인이 불가능한 경우</li><li>기능상 영향이 없는 경미한 이음·잡음·진동 및 재질 특성에 따른 증상, 전손·폐차 판정 차량 등</li><li>부품비·공임을 제외한 교통·숙박·운휴손실·제세공과금 등 간접비용</li></ul><p>※ 위 내용은 대표 항목이며 전체 제외사항은 볼보코리아 공식 보증 프로그램을 기준으로 합니다.</p></div></details>
+        <details><summary>보증수리 · 소유자 변경 시 안내</summary><div class="wg-detail-body"><ul><li>보증기간은 <b>신차 출고일</b>부터 적용되며 기간·주행거리 중 먼저 도래한 시점에 만료</li><li>보증수리는 볼보자동차 지정 서비스센터에서 실시하며 순정부품(재제조 부품 포함)을 사용</li><li>보증기간 내 차량 매매·기증 등으로 소유자가 변경되면 <b>잔여 보증기간에 한해 보증 승계 가능</b></li><li>승계를 위해서는 볼보자동차 공식 서비스센터에 방문해 <b>실소유자 변경 및 승계 처리</b>를 진행</li><li>차량 보증 내용과 소모성 부품 무상 교환 프로그램은 대한민국 내에서 유효</li></ul></div></details>
+        <details><summary>긴급출동 · 평생 부품 보증</summary><div class="wg-detail-body"><ul><li>긴급출동 서비스: 출고 후 <b>5년 또는 100,000km</b>까지 제공</li><li>평생 부품 보증: 볼보자동차코리아 공식 서비스센터에서 <b>유상 수리로 장착한 대상 부품</b>의 자재·공정 결함에 대해 적용</li><li>평생 부품 보증에는 대상 부품 교체 공임이 포함되며 <b>액세서리, 소모성 부품·소모품, 외부 영향으로 교체가 필요한 부품은 제외</b></li><li>세부 적용 조건은 공식 서비스 정책 및 차량별 서비스 가이드에서 최종 확인</li></ul></div></details>
       </div>
-      <div class="wg-source"><a href="${OFFICIAL_WARRANTY}" target="_blank" rel="noopener">볼보코리아 보증 프로그램</a><a href="${OFFICIAL_MAINT}" target="_blank" rel="noopener">볼보코리아 소모품 무상 서비스</a></div>
+      <div class="wg-source"><a href="${OFFICIAL_WARRANTY}" target="_blank" rel="noopener">볼보코리아 보증 프로그램</a><a href="${OFFICIAL_MAINT}" target="_blank" rel="noopener">소모품 무상 서비스</a><a href="${OFFICIAL_SERVICE}" target="_blank" rel="noopener">보증·긴급출동 안내</a><a href="${OFFICIAL_PARTS}" target="_blank" rel="noopener">평생 부품 보증</a></div>
     `;
   }
 
   window.openWarrantyGuide=function(){
     if(typeof window.openM==='function'){
-      window.openM('VOLVO 보증 · 무상서비스','보증·무상서비스','보증과 소모품 교환 서비스를 정확히 구분해 확인하세요.',modalHTML());
+      window.openM('VOLVO 보증 · 무상서비스','보증·무상서비스','볼보코리아 공식 기준으로 보증과 무상 서비스를 구분해 안내합니다.',modalHTML());
     }
   };
 
@@ -70,7 +72,7 @@
     if(!service)return;
     const sec=document.createElement('section');
     sec.className='warranty-section';sec.id='warranty';
-    sec.innerHTML=`<div class="warranty-wrap"><div class="warranty-head"><div><div class="ey">보증 · 케어 안내</div><h2>보증 · 무상서비스</h2></div><p>보증수리와 소모품 무상교환은 적용 방식이 다릅니다. 고객이 가장 많이 묻는 핵심 기준만 먼저 보여드리고, 세부 범위는 상세 안내에서 확인할 수 있습니다.</p></div><div class="warranty-summary"><article class="warranty-summary-card"><small>일반 부품 보증</small><strong>5년 / 10만km</strong><p>소모품 제외 · 제조 또는 재질상 결함</p></article><article class="warranty-summary-card"><small>소모품 무상 서비스</small><strong>5년 / 10만km</strong><p>볼보 무상 소모품 서비스에 따른 <span class="warranty-caution">일부 지정 소모품</span></p></article><article class="warranty-summary-card"><small>고전압 배터리 보증</small><strong>8년 / 16만km</strong><p>PHEV · 순수 전기차 고전압 배터리</p></article></div><div class="warranty-actions"><span><b>모든 소모품이 5년간 무제한 보증되는 것은 아닙니다.</b><br>보증과 무상교환 항목을 구분해서 확인하세요.</span><button type="button" onclick="openWarrantyGuide()">보증 범위 자세히 보기 →</button></div></div>`;
+    sec.innerHTML=`<div class="warranty-wrap"><div class="warranty-head"><div><div class="ey">보증 · 케어 안내</div><h2>보증 · 무상서비스</h2></div><p>보증수리와 소모품 무상 서비스는 적용 방식이 다릅니다. 고객이 가장 많이 묻는 핵심 기준만 먼저 보여드리고, 세부 범위는 상세 안내에서 확인할 수 있습니다.</p></div><div class="warranty-summary"><article class="warranty-summary-card"><small>일반 부품 보증</small><strong>5년 / 10만km</strong><p>소모품 제외 · 재질 또는 제조상 결함</p></article><article class="warranty-summary-card"><small>소모품 무상 서비스</small><strong>5년 / 10만km</strong><p>볼보 무상 소모품 서비스에 따른 <span class="warranty-caution">일부 지정 소모품</span></p></article><article class="warranty-summary-card"><small>고전압 배터리 보증</small><strong>8년 / 16만km</strong><p>PHEV · 순수 전기차 고전압 배터리</p></article></div><div class="warranty-actions"><span><b>모든 소모품이 5년간 무제한 보증되는 것은 아닙니다.</b><br>일반보증과 소모품 무상 서비스를 구분해서 확인하세요.</span><button type="button" onclick="openWarrantyGuide()">보증 범위 자세히 보기 →</button></div></div>`;
     service.parentNode.insertBefore(sec,service);
   }
 
@@ -90,6 +92,6 @@
     }
   }
 
-  function start(){installStyle();installSection();installNav();setTimeout(installNav,150);document.documentElement.setAttribute('data-warranty-guide','20260821-2')}
+  function start(){installStyle();installSection();installNav();setTimeout(installNav,150);document.documentElement.setAttribute('data-warranty-guide','20260821-3')}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
