@@ -3,7 +3,16 @@
    are not hidden by the comparison UI layer.
 */
 (function(){
+  function installAuditCss(){
+    if(document.querySelector('link[data-site-audit-css]')) return;
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href='scripts/site-audit-fixes-20260821.css?v=20260821audit1';
+    l.setAttribute('data-site-audit-css','1');
+    document.head.appendChild(l);
+  }
   function loadAuditFixes(){
+    installAuditCss();
     if(document.querySelector('script[data-site-audit-fixes]')) return;
     var s=document.createElement('script');
     s.src='scripts/site-audit-fixes-20260821.js?v=20260821audit1';
@@ -11,6 +20,7 @@
     document.body.appendChild(s);
   }
 
+  installAuditCss();
   if(document.readyState==='loading'){
     document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821audit1"><\/script>');
     document.write('<script src="scripts/site-dark-guide.js?v=20260821audit1"><\/script>');
