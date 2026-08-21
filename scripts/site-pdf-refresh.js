@@ -48,7 +48,7 @@
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
-    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822a"><\/script>');
+    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822b"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
@@ -57,7 +57,7 @@
     load('scripts/site-dark-guide.js?v=20260821dark5',function(){
       load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5',function(){
         load('scripts/site-copy-fix-20260821.js?v=20260821copy1',function(){
-          load('scripts/site-color-interior-guide-20260822.js?v=20260822a',loadAuditFixes);
+          load('scripts/site-color-interior-guide-20260822.js?v=20260822b',loadAuditFixes);
         });
       });
     });
