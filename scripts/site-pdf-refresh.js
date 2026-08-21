@@ -1,8 +1,8 @@
 const models={
-XC40:{year:'MY26',power:'B4 AWD · 48V Mild Hybrid',note:'도심과 일상에 부담 없는 컴팩트 SUV',trims:[
-['B4 AWD PLUS BRIGHT','5,230만 원','실속형',['AWD 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
-['B4 AWD ULTRA BRIGHT','5,490만 원','상위형',['ULTRA 구성','Bright 외관 테마','상위 편의·인테리어']],
-['B4 AWD ULTRA DARK','5,520만 원','스타일',['ULTRA 구성','Dark 외관 테마','상위 편의·인테리어']]
+XC40:{year:'MY26',power:'B4 AWD · 48V Mild Hybrid',note:'파워트레인은 동일 — Plus는 실속, Ultra는 360° 카메라·하만카돈·픽셀 LED 등 편의사양 강화',trims:[
+['B4 AWD PLUS BRIGHT','5,230만 원','실속형',['197마력 B4 AWD 마일드 하이브리드 · 전 트림 동일','파노라마 글라스 루프 · 파일럿 어시스트 · 에어 클리너 등 주요 사양 기본','18인치 휠 · Bright 외관 테마']],
+['B4 AWD ULTRA BRIGHT','5,490만 원','편의형',['Plus 대비 +260만 원','360° 카메라 · Harman Kardon 프리미엄 사운드 · 픽셀 LED 헤드라이트','Ultra 고급 편의사양 · Bright 외관 테마']],
+['B4 AWD ULTRA DARK','5,520만 원','스타일',['Ultra Bright와 주요 편의사양 동일 · +30만 원','크롬 디테일 대신 블랙 하이글로시 외관 테마','20인치 5-더블 스포크 블랙 다이아몬드 컷 휠']]
 ]},
 XC60:{year:'MY26',power:'B5 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'가장 균형 잡힌 중형 SUV 선택지',trims:[
 ['B5 AWD PLUS BRIGHT','6,570만 원','실속형',['B5 AWD 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
