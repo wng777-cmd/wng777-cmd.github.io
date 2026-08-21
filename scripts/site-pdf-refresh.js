@@ -1,10 +1,24 @@
-/* Loader: preserve the existing site core, then add the Dark theme visual guide. */
+/* Loader: preserve the existing site core, then add the Dark theme visual guide.
+   2026-08-21 audit: post-UI fixes load after parser scripts so today's trim updates
+   are not hidden by the comparison UI layer.
+*/
 (function(){
+  function loadAuditFixes(){
+    if(document.querySelector('script[data-site-audit-fixes]')) return;
+    var s=document.createElement('script');
+    s.src='scripts/site-audit-fixes-20260821.js?v=20260821audit1';
+    s.setAttribute('data-site-audit-fixes','1');
+    document.body.appendChild(s);
+  }
+
   if(document.readyState==='loading'){
-    document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821dark1"><\/script>');
-    document.write('<script src="scripts/site-dark-guide.js?v=20260821dark1"><\/script>');
+    document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821audit1"><\/script>');
+    document.write('<script src="scripts/site-dark-guide.js?v=20260821audit1"><\/script>');
+    document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
   function load(src,done){var s=document.createElement('script');s.src=src;s.onload=done||null;document.head.appendChild(s)}
-  load('scripts/site-pdf-refresh-core.js?v=20260821dark1',function(){load('scripts/site-dark-guide.js?v=20260821dark1')});
+  load('scripts/site-pdf-refresh-core.js?v=20260821audit1',function(){
+    load('scripts/site-dark-guide.js?v=20260821audit1',loadAuditFixes);
+  });
 })();
