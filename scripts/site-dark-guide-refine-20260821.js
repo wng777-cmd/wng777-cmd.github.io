@@ -2,27 +2,37 @@
    Front and 3/4 side views are shown as two stable stacked cards.
    This prevents the side image from overlapping the description panel and
    keeps the same structure on desktop and mobile.
+   S90 is included with model-specific markers so only actual Dark-theme
+   exterior points are highlighted.
 */
 (function(){
   const sideImages={
     XC40:'https://wizz.volvocars.com/images/2026/536/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_6FEFADDABC7B912361B1D19779B4DCDCFD619C73.png?bg=fafafa&client=pdps&w=3840',
     XC60:'https://wizz.volvocars.com/images/2026/246/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_8F00F51978887CF795CDB7A4761A925C1B44BE0B.png?bg=fafafa&client=pdps&w=3840',
-    XC90:'https://wizz.volvocars.com/images/2026/256/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_5898521E9125FDA1403996EF39C074D1EF60E037.png?bg=fafafa&client=homepage&w=3840'
+    XC90:'https://wizz.volvocars.com/images/2026/256/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_5898521E9125FDA1403996EF39C074D1EF60E037.png?bg=fafafa&client=homepage&w=3840',
+    S90:'https://wizz.volvocars.com/images/2026/238/exterior/studio/threeQuartersFrontLeft/transparent_exterior-studio-threeQuartersFrontLeft_2003EF9A5402A0D5EC7177ED74777B55DDB47737.png?bg=fafafa&client=pdps&w=3840'
   };
 
   const frontLayouts={
     XC40:{1:{left:35,top:49,width:30,height:9},3:{left:27,top:62,width:31,height:8}},
     XC60:{1:{left:34,top:50,width:29,height:9},3:{left:27,top:63,width:32,height:8}},
-    XC90:{1:{left:33,top:50,width:30,height:9},3:{left:26,top:63,width:34,height:8}}
+    XC90:{1:{left:33,top:50,width:30,height:9},3:{left:26,top:63,width:34,height:8}},
+    S90:{1:{left:30,top:51,width:39,height:9}}
   };
 
   const sideLayouts={
     XC40:{2:{left:47,top:31,width:36,height:9},4:{left:31,top:56,width:15,height:27}},
     XC60:{2:{left:48,top:31,width:35,height:9},4:{left:31,top:56,width:15,height:27}},
-    XC90:{2:{left:47,top:30,width:38,height:9},4:{left:31,top:56,width:15,height:27}}
+    XC90:{2:{left:47,top:30,width:38,height:9},4:{left:31,top:56,width:15,height:27}},
+    S90:{2:{left:42,top:37,width:11,height:12},3:{left:49,top:31,width:39,height:8}}
   };
 
-  const labels=['그릴','윈도우 몰딩','하단 범퍼','휠'];
+  const modelLabels={
+    XC40:{1:'그릴',2:'윈도우 몰딩',3:'하단 범퍼',4:'휠'},
+    XC60:{1:'그릴',2:'윈도우 몰딩',3:'하단 범퍼',4:'휠'},
+    XC90:{1:'그릴',2:'윈도우 몰딩',3:'하단 범퍼',4:'휠'},
+    S90:{1:'그릴',2:'사이드미러',3:'윈도우 데코'}
+  };
 
   function currentModel(){
     const h=document.querySelector('#mbody .dg-copy h3');
@@ -31,12 +41,15 @@
     if(t.includes('XC40'))return 'XC40';
     if(t.includes('XC60'))return 'XC60';
     if(t.includes('XC90'))return 'XC90';
+    if(t.includes('S90'))return 'S90';
     return null;
   }
 
   function hotspot(n,p){
     return '<span class="dg-hotspot dg-side-hotspot" style="left:'+p.left+'%;top:'+p.top+'%;width:'+p.width+'%;height:'+p.height+'%"><b>'+n+'</b></span>';
   }
+
+  function markerKeys(obj){return Object.keys(obj||{}).map(Number).sort((a,b)=>a-b)}
 
   function installCss(){
     let old=document.getElementById('dark-guide-refine-style');
@@ -84,7 +97,7 @@
   }
 
   function setFrontMarkers(photo,model){
-    const pos=frontLayouts[model];
+    const pos=frontLayouts[model]||{};
     [...photo.querySelectorAll('.dg-hotspot')].forEach(el=>{
       const n=(el.querySelector('b')&&el.querySelector('b').textContent||'').trim();
       if(!pos[n]){el.style.display='none';return;}
@@ -96,12 +109,13 @@
     });
   }
 
-  function ensureLegend(wrap,anchor){
+  function ensureLegend(wrap,anchor,model){
     let legend=wrap.querySelector('.dg-mini-legend');
     if(legend)return legend;
+    const labels=modelLabels[model]||{};
     legend=document.createElement('div');
     legend.className='dg-mini-legend';
-    legend.innerHTML=labels.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join('');
+    legend.innerHTML=Object.keys(labels).map(n=>'<span><b>'+n+'</b>'+labels[n]+'</span>').join('');
     wrap.insertBefore(legend,anchor);
     return legend;
   }
@@ -110,20 +124,23 @@
     let grid=wrap.querySelector('.dg-view-grid');
     if(grid)return grid;
 
-    ensureLegend(wrap,photo);
+    ensureLegend(wrap,photo,model);
 
     grid=document.createElement('div');
     grid.className='dg-view-grid';
 
+    const frontKeys=markerKeys(frontLayouts[model]);
+    const sideKeys=markerKeys(sideLayouts[model]);
+
     const front=document.createElement('div');
     front.className='dg-view-card dg-front-card';
-    front.innerHTML='<span class="dg-view-label">전면</span><span class="dg-view-hint">1 · 3 확인</span><div class="dg-front-stage"></div>';
+    front.innerHTML='<span class="dg-view-label">전면</span><span class="dg-view-hint">'+frontKeys.join(' · ')+' 확인</span><div class="dg-front-stage"></div>';
     front.querySelector('.dg-front-stage').appendChild(photo);
 
     const side=document.createElement('div');
     side.className='dg-view-card dg-side-card';
-    const sp=sideLayouts[model];
-    side.innerHTML='<span class="dg-view-label">측면 · 3/4</span><span class="dg-view-hint">2 · 4 확인</span><div class="dg-side-photo"><img src="'+sideImages[model]+'" alt="'+model+' 측면 외관 Dark 적용 위치">'+hotspot(2,sp[2])+hotspot(4,sp[4])+'</div>';
+    const sp=sideLayouts[model]||{};
+    side.innerHTML='<span class="dg-view-label">측면 · 3/4</span><span class="dg-view-hint">'+sideKeys.join(' · ')+' 확인</span><div class="dg-side-photo"><img src="'+sideImages[model]+'" alt="'+model+' 측면 외관 Dark 적용 위치">'+sideKeys.map(n=>hotspot(n,sp[n])).join('')+'</div>';
 
     grid.appendChild(front);
     grid.appendChild(side);
@@ -148,7 +165,11 @@
       buildViews(wrap,photo,model);
 
       const note=wrap.querySelector(':scope > small');
-      if(note)note.textContent='※ 전면에서는 그릴·하단 범퍼, 측면에서는 윈도우 몰딩·휠을 각각 확인할 수 있습니다.';
+      if(note){
+        note.textContent=model==='S90'
+          ? '※ S90은 전면 그릴, 측면 사이드미러·윈도우 데코를 중심으로 Dark 적용 위치를 표시했습니다.'
+          : '※ 전면에서는 그릴·하단 범퍼, 측면에서는 윈도우 몰딩·휠을 각각 확인할 수 있습니다.';
+      }
     } finally {busy=false;}
   }
 
