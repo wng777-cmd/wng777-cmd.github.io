@@ -1,0 +1,11 @@
+/* 2026-08-21 audit helpers */
+@media (max-width:700px){
+  .modal .box{max-height:92vh;overflow:auto}
+  .base-spec-list{grid-template-columns:1fr!important}
+  .trim-diff li{font-size:10px!important;line-height:1.55}
+  .dg-panel{grid-template-columns:1fr!important}
+  .dg-tabs{position:sticky;top:0;z-index:2;background:#fff;padding-top:2px}
+}
+@media (min-width:701px){
+  .modal .box{max-width:1040px}
+}
