@@ -26,50 +26,20 @@ jobs:
             var mode=new URLSearchParams(location.search).get('qa')||'home';
             var n=0;
             function finish(){
-              var bodyText=(document.getElementById('mbody')||document.body).innerText||'';
+              var bodyText=(document.getElementById('mbody')||document.body).textContent||'';
               var box=document.querySelector('.modal.open .box');
               var h=document.querySelector('.hero .copy h1');
               var menu=document.querySelector('.mobile-quick-nav');
-              var out={
-                mode:mode, width:innerWidth, height:innerHeight,
-                docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),
-                heroOverflow:h?Math.max(0,h.scrollWidth-h.clientWidth):999,
-                finalData:document.documentElement.getAttribute('data-site-final-data'),
-                finalUx:document.documentElement.getAttribute('data-site-final-ux'),
-                phoneLinks:document.querySelectorAll('a[href^="tel:"]').length,
-                kakaoLinks:document.querySelectorAll('a[href*="qr.kakao.com"]').length,
-                modalOpen:!!box,
-                modalOverflow:box?Math.max(0,box.scrollWidth-box.clientWidth):0,
-                trimCards:document.querySelectorAll('.modal.open .trim-card').length,
-                cta:!!document.querySelector('.modal.open .final-model-cta'),
-                darkViews:document.querySelectorAll('.modal.open .dg-view-card').length,
-                menuOpen:!!(menu&&menu.classList.contains('open')),
-                menuItems:menu?menu.querySelectorAll('a,button').length:0,
-                xc60Correct:bodyText.includes('7,070만 원')&&bodyText.includes('7,330만 원'),
-                es90Correct:bodyText.includes('4.0초')&&bodyText.includes('8,741만 원'),
-                s90DarkCorrect:bodyText.includes('7,390만 원')&&!bodyText.includes('Dark 전용 20인치')
-              };
+              var out={mode:mode,width:innerWidth,height:innerHeight,docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),heroOverflow:h?Math.max(0,h.scrollWidth-h.clientWidth):999,finalData:document.documentElement.getAttribute('data-site-final-data'),finalUx:document.documentElement.getAttribute('data-site-final-ux'),phoneLinks:document.querySelectorAll('a[href^="tel:"]').length,kakaoLinks:document.querySelectorAll('a[href*="qr.kakao.com"]').length,modalOpen:!!box,modalOverflow:box?Math.max(0,box.scrollWidth-box.clientWidth):0,trimCards:document.querySelectorAll('.modal.open .trim-card').length,cta:!!document.querySelector('.modal.open .final-model-cta'),darkViews:document.querySelectorAll('.modal.open .dg-view-card').length,menuOpen:!!(menu&&menu.classList.contains('open')),menuItems:menu?menu.querySelectorAll('a,button').length:0,xc60Correct:bodyText.includes('7,070만 원')&&bodyText.includes('7,330만 원'),es90Correct:bodyText.includes('4.0초')&&bodyText.includes('8,741만 원'),s90DarkCorrect:bodyText.includes('7,390만 원')&&!bodyText.includes('Dark 전용 20인치')};
               var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
             }
-            function openTarget(){
-              try{
-                if(mode==='xc60')openModel('XC60');
-                else if(mode==='ex90')openModel('EX90');
-                else if(mode==='es90')openModel('ES90');
-                else if(mode==='s90dark')openDarkGuide('S90');
-                else if(mode==='menu'){var b=document.querySelector('.hamb');if(b)b.click();}
-              }catch(e){var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify({mode:mode,exception:String(e)});document.body.appendChild(p);return;}
-              setTimeout(finish,400);
-            }
+            function openTarget(){try{if(mode==='xc60')openModel('XC60');else if(mode==='ex90')openModel('EX90');else if(mode==='es90')openModel('ES90');else if(mode==='s90dark')openDarkGuide('S90');else if(mode==='menu'){var b=document.querySelector('.hamb');if(b)b.click();}}catch(e){var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify({mode:mode,exception:String(e)});document.body.appendChild(p);return;}setTimeout(finish,400);}
             function wait(){n++;if((document.documentElement.getAttribute('data-site-final-data')&&document.documentElement.getAttribute('data-site-final-ux'))||n>80)openTarget();else setTimeout(wait,50);}
             if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});else wait();
           })();
           EOF
           python3 - <<'PY'
-          p='index.html'
-          s=open(p,encoding='utf-8').read()
-          s=s.replace('</body>','<script src="qa-probe.js"></script>\n</body>')
-          open(p,'w',encoding='utf-8').write(s)
+          p='index.html';s=open(p,encoding='utf-8').read();s=s.replace('</body>','<script src="qa-probe.js"></script>\n</body>');open(p,'w',encoding='utf-8').write(s)
           PY
       - name: Start local site
         run: |
@@ -79,46 +49,30 @@ jobs:
         run: |
           BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           if [ -z "$BROWSER" ]; then printf '{"failures":["No system Chrome/Chromium found on runner"]}\n' > /tmp/site-qa/qa-report.json; exit 1; fi
-          echo "Using $BROWSER"
           for spec in desktop:1440:1000 mobile:390:844; do
-            IFS=: read NAME W H <<< "$spec"
-            MODES="home xc60 ex90 es90 s90dark"
-            if [ "$NAME" = "mobile" ]; then MODES="$MODES menu"; fi
+            IFS=: read NAME W H <<< "$spec"; MODES="home xc60 ex90 es90 s90dark"; if [ "$NAME" = "mobile" ]; then MODES="$MODES menu"; fi
             for MODE in $MODES; do
               "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=7000 --screenshot="/tmp/site-qa/${NAME}-${MODE}.png" --dump-dom "http://127.0.0.1:8000/?qa=${MODE}" > "/tmp/site-qa/${NAME}-${MODE}.html" 2> "/tmp/site-qa/${NAME}-${MODE}.log" || true
             done
           done
           python3 - <<'PY'
           import glob,re,json,html,os
-          failures=[]; checks=[]; screens={}
+          failures=[];checks=[];screens={}
           for path in sorted(glob.glob('/tmp/site-qa/*.html')):
-              name=os.path.basename(path)[:-5]
-              txt=open(path,encoding='utf-8',errors='ignore').read()
-              m=re.search(r'<pre id="qa-result">(.*?)</pre>',txt,re.S)
-              if not m:
-                  failures.append(name+' did not produce QA metrics'); continue
-              try: d=json.loads(html.unescape(m.group(1)))
-              except Exception as e: failures.append(name+' metrics parse failed: '+str(e)); continue
+              name=os.path.basename(path)[:-5];txt=open(path,encoding='utf-8',errors='ignore').read();m=re.search(r'<pre id="qa-result">(.*?)</pre>',txt,re.S)
+              if not m: failures.append(name+' did not produce QA metrics');continue
+              try:d=json.loads(html.unescape(m.group(1)))
+              except Exception as e:failures.append(name+' metrics parse failed: '+str(e));continue
               screens[name]=d
-              def ck(ok,label):
-                  checks.append({'ok':bool(ok),'label':name+' '+label,'detail':d})
-                  if not ok: failures.append(name+' '+label)
-              ck(not d.get('exception'),'no runtime exception')
-              ck(d.get('finalData')=='20260821-1','final PDF data loaded')
-              ck(d.get('finalUx')=='20260821-1','final UX loaded')
-              ck(d.get('docOverflow',999)<=3,'no page horizontal overflow')
-              ck(d.get('heroOverflow',999)<=3,'hero title fits')
-              ck(d.get('phoneLinks',0)>=3 and d.get('kakaoLinks',0)>=3,'contact links present')
+              def ck(ok,label): checks.append({'ok':bool(ok),'label':name+' '+label,'detail':d}); failures.append(name+' '+label) if not ok else None
+              ck(not d.get('exception'),'no runtime exception');ck(d.get('finalData')=='20260821-1','final PDF data loaded');ck(d.get('finalUx')=='20260821-1','final UX loaded');ck(d.get('docOverflow',999)<=3,'no page horizontal overflow');ck(d.get('heroOverflow',999)<=3,'hero title fits');ck(d.get('phoneLinks',0)>=3 and d.get('kakaoLinks',0)>=3,'contact links present')
               mode=d.get('mode')
-              if mode=='xc60': ck(d.get('modalOpen') and d.get('xc60Correct'),'XC60 corrected PDF pricing visible')
-              if mode=='ex90': ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('cta') and d.get('modalOverflow',999)<=3,'EX90 five trims CTA and modal fit')
-              if mode=='es90': ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('es90Correct') and d.get('modalOverflow',999)<=3,'ES90 PDF data and modal fit')
-              if mode=='s90dark': ck(d.get('modalOpen') and d.get('darkViews')==2 and d.get('s90DarkCorrect') and d.get('modalOverflow',999)<=3,'S90 Dark two-view guide and wording')
-              if mode=='menu': ck(d.get('menuOpen') and d.get('menuItems')==6,'mobile quick menu works')
-          report={'screens':screens,'checks':checks,'failures':failures}
-          open('/tmp/site-qa/qa-report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2))
-          print(json.dumps(report,ensure_ascii=False,indent=2))
-          if failures: raise SystemExit(1)
+              if mode=='xc60':ck(d.get('modalOpen') and d.get('xc60Correct'),'XC60 corrected PDF pricing visible')
+              if mode=='ex90':ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('cta') and d.get('modalOverflow',999)<=3,'EX90 five trims CTA and modal fit')
+              if mode=='es90':ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('es90Correct') and d.get('modalOverflow',999)<=3,'ES90 PDF data and modal fit')
+              if mode=='s90dark':ck(d.get('modalOpen') and d.get('darkViews')==2 and d.get('s90DarkCorrect') and d.get('modalOverflow',999)<=3,'S90 Dark two-view guide and wording')
+              if mode=='menu':ck(d.get('menuOpen') and d.get('menuItems')==6,'mobile quick menu works')
+          report={'screens':screens,'checks':checks,'failures':failures};open('/tmp/site-qa/qa-report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));raise SystemExit(1 if failures else 0)
           PY
       - name: Upload QA screenshots and report
         if: always()
@@ -131,10 +85,6 @@ jobs:
         run: |
           mkdir -p qa
           if [ -f /tmp/site-qa/qa-report.json ]; then cp /tmp/site-qa/qa-report.json qa/site-final-qa-report.json; else printf '{"failures":["QA runner did not produce a browser report"]}\n' > qa/site-final-qa-report.json; fi
-          git checkout -- index.html 2>/dev/null || true
-          rm -f qa-probe.js
-          git config user.name "site-final-qa"
-          git config user.email "actions@users.noreply.github.com"
-          git add qa/site-final-qa-report.json
-          git commit -m "Record final browser QA result [skip ci]" || exit 0
-          git push
+          git checkout -- index.html 2>/dev/null || true; rm -f qa-probe.js
+          git config user.name "site-final-qa"; git config user.email "actions@users.noreply.github.com"
+          git add qa/site-final-qa-report.json; git commit -m "Record final browser QA result [skip ci]" || exit 0; git push
