@@ -2,6 +2,7 @@
    2026-08-21 audit: post-UI fixes load after parser scripts so today's trim updates
    are not hidden by the comparison UI layer.
    Dark guide now shows front + side views on PC and mobile.
+   Hero title layout is stabilized across desktop and mobile widths.
 */
 (function(){
   function installAuditCss(){
@@ -12,8 +13,17 @@
     l.setAttribute('data-site-audit-css','1');
     document.head.appendChild(l);
   }
+  function installHeroTitleCss(){
+    if(document.querySelector('link[data-hero-title-css]')) return;
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href='scripts/site-hero-title-fix-20260821.css?v=20260821hero1';
+    l.setAttribute('data-hero-title-css','1');
+    document.head.appendChild(l);
+  }
   function loadAuditFixes(){
     installAuditCss();
+    installHeroTitleCss();
     if(document.querySelector('script[data-site-audit-fixes]')) return;
     var s=document.createElement('script');
     s.src='scripts/site-audit-fixes-20260821.js?v=20260821audit1';
@@ -22,6 +32,7 @@
   }
 
   installAuditCss();
+  installHeroTitleCss();
   if(document.readyState==='loading'){
     document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821audit1"><\/script>');
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark2"><\/script>');
