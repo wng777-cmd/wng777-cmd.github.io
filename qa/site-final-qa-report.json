@@ -101,7 +101,7 @@
       "darkViews": 0,
       "menuOpen": false,
       "menuItems": 6,
-      "xc60Correct": false,
+      "xc60Correct": true,
       "es90Correct": false,
       "s90DarkCorrect": false
     },
@@ -227,7 +227,7 @@
       "darkViews": 0,
       "menuOpen": false,
       "menuItems": 6,
-      "xc60Correct": false,
+      "xc60Correct": true,
       "es90Correct": false,
       "s90DarkCorrect": false
     }
@@ -928,7 +928,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -953,7 +953,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -978,7 +978,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -1003,7 +1003,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -1028,7 +1028,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -1053,13 +1053,13 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
     },
     {
-      "ok": false,
+      "ok": true,
       "label": "desktop-xc60 XC60 corrected PDF pricing visible",
       "detail": {
         "mode": "xc60",
@@ -1078,7 +1078,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -1953,7 +1953,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -1978,7 +1978,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -2003,7 +2003,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -2028,7 +2028,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -2053,7 +2053,7 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
@@ -2078,13 +2078,13 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
     },
     {
-      "ok": false,
+      "ok": true,
       "label": "mobile-xc60 XC60 corrected PDF pricing visible",
       "detail": {
         "mode": "xc60",
@@ -2103,14 +2103,11 @@
         "darkViews": 0,
         "menuOpen": false,
         "menuItems": 6,
-        "xc60Correct": false,
+        "xc60Correct": true,
         "es90Correct": false,
         "s90DarkCorrect": false
       }
     }
   ],
-  "failures": [
-    "desktop-xc60 XC60 corrected PDF pricing visible",
-    "mobile-xc60 XC60 corrected PDF pricing visible"
-  ]
+  "failures": []
 }
