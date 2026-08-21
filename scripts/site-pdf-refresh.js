@@ -3,8 +3,16 @@
    are not hidden by the comparison UI layer.
    Dark guide now shows front + side views on PC and mobile, including S90.
    Hero title layout is stabilized across desktop and mobile widths.
+   Owner internal-test browsers are opted out of analytics after one-time activation.
 */
 (function(){
+  function installInternalTestFilter(){
+    if(document.querySelector('script[data-internal-test-filter]')) return;
+    var s=document.createElement('script');
+    s.src='scripts/site-internal-test-filter-20260821.js?v=20260821internal1';
+    s.setAttribute('data-internal-test-filter','1');
+    document.head.appendChild(s);
+  }
   function installAuditCss(){
     if(document.querySelector('link[data-site-audit-css]')) return;
     var l=document.createElement('link');
@@ -31,6 +39,7 @@
     document.body.appendChild(s);
   }
 
+  installInternalTestFilter();
   installAuditCss();
   installHeroTitleCss();
   if(document.readyState==='loading'){
