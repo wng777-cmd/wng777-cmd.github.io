@@ -26,7 +26,7 @@
     installHeroTitleCss();
     if(document.querySelector('script[data-site-audit-fixes]')) return;
     var s=document.createElement('script');
-    s.src='scripts/site-audit-fixes-20260821.js?v=20260821audit2';
+    s.src='scripts/site-audit-fixes-20260821.js?v=20260821audit3';
     s.setAttribute('data-site-audit-fixes','1');
     document.body.appendChild(s);
   }
