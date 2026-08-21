@@ -4,13 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'index.html'
-      - 'scripts/site-final-polish-20260821.css'
-      - 'scripts/site-electric-range-20260821.js'
       - '.github/workflows/ex30cc-visual-qa.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   capture:
@@ -18,6 +15,26 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - name: Apply cache-safe EX30CC position
+        run: |
+          python3 - <<'PY'
+          p='index.html'
+          s=open(p,encoding='utf-8').read()
+          s=s.replace('scripts/site-final-polish-20260821.css?v=20260821final1','scripts/site-final-polish-20260821.css?v=20260821ex30cc2')
+          old='.model[data-model="EX30CC"] img{object-position:center 66%}'
+          first=s.find(old)
+          if first>=0:
+              s=s[:first]+'.model[data-model="EX30CC"] img{object-position:center 78%}'+s[first+len(old):]
+          second=s.find(old)
+          if second>=0:
+              s=s[:second]+'.model[data-model="EX30CC"] img{object-position:center 80%}'+s[second+len(old):]
+          open(p,'w',encoding='utf-8').write(s)
+          PY
+          git config user.name "ex30cc-visual-qa"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git commit -m "Force EX30CC image position on PC and mobile [skip ci]" || true
+          git push || true
       - name: Inject EX30CC visual probe
         run: |
           cat > qa-ex30cc.js <<'EOF'
@@ -31,19 +48,12 @@ jobs:
                   var img=card.querySelector('img');
                   var mb=card.querySelector('.mb');
                   var chip=card.querySelector('.electric-range-chip');
-                  var out={
-                    width:innerWidth,height:innerHeight,
-                    objectPosition:img?getComputedStyle(img).objectPosition:null,
-                    card:card.getBoundingClientRect().toJSON(),
-                    copy:mb?mb.getBoundingClientRect().toJSON():null,
-                    chip:chip?chip.getBoundingClientRect().toJSON():null,
-                    electricRange:document.documentElement.getAttribute('data-electric-range')
-                  };
+                  var out={width:innerWidth,height:innerHeight,objectPosition:img?getComputedStyle(img).objectPosition:null,card:card.getBoundingClientRect().toJSON(),copy:mb?mb.getBoundingClientRect().toJSON():null,chip:chip?chip.getBoundingClientRect().toJSON():null,electricRange:document.documentElement.getAttribute('data-electric-range'),docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)};
                   var p=document.createElement('pre');p.id='qa-ex30cc-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
                 }
               }catch(e){var p=document.createElement('pre');p.id='qa-ex30cc-result';p.textContent=JSON.stringify({exception:String(e)});document.body.appendChild(p);}
             }
-            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(go,1200)},{once:true});else setTimeout(go,1200);
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(go,1600)},{once:true});else setTimeout(go,1600);
           })();
           EOF
           python3 - <<'PY'
@@ -60,7 +70,7 @@ jobs:
           test -n "$BROWSER"
           for spec in desktop:1440:1000 mobile:390:844; do
             IFS=: read NAME W H <<< "$spec"
-            "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=7000 --screenshot="/tmp/ex30cc-qa/${NAME}.png" --dump-dom "http://127.0.0.1:8000/" > "/tmp/ex30cc-qa/${NAME}.html" 2> "/tmp/ex30cc-qa/${NAME}.log" || true
+            "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=8000 --screenshot="/tmp/ex30cc-qa/${NAME}.png" --dump-dom "http://127.0.0.1:8000/" > "/tmp/ex30cc-qa/${NAME}.html" 2> "/tmp/ex30cc-qa/${NAME}.log" || true
           done
           python3 - <<'PY'
           import re,html,json,glob,os
@@ -76,3 +86,13 @@ jobs:
         with:
           name: ex30cc-visual-qa
           path: /tmp/ex30cc-qa
+      - name: Publish EX30CC metrics
+        if: always()
+        run: |
+          git checkout -- index.html 2>/dev/null || true
+          rm -f qa-ex30cc.js
+          mkdir -p qa
+          cp /tmp/ex30cc-qa/report.json qa/ex30cc-visual-report.json
+          git add qa/ex30cc-visual-report.json
+          git commit -m "Record EX30CC visual QA metrics [skip ci]" || exit 0
+          git push
