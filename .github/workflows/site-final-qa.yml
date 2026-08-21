@@ -1,0 +1,116 @@
+name: Site Final QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'scripts/**'
+      - '.github/workflows/site-final-qa.yml'
+
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Start local site
+        run: |
+          python3 -m http.server 8000 >/tmp/site-server.log 2>&1 &
+          sleep 2
+      - name: Run desktop and mobile QA
+        run: |
+          cat > /tmp/site-qa.mjs <<'EOF'
+          import { chromium } from 'playwright';
+          import fs from 'fs';
+          fs.mkdirSync('/tmp/site-qa',{recursive:true});
+          const browser=await chromium.launch({headless:true});
+          const results=[];
+          const failures=[];
+          const cases=[
+            {name:'desktop',width:1440,height:1000},
+            {name:'mobile',width:390,height:844}
+          ];
+          function check(ok,label,detail=''){
+            results.push({ok,label,detail});
+            if(!ok)failures.push(label+(detail?' — '+detail:''));
+          }
+          for(const c of cases){
+            const page=await browser.newPage({viewport:{width:c.width,height:c.height}});
+            const pageErrors=[];
+            page.on('pageerror',e=>pageErrors.push(String(e)));
+            await page.goto('http://127.0.0.1:8000/',{waitUntil:'domcontentloaded',timeout:30000});
+            await page.waitForFunction(()=>document.documentElement.getAttribute('data-site-final-data')==='20260821-1',{timeout:10000});
+            await page.waitForFunction(()=>document.documentElement.getAttribute('data-site-final-ux')==='20260821-1',{timeout:10000});
+            await page.waitForTimeout(1000);
+
+            const base=await page.evaluate(()=>({
+              scrollWidth:document.documentElement.scrollWidth,
+              innerWidth:window.innerWidth,
+              titleOverflow:(()=>{const h=document.querySelector('.hero .copy h1');return h?Math.max(0,h.scrollWidth-h.clientWidth):999})(),
+              tel:document.querySelectorAll('a[href^="tel:"]').length,
+              kakao:document.querySelectorAll('a[href*="qr.kakao.com"]').length,
+              xc60Text:document.body.innerText.includes('7,070만 원')
+            }));
+            check(base.scrollWidth<=base.innerWidth+3,c.name+' home horizontal overflow',JSON.stringify(base));
+            check(base.titleOverflow<=3,c.name+' hero title fits',String(base.titleOverflow));
+            check(base.tel>=3,c.name+' phone links present',String(base.tel));
+            check(base.kakao>=3,c.name+' Kakao links present',String(base.kakao));
+            await page.screenshot({path:'/tmp/site-qa/'+c.name+'-home.png',fullPage:true});
+
+            await page.locator('[data-model="EX90"] .primary').click();
+            await page.waitForSelector('.modal.open .trim-card');
+            await page.waitForSelector('.modal.open .final-model-cta');
+            let modal=await page.evaluate(()=>{const b=document.querySelector('.modal.open .box');return {sw:b.scrollWidth,cw:b.clientWidth,cards:document.querySelectorAll('.modal.open .trim-card').length,cta:!!document.querySelector('.modal.open .final-model-cta')}});
+            check(modal.sw<=modal.cw+3,c.name+' EX90 modal fits',JSON.stringify(modal));
+            check(modal.cards===5,c.name+' EX90 has five trims',String(modal.cards));
+            check(modal.cta,c.name+' EX90 consultation CTA');
+            await page.screenshot({path:'/tmp/site-qa/'+c.name+'-ex90.png',fullPage:false});
+            await page.locator('.modal.open .close').click();
+
+            await page.locator('[data-model="ES90"] .primary').click();
+            await page.waitForSelector('.modal.open .trim-card');
+            const es=await page.evaluate(()=>({cards:document.querySelectorAll('.modal.open .trim-card').length,text:document.querySelector('.modal.open .body').innerText}));
+            check(es.cards===5,c.name+' ES90 has five trims',String(es.cards));
+            check(es.text.includes('4.0초')&&es.text.includes('8,741만 원'),c.name+' ES90 final PDF data visible');
+            await page.screenshot({path:'/tmp/site-qa/'+c.name+'-es90.png',fullPage:false});
+            await page.locator('.modal.open .close').click();
+
+            await page.evaluate(()=>window.openDarkGuide('S90'));
+            await page.waitForSelector('.modal.open .dg-view-grid');
+            const dark=await page.evaluate(()=>{const b=document.querySelector('.modal.open .box');const t=document.querySelector('.modal.open .body').innerText;return {sw:b.scrollWidth,cw:b.clientWidth,text:t,views:document.querySelectorAll('.modal.open .dg-view-card').length}});
+            check(dark.sw<=dark.cw+3,c.name+' S90 Dark modal fits',JSON.stringify({sw:dark.sw,cw:dark.cw}));
+            check(dark.views===2,c.name+' S90 Dark front/side views',String(dark.views));
+            check(dark.text.includes('7,390만 원')&&!dark.text.includes('Dark 전용 20인치'),c.name+' S90 Dark PDF/visual wording');
+            await page.screenshot({path:'/tmp/site-qa/'+c.name+'-s90-dark.png',fullPage:false});
+            await page.locator('.modal.open .close').click();
+
+            if(c.name==='mobile'){
+              await page.locator('.hamb').click();
+              const nav=await page.evaluate(()=>({open:document.querySelector('.mobile-quick-nav').classList.contains('open'),items:document.querySelectorAll('.mobile-quick-nav a,.mobile-quick-nav button').length}));
+              check(nav.open&&nav.items===6,'mobile quick menu works',JSON.stringify(nav));
+              await page.screenshot({path:'/tmp/site-qa/mobile-menu.png',fullPage:false});
+            }
+            check(pageErrors.length===0,c.name+' no JavaScript page errors',pageErrors.join(' | '));
+            await page.close();
+          }
+          await browser.close();
+          fs.writeFileSync('/tmp/site-qa/qa-report.json',JSON.stringify({results,failures},null,2));
+          console.log(JSON.stringify({results,failures},null,2));
+          if(failures.length)process.exit(1);
+          EOF
+          node /tmp/site-qa.mjs
+      - name: Upload QA screenshots and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-final-qa
+          path: /tmp/site-qa
