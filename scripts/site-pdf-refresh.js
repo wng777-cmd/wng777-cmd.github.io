@@ -4,11 +4,11 @@ XC40:{year:'MY26',power:'B4 AWD · 48V Mild Hybrid',note:'파워트레인은 동
 ['B4 AWD ULTRA BRIGHT','5,490만 원','편의형',['Plus 대비 +260만 원','360° 카메라 · Harman Kardon 프리미엄 사운드 · 픽셀 LED 헤드라이트','Ultra 고급 편의사양 · Bright 외관 테마']],
 ['B4 AWD ULTRA DARK','5,520만 원','스타일',['Ultra Bright와 주요 편의사양 동일 · +30만 원','크롬 디테일 대신 블랙 하이글로시 외관 테마','20인치 5-더블 스포크 블랙 다이아몬드 컷 휠']]
 ]},
-XC60:{year:'MY26',power:'B5 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'가장 균형 잡힌 중형 SUV 선택지',trims:[
-['B5 AWD PLUS BRIGHT','6,570만 원','실속형',['B5 AWD 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
-['B5 AWD ULTRA BRIGHT','7,070만 원','추천',['ULTRA 구성','Bright 외관 테마','에어 서스펜션 선택 시 7,330만 원']],
-['B5 AWD ULTRA DARK','7,070만 원','스타일',['ULTRA 구성','Dark 외관 테마','에어 서스펜션 선택 시 7,330만 원']],
-['T8 AWD ULTRA BRIGHT','9,120만 원','PHEV',['T8 AWD 플러그인 하이브리드','ULTRA 구성','Bright 외관 테마']]
+XC60:{year:'MY26',power:'B5 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'Plus는 실속, B5 Ultra는 승차감·오디오·시트 강화, T8 Ultra는 전기주행 가능한 PHEV',trims:[
+['B5 AWD PLUS BRIGHT','6,570만 원','실속형',['250마력 B5 AWD · 가솔린 기반 48V 마일드 하이브리드','Plus 기본 편의·안전사양 · Bright 외관 테마','Ultra 대비 가격 경쟁력 중심']],
+['B5 AWD ULTRA BRIGHT','7,330만 원','추천',['Plus 대비 +760만 원 · Bowers & Wilkins 하이파이 오디오','앞좌석 전동 사이드 서포트 · 마사지 · 통풍 시트','액티브 에어 서스펜션 기본 · Bright 외관 테마']],
+['B5 AWD ULTRA DARK','7,330만 원','스타일',['Ultra Bright와 주요 편의·주행 사양 동일','Bowers & Wilkins · 마사지/통풍 · 액티브 에어 서스펜션 기본','Dark 외관 테마 · Bright와 동일 가격']],
+['T8 AWD ULTRA BRIGHT','9,120만 원','PHEV',['외부 충전 가능한 T8 AWD 플러그인 하이브리드','1회 충전 시 순수 전기모드 최대 61km','Ultra급 프리미엄 사양 · Bright 단일 외관 테마']]
 ]},
 XC90:{year:'MY26',power:'B6 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'3열과 넉넉한 공간이 필요한 7인승 SUV',trims:[
 ['B6 AWD PLUS BRIGHT','8,820만 원','7인승',['B6 AWD 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
