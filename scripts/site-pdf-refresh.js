@@ -1,7 +1,7 @@
 /* Loader: preserve the existing site core, then add the Dark theme visual guide.
    2026-08-21 audit: post-UI fixes load after parser scripts so today's trim updates
    are not hidden by the comparison UI layer.
-   Dark guide now shows front + side views on PC and mobile.
+   Dark guide now shows front + side views on PC and mobile, including S90.
    Hero title layout is stabilized across desktop and mobile widths.
 */
 (function(){
@@ -35,16 +35,16 @@
   installHeroTitleCss();
   if(document.readyState==='loading'){
     document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821audit1"><\/script>');
-    document.write('<script src="scripts/site-dark-guide.js?v=20260821dark2"><\/script>');
-    document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark4"><\/script>');
+    document.write('<script src="scripts/site-dark-guide.js?v=20260821dark5"><\/script>');
+    document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
   function load(src,done){var s=document.createElement('script');s.src=src;s.onload=done||null;document.head.appendChild(s)}
   load('scripts/site-pdf-refresh-core.js?v=20260821audit1',function(){
-    load('scripts/site-dark-guide.js?v=20260821dark2',function(){
-      load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark4',function(){
+    load('scripts/site-dark-guide.js?v=20260821dark5',function(){
+      load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5',function(){
         load('scripts/site-copy-fix-20260821.js?v=20260821copy1',loadAuditFixes);
       });
     });
