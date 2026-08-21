@@ -25,7 +25,7 @@
   if(document.readyState==='loading'){
     document.write('<script src="scripts/site-pdf-refresh-core.js?v=20260821audit1"><\/script>');
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark2"><\/script>');
-    document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark3"><\/script>');
+    document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark4"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
@@ -33,7 +33,7 @@
   function load(src,done){var s=document.createElement('script');s.src=src;s.onload=done||null;document.head.appendChild(s)}
   load('scripts/site-pdf-refresh-core.js?v=20260821audit1',function(){
     load('scripts/site-dark-guide.js?v=20260821dark2',function(){
-      load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark3',function(){
+      load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark4',function(){
         load('scripts/site-copy-fix-20260821.js?v=20260821copy1',loadAuditFixes);
       });
     });
