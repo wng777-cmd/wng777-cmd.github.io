@@ -104,12 +104,65 @@
       ];
     }
 
+    /* ES90: explain the three decision axes — drivetrain, trim, performance. */
+    if(trimGuides.ES90){
+      trimGuides.ES90.base=[
+        'MY27 ES90 · 800V 전기 아키텍처',
+        'Single Motor Extended Range: 333마력 · 후륜구동(RWD) · 92kWh 배터리',
+        'Twin Motor: 456마력 · 사륜구동(AWD) · 106kWh 배터리',
+        'Plus는 가격·효율 중심, Ultra는 오디오·시트·루프 등 고급 편의사양 강화',
+        'Performance는 680마력 AWD 최상위 성능 구성'
+      ];
+      trimGuides.ES90.trims['Single Motor Extended Range PLUS']={kind:'base',title:'Single PLUS — 가장 합리적인 장거리형',items:[
+        '7,294만 원 · 333마력 · 후륜구동(RWD)',
+        '92kWh 배터리 · 800V 시스템',
+        'Bose 14스피커 프리미엄 사운드',
+        '가격과 효율·주행거리 우선 고객에게 적합'
+      ]};
+      trimGuides.ES90.trims['Single Motor Extended Range ULTRA']={kind:'upgrade',title:'Single PLUS 대비 +761만 원 — 효율 + 럭셔리',items:[
+        '8,055만 원 · Single Motor 성능은 PLUS와 동일',
+        'Bowers & Wilkins 25스피커 · 1,610W 프리미엄 사운드',
+        '앞·뒷좌석 통풍시트 · 일렉트로크로믹 글라스 루프 등 고급 편의사양 강화',
+        '듀얼 챔버 에어 서스펜션 선택 가능 · 적용 시 8,341만 원'
+      ]};
+      trimGuides.ES90.trims['Twin Motor PLUS']={kind:'power',title:'Single과 다른 핵심 — 456마력 AWD',items:[
+        '7,960만 원 · 456마력 · 사륜구동(AWD)',
+        '106kWh 배터리 · 800V 시스템',
+        'Single Ultra보다 95만 원 낮은 가격으로 AWD·출력 강화',
+        '고급 옵션보다 구동성능과 가격 균형을 중시할 때 적합'
+      ]};
+      trimGuides.ES90.trims['Twin Motor ULTRA']={kind:'upgrade',title:'Twin PLUS 대비 +781만 원 — AWD + 럭셔리',items:[
+        '8,741만 원 · 456마력 AWD',
+        'Bowers & Wilkins 25스피커 · 1,610W',
+        '앞·뒷좌석 통풍시트 · 일렉트로크로믹 글라스 루프 등 Ultra 고급사양',
+        '듀얼 챔버 에어 서스펜션 선택 가능 · 적용 시 9,041만 원',
+        '성능과 편의사양을 함께 원하는 균형형 선택'
+      ]};
+      trimGuides.ES90.trims['Twin Motor Performance ULTRA']={kind:'power',title:'Twin ULTRA 대비 +800만 원 — 680마력 최상위',items:[
+        '9,541만 원 · 680마력 AWD',
+        'Ultra 고급 편의사양 유지',
+        '듀얼 챔버 에어 서스펜션 기본 적용',
+        'ES90에서 성능과 사양을 모두 최우선으로 하는 구성'
+      ]};
+    }
+
+    if(models.ES90){
+      models.ES90.note='Single = 효율·가격 · Twin = 456마력 AWD · Ultra = 고급 편의사양 · Performance = 680마력 최상위';
+      models.ES90.trims=[
+        ['Single Motor Extended Range PLUS','7,294만 원','효율형',['333마력 RWD · 92kWh · 800V','Bose 14스피커 프리미엄 사운드','가격·효율·주행거리 중심의 기본 선택']],
+        ['Single Motor Extended Range ULTRA','8,055만 원','럭셔리',['Single Plus 대비 +761만 원','B&W 25스피커 1,610W · 앞/뒤 통풍 · 일렉트로크로믹 루프','에어 서스펜션 선택 가능 · 적용 시 8,341만 원']],
+        ['Twin Motor PLUS','7,960만 원','AWD',['456마력 AWD · 106kWh · 800V','Single Ultra보다 95만 원 낮은 가격','고급 옵션보다 AWD·출력을 우선하는 선택']],
+        ['Twin Motor ULTRA','8,741만 원','추천',['Twin Plus 대비 +781만 원','456마력 AWD + B&W·통풍·일렉트로크로믹 루프','에어 서스펜션 선택 가능 · 적용 시 9,041만 원']],
+        ['Twin Motor Performance ULTRA','9,541만 원','680마력',['Twin Ultra 대비 +800만 원','680마력 AWD · Ultra 고급 편의사양 유지','듀얼 챔버 에어 서스펜션 기본 · 최상위 구성']]
+      ];
+    }
+
     /* Keep today's XC40/XC60/XC90 customer-facing distinctions explicit. */
     if(models.XC40) models.XC40.note='파워트레인은 동일 — Plus는 실속, Ultra는 편의사양 강화, Dark는 외관 테마 차이';
     if(models.XC60) models.XC60.note='Plus는 실속, B5 Ultra는 B&W·마사지/통풍·에어 서스펜션, T8은 충전 가능한 PHEV';
     if(models.XC90) models.XC90.note='Plus는 실속형 7인승, B6 Ultra는 B&W·마사지/통풍·에어 서스펜션, T8은 462마력 PHEV';
 
-    document.documentElement.setAttribute('data-site-audit','20260821-2');
+    document.documentElement.setAttribute('data-site-audit','20260821-3');
     return true;
   }
 
