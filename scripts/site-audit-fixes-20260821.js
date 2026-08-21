@@ -51,12 +51,65 @@
       ]};
     }
 
+    /* EX90: make the three customer decision axes explicit — trim, seats, performance. */
+    if(trimGuides.EX90){
+      trimGuides.EX90.base=[
+        'MY27 EX90 · 106kWh 배터리 · 800V 전기 아키텍처 · AWD',
+        'Twin Motor 456마력 · 0→100km/h 5.5초',
+        '파일럿 어시스트 · 파크 파일럿 어시스트 · 360° 카메라',
+        '14.5인치 센터 디스플레이 · HUD · 4-구역 독립 온도 조절 · 3열 공조',
+        'Plus는 7인승 기본 · Ultra부터 6인승/7인승 선택 가능'
+      ];
+      trimGuides.EX90.trims['Twin Motor PLUS · 7-Seater']={kind:'base',title:'PLUS 7-Seater — 실속형 플래그십',items:[
+        '1억 620만 원 · 456마력 Twin Motor AWD',
+        '7인승 구성 · Nordico 시트',
+        'Bose 프리미엄 사운드 · LED 헤드램프 · 21인치 휠',
+        'EX90의 핵심 안전·전기차 성능을 갖춘 기본 선택'
+      ]};
+      trimGuides.EX90.trims['Twin Motor ULTRA · 7-Seater']={kind:'upgrade',title:'PLUS 대비 +1,000만 원 — 플래그십 편의사양',items:[
+        '1억 1,620만 원 · Twin Motor 성능은 PLUS와 동일',
+        '듀얼 챔버 에어 서스펜션 + 어댑티브 샤시',
+        'High-Definition Pixel 헤드램프 · 소프트 도어 클로징',
+        'Nappa 가죽 · 앞좌석 전동 사이드 서포트 + 마사지',
+        '일렉트로크로믹 글라스 루프',
+        'Bowers & Wilkins 1,610W 프리미엄 사운드 · 22인치 휠'
+      ]};
+      trimGuides.EX90.trims['Twin Motor ULTRA · 6-Seater']={kind:'seat',title:'7인승 대비 +200만 원 — 2열 독립시트',items:[
+        '1억 1,820만 원 · ULTRA 편의·주행 사양 동일',
+        '2열 캡틴 시트 적용 · 6인승 구성',
+        '2열 승객 독립성과 3열 접근성을 중시할 때 적합'
+      ]};
+      trimGuides.EX90.trims['Twin Motor Performance ULTRA · 7-Seater']={kind:'power',title:'Twin Motor ULTRA 대비 +500만 원 — 680마력 Performance',items:[
+        '1억 2,120만 원 · 680마력 AWD',
+        '0→100km/h 4.2초',
+        'ULTRA의 에어 서스펜션·Nappa·B&W 등 플래그십 사양 유지',
+        '7인승 구성'
+      ]};
+      trimGuides.EX90.trims['Twin Motor Performance ULTRA · 6-Seater']={kind:'power',title:'Performance + 6인승 — 최상위 구성',items:[
+        '1억 2,320만 원 · 680마력 AWD · 0→100km/h 4.2초',
+        'Performance ULTRA 7인승 대비 +200만 원',
+        '2열 캡틴 시트 · 6인승 구성',
+        '고성능과 2열 편의성을 동시에 원하는 선택'
+      ]};
+    }
+
+    if(models.EX90){
+      models.EX90.note='Plus = 실속형 · Ultra = 플래그십 편의사양 · 6인승 = 2열 독립시트 · Performance = 680마력 고성능';
+      models.EX90.trims=[
+        ['Twin Motor PLUS · 7-Seater','1억 620만 원','실속형',['456마력 Twin Motor AWD · 0→100km/h 5.5초','7인승 · Nordico 시트 · Bose 프리미엄 사운드','EX90 핵심 안전·전기차 성능을 갖춘 기본 선택']],
+        ['Twin Motor ULTRA · 7-Seater','1억 1,620만 원','추천',['Plus 대비 +1,000만 원','듀얼 챔버 에어 서스펜션 · HD Pixel 헤드램프 · 소프트 도어 클로징','Nappa 가죽·마사지 · 일렉트로크로믹 루프 · B&W 1,610W']],
+        ['Twin Motor ULTRA · 6-Seater','1억 1,820만 원','6인승',['Ultra 7인승 대비 +200만 원','2열 캡틴 시트 · 6인승 구성','2열 독립성과 3열 접근성 강화']],
+        ['Twin Motor Performance ULTRA · 7-Seater','1억 2,120만 원','680마력',['Twin Motor Ultra 대비 +500만 원','680마력 AWD · 0→100km/h 4.2초','Ultra 플래그십 편의사양 유지 · 7인승']],
+        ['Twin Motor Performance ULTRA · 6-Seater','1억 2,320만 원','최상위',['Performance 7인승 대비 +200만 원','680마력 AWD · 0→100km/h 4.2초','2열 캡틴 시트 · 6인승 구성']]
+      ];
+    }
+
     /* Keep today's XC40/XC60/XC90 customer-facing distinctions explicit. */
     if(models.XC40) models.XC40.note='파워트레인은 동일 — Plus는 실속, Ultra는 편의사양 강화, Dark는 외관 테마 차이';
     if(models.XC60) models.XC60.note='Plus는 실속, B5 Ultra는 B&W·마사지/통풍·에어 서스펜션, T8은 충전 가능한 PHEV';
     if(models.XC90) models.XC90.note='Plus는 실속형 7인승, B6 Ultra는 B&W·마사지/통풍·에어 서스펜션, T8은 462마력 PHEV';
 
-    document.documentElement.setAttribute('data-site-audit','20260821-1');
+    document.documentElement.setAttribute('data-site-audit','20260821-2');
     return true;
   }
 
