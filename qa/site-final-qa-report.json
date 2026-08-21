@@ -20,7 +20,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": true,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "desktop-ex90": {
       "mode": "ex90",
@@ -42,7 +46,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "desktop-home": {
       "mode": "home",
@@ -64,7 +72,37 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
+    },
+    "desktop-interior": {
+      "mode": "interior",
+      "width": 1440,
+      "height": 913,
+      "docOverflow": 0,
+      "heroOverflow": 0,
+      "finalData": "20260821-1",
+      "finalUx": "20260821-2",
+      "warrantyGuide": "20260821-3",
+      "phoneLinks": 3,
+      "kakaoLinks": 3,
+      "modalOpen": false,
+      "modalOverflow": 0,
+      "trimCards": 0,
+      "cta": false,
+      "darkViews": 0,
+      "menuOpen": false,
+      "menuItems": 7,
+      "xc60Correct": false,
+      "es90Correct": false,
+      "s90DarkCorrect": false,
+      "interiorOpen": true,
+      "interiorMediaHeight": 245,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00"
     },
     "desktop-s90dark": {
       "mode": "s90dark",
@@ -86,7 +124,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": true
+      "s90DarkCorrect": true,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "desktop-xc60": {
       "mode": "xc60",
@@ -108,7 +150,11 @@
       "menuItems": 7,
       "xc60Correct": true,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "mobile-es90": {
       "mode": "es90",
@@ -130,7 +176,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": true,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "mobile-ex90": {
       "mode": "ex90",
@@ -152,7 +202,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "mobile-home": {
       "mode": "home",
@@ -174,7 +228,37 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
+    },
+    "mobile-interior": {
+      "mode": "interior",
+      "width": 500,
+      "height": 757,
+      "docOverflow": 0,
+      "heroOverflow": 0,
+      "finalData": "20260821-1",
+      "finalUx": "20260821-2",
+      "warrantyGuide": "20260821-3",
+      "phoneLinks": 3,
+      "kakaoLinks": 3,
+      "modalOpen": false,
+      "modalOverflow": 0,
+      "trimCards": 0,
+      "cta": false,
+      "darkViews": 0,
+      "menuOpen": false,
+      "menuItems": 7,
+      "xc60Correct": false,
+      "es90Correct": false,
+      "s90DarkCorrect": false,
+      "interiorOpen": true,
+      "interiorMediaHeight": 168,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00"
     },
     "mobile-menu": {
       "mode": "menu",
@@ -196,7 +280,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "mobile-s90dark": {
       "mode": "s90dark",
@@ -218,7 +306,11 @@
       "menuItems": 7,
       "xc60Correct": false,
       "es90Correct": false,
-      "s90DarkCorrect": true
+      "s90DarkCorrect": true,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     },
     "mobile-xc60": {
       "mode": "xc60",
@@ -240,7 +332,11 @@
       "menuItems": 7,
       "xc60Correct": true,
       "es90Correct": false,
-      "s90DarkCorrect": false
+      "s90DarkCorrect": false,
+      "interiorOpen": false,
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RPE0",
+      "selectedDetail": "RPE0현재 대표 사진 조합"
     }
   },
   "checks": [
@@ -267,7 +363,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -293,7 +393,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -319,7 +423,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -345,7 +453,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -371,7 +483,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -397,7 +513,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -423,7 +543,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -449,7 +573,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -475,7 +603,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -501,7 +633,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -527,7 +663,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -553,7 +693,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -579,7 +723,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -605,7 +753,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -631,7 +783,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -657,7 +813,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -683,7 +843,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -709,7 +873,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -735,7 +903,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -761,7 +933,251 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior no runtime exception",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior final PDF data loaded",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior final UX loaded",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior no page horizontal overflow",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior hero title fits",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior contact links present",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior interior tab and seat code click work",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior interior photo area is compact",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 245,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
       }
     },
     {
@@ -787,7 +1203,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -813,7 +1233,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -839,7 +1263,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -865,7 +1293,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -891,7 +1323,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -917,7 +1353,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -943,7 +1383,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -969,7 +1413,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -995,7 +1443,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1021,7 +1473,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1047,7 +1503,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1073,7 +1533,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1099,7 +1563,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1125,7 +1593,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1151,7 +1623,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1177,7 +1653,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1203,7 +1683,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1229,7 +1713,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1255,7 +1743,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1281,7 +1773,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1307,7 +1803,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": true,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1333,7 +1833,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1359,7 +1863,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1385,7 +1893,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1411,7 +1923,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1437,7 +1953,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1463,7 +1983,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1489,7 +2013,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1515,7 +2043,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1541,7 +2073,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1567,7 +2103,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1593,7 +2133,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1619,7 +2163,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1645,7 +2193,251 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior no runtime exception",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior final PDF data loaded",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior final UX loaded",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior no page horizontal overflow",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior hero title fits",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior contact links present",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior interior tab and seat code click work",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior interior photo area is compact",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 168,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00"
       }
     },
     {
@@ -1671,7 +2463,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1697,7 +2493,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1723,7 +2523,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1749,7 +2553,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1775,7 +2583,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1801,7 +2613,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1827,7 +2643,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1853,7 +2673,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1879,7 +2703,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1905,7 +2733,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1931,7 +2763,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1957,7 +2793,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -1983,7 +2823,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2009,7 +2853,11 @@
         "menuItems": 7,
         "xc60Correct": false,
         "es90Correct": false,
-        "s90DarkCorrect": true
+        "s90DarkCorrect": true,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2035,7 +2883,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2061,7 +2913,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2087,7 +2943,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2113,7 +2973,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2139,7 +3003,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2165,7 +3033,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     },
     {
@@ -2191,7 +3063,11 @@
         "menuItems": 7,
         "xc60Correct": true,
         "es90Correct": false,
-        "s90DarkCorrect": false
+        "s90DarkCorrect": false,
+        "interiorOpen": false,
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RPE0",
+        "selectedDetail": "RPE0현재 대표 사진 조합"
       }
     }
   ],
