@@ -1,6 +1,7 @@
-/* 2026-08-21 Dark guide front + side refinement
-   Shows front and 3/4 side views together so customers can immediately see
-   where grille/lower trim vs window moulding/wheels change on Dark theme.
+/* 2026-08-21 Dark guide layout fix
+   Front and 3/4 side views are shown as two stable stacked cards.
+   This prevents the side image from overlapping the description panel and
+   keeps the same structure on desktop and mobile.
 */
 (function(){
   const sideImages={
@@ -38,28 +39,40 @@
   }
 
   function installCss(){
-    if(document.getElementById('dark-guide-refine-style'))return;
+    let old=document.getElementById('dark-guide-refine-style');
+    if(old)old.remove();
     const s=document.createElement('style');
     s.id='dark-guide-refine-style';
     s.textContent=`
+      .dg-panel{grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr)!important;align-items:start!important}
+      .dg-photo-wrap,.dg-copy{min-width:0!important}
+      .dg-photo-wrap{overflow:hidden!important}
       .dg-mini-legend{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px;padding:0 1px}
       .dg-mini-legend span{display:inline-flex;align-items:center;gap:4px;border:1px solid #dbe1e4;background:#fff;border-radius:999px;padding:5px 8px;font-size:9px;font-weight:800;color:#40515b;line-height:1}
       .dg-mini-legend b{display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#f1263d;color:#fff;font-size:8px}
-      .dg-view-grid{display:grid;grid-template-columns:minmax(220px,.78fr) minmax(330px,1.22fr);gap:10px;align-items:start}
-      .dg-view-card{position:relative;border:1px solid #e0e5e7;border-radius:12px;background:#fff;overflow:hidden}
-      .dg-view-label{position:absolute;z-index:5;left:9px;top:9px;border-radius:999px;background:rgba(16,24,32,.88);color:#fff;padding:5px 8px;font-size:9px;font-weight:900;letter-spacing:.2px}
-      .dg-view-hint{position:absolute;z-index:5;right:9px;top:9px;border-radius:999px;background:rgba(255,255,255,.92);color:#d51e33;border:1px solid rgba(213,30,51,.18);padding:5px 8px;font-size:8px;font-weight:900}
-      .dg-photo{aspect-ratio:4/5!important;min-height:0!important;height:auto!important;border-radius:0!important;background:#ecebea!important}
-      .dg-photo img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important;object-position:center center!important}
-      .dg-side-photo{position:relative;aspect-ratio:16/9;background:#fafafa;overflow:hidden}
+
+      .dg-view-grid{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;width:100%!important;min-width:0!important}
+      .dg-view-card{position:relative;width:100%;min-width:0;border:1px solid #e0e5e7;border-radius:12px;background:#fafafa;overflow:hidden;box-sizing:border-box}
+      .dg-view-label{position:absolute;z-index:8;left:9px;top:9px;border-radius:999px;background:rgba(16,24,32,.88);color:#fff;padding:5px 8px;font-size:9px;font-weight:900;letter-spacing:.2px}
+      .dg-view-hint{position:absolute;z-index:8;right:9px;top:9px;border-radius:999px;background:rgba(255,255,255,.94);color:#d51e33;border:1px solid rgba(213,30,51,.18);padding:5px 8px;font-size:8px;font-weight:900}
+
+      .dg-front-stage{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:16/9;background:#fafafa;overflow:hidden;padding:10px;box-sizing:border-box}
+      .dg-front-stage .dg-photo{position:relative!important;width:min(46%,310px)!important;aspect-ratio:4/5!important;min-height:0!important;height:auto!important;border-radius:8px!important;background:#eeece9!important;overflow:hidden!important;flex:none!important}
+      .dg-front-stage .dg-photo img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important;object-position:center center!important}
+
+      .dg-side-photo{position:relative;width:100%;aspect-ratio:16/9;background:#fafafa;overflow:hidden}
       .dg-side-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;display:block}
-      .dg-hotspot{border:2px solid #f1263d!important;background:rgba(241,38,61,.025)!important;box-shadow:0 0 0 1px rgba(255,255,255,.9),0 2px 7px rgba(0,0,0,.16)!important}
-      .dg-hotspot b{left:-8px!important;top:-9px!important;width:19px!important;height:19px!important;font-size:9px!important;border-width:2px!important}
+
+      .dg-hotspot{position:absolute!important;border:2px solid #f1263d!important;background:rgba(241,38,61,.025)!important;box-shadow:0 0 0 1px rgba(255,255,255,.9),0 2px 7px rgba(0,0,0,.16)!important;border-radius:999px!important;pointer-events:none!important;box-sizing:border-box!important}
+      .dg-hotspot b{position:absolute!important;left:-8px!important;top:-9px!important;width:19px!important;height:19px!important;border-radius:50%!important;background:#f1263d!important;color:#fff!important;display:grid!important;place-items:center!important;font-size:9px!important;border:2px solid #fff!important;box-sizing:border-box!important}
       .dg-photo-wrap>small{display:block;margin:9px 2px 1px!important;line-height:1.5}
+
       @media(max-width:700px){
-        .dg-view-grid{grid-template-columns:1fr;gap:8px}
-        .dg-photo{aspect-ratio:4/5!important;min-height:0!important}
-        .dg-side-photo{aspect-ratio:16/9}
+        .dg-panel{grid-template-columns:1fr!important}
+        .dg-view-grid{grid-template-columns:1fr!important;gap:8px!important}
+        .dg-front-stage{aspect-ratio:16/10;padding:8px}
+        .dg-front-stage .dg-photo{width:min(55%,270px)!important}
+        .dg-side-photo{aspect-ratio:16/10}
         .dg-hotspot b{width:18px!important;height:18px!important;font-size:8px!important;left:-7px!important;top:-8px!important}
         .dg-mini-legend{gap:5px;margin-bottom:8px}
         .dg-mini-legend span{font-size:8px;padding:4px 7px}
@@ -83,30 +96,34 @@
     });
   }
 
-  function buildViews(wrap,photo,model){
+  function ensureLegend(wrap,anchor){
     let legend=wrap.querySelector('.dg-mini-legend');
-    if(!legend){
-      legend=document.createElement('div');
-      legend.className='dg-mini-legend';
-      legend.innerHTML=labels.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join('');
-      wrap.insertBefore(legend,photo);
-    }
+    if(legend)return legend;
+    legend=document.createElement('div');
+    legend.className='dg-mini-legend';
+    legend.innerHTML=labels.map((x,i)=>'<span><b>'+(i+1)+'</b>'+x+'</span>').join('');
+    wrap.insertBefore(legend,anchor);
+    return legend;
+  }
 
+  function buildViews(wrap,photo,model){
     let grid=wrap.querySelector('.dg-view-grid');
     if(grid)return grid;
+
+    ensureLegend(wrap,photo);
 
     grid=document.createElement('div');
     grid.className='dg-view-grid';
 
     const front=document.createElement('div');
     front.className='dg-view-card dg-front-card';
-    front.innerHTML='<span class="dg-view-label">전면</span><span class="dg-view-hint">1·3 확인</span>';
-    front.appendChild(photo);
+    front.innerHTML='<span class="dg-view-label">전면</span><span class="dg-view-hint">1 · 3 확인</span><div class="dg-front-stage"></div>';
+    front.querySelector('.dg-front-stage').appendChild(photo);
 
     const side=document.createElement('div');
     side.className='dg-view-card dg-side-card';
     const sp=sideLayouts[model];
-    side.innerHTML='<span class="dg-view-label">측면 · 3/4</span><span class="dg-view-hint">2·4 확인</span><div class="dg-side-photo"><img src="'+sideImages[model]+'" alt="'+model+' 측면 외관 Dark 적용 위치">'+hotspot(2,sp[2])+hotspot(4,sp[4])+'</div>';
+    side.innerHTML='<span class="dg-view-label">측면 · 3/4</span><span class="dg-view-hint">2 · 4 확인</span><div class="dg-side-photo"><img src="'+sideImages[model]+'" alt="'+model+' 측면 외관 Dark 적용 위치">'+hotspot(2,sp[2])+hotspot(4,sp[4])+'</div>';
 
     grid.appendChild(front);
     grid.appendChild(side);
@@ -131,7 +148,7 @@
       buildViews(wrap,photo,model);
 
       const note=wrap.querySelector(':scope > small');
-      if(note)note.textContent='※ 전면은 그릴·하단 범퍼, 측면은 윈도우 몰딩·휠을 나눠 표시했습니다. 사진은 Dark 적용 위치를 이해하기 위한 안내용입니다.';
+      if(note)note.textContent='※ 전면에서는 그릴·하단 범퍼, 측면에서는 윈도우 몰딩·휠을 각각 확인할 수 있습니다.';
     } finally {busy=false;}
   }
 
