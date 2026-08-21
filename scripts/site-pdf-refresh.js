@@ -10,12 +10,12 @@ XC60:{year:'MY26',power:'B5 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'Plus�
 ['B5 AWD ULTRA DARK','7,330만 원','스타일',['Ultra Bright와 주요 편의·주행 사양 동일','Bowers & Wilkins · 마사지/통풍 · 액티브 에어 서스펜션 기본','Dark 외관 테마 · Bright와 동일 가격']],
 ['T8 AWD ULTRA BRIGHT','9,120만 원','PHEV',['외부 충전 가능한 T8 AWD 플러그인 하이브리드','1회 충전 시 순수 전기모드 최대 61km','Ultra급 프리미엄 사양 · Bright 단일 외관 테마']]
 ]},
-XC90:{year:'MY26',power:'B6 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'3열과 넉넉한 공간이 필요한 7인승 SUV',trims:[
-['B6 AWD PLUS BRIGHT','8,820만 원','7인승',['B6 AWD 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
-['B6 AWD ULTRA BRIGHT','9,990만 원','추천',['B6 AWD','ULTRA 구성','Bright 외관 테마']],
-['B6 AWD ULTRA DARK','9,990만 원','스타일',['B6 AWD','ULTRA 구성','Dark 외관 테마']],
-['T8 AWD ULTRA BRIGHT','1억 1,620만 원','PHEV',['T8 AWD 플러그인 하이브리드','ULTRA 구성','Bright 외관 테마']],
-['T8 AWD ULTRA DARK','1억 1,620만 원','PHEV',['T8 AWD 플러그인 하이브리드','ULTRA 구성','Dark 외관 테마']]
+XC90:{year:'MY26',power:'B6 AWD Mild Hybrid / T8 AWD Plug-in Hybrid',note:'Plus는 실속형 7인승, B6 Ultra는 승차감·오디오·시트 강화, T8 Ultra는 462마력 PHEV',trims:[
+['B6 AWD PLUS BRIGHT','8,820만 원','실속형',['300마력 B6 AWD · 가솔린 기반 48V 마일드 하이브리드','파노라마 글라스 루프 · 파일럿 어시스트 · 매트릭스 디자인 LED 기본','7인승 플래그십의 핵심 사양을 갖춘 Plus · Bright 외관 테마']],
+['B6 AWD ULTRA BRIGHT','9,990만 원','추천',['Plus 대비 +1,170만 원 · Bowers & Wilkins 하이파이 오디오','앞좌석 전동 사이드 서포트 · 마사지 · 통풍 나파 가죽 시트','액티브 에어 서스펜션 기본 · Bright 외관 테마']],
+['B6 AWD ULTRA DARK','9,990만 원','스타일',['Ultra Bright와 주요 편의·주행 사양 동일','Bowers & Wilkins · 마사지/통풍 · 액티브 에어 서스펜션 기본','Dark 외관 테마 · Bright와 동일 가격']],
+['T8 AWD ULTRA BRIGHT','1억 1,620만 원','PHEV',['462마력 T8 AWD 플러그인 하이브리드 · 외부 충전 가능','1회 충전 시 순수 전기모드 최대 56km','Ultra급 프리미엄 사양 · Bright 외관 테마']],
+['T8 AWD ULTRA DARK','1억 1,620만 원','PHEV',['462마력 T8 AWD 플러그인 하이브리드 · 외부 충전 가능','1회 충전 시 순수 전기모드 최대 56km','Ultra급 프리미엄 사양 · Dark 외관 테마']]
 ]},
 S90:{year:'MY26',power:'B5 Mild Hybrid / T8 AWD Plug-in Hybrid',note:'안락함과 뒷좌석 편안함을 중시하는 플래그십 세단',trims:[
 ['B5 PLUS BRIGHT','6,530만 원','실속형',['B5 마일드 하이브리드','PLUS 구성','Bright 외관 테마']],
