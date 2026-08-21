@@ -4,6 +4,7 @@
    Dark guide now shows front + side views on PC and mobile, including S90.
    Hero title layout is stabilized across desktop and mobile widths.
    Owner internal-test browsers are opted out of analytics after one-time activation.
+   2026-08-22: customer-facing exterior/interior color guide adds official real interior visuals.
 */
 (function(){
   function installInternalTestFilter(){
@@ -47,6 +48,7 @@
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
+    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822a"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
@@ -54,7 +56,9 @@
   load('scripts/site-pdf-refresh-core.js?v=20260821audit1',function(){
     load('scripts/site-dark-guide.js?v=20260821dark5',function(){
       load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5',function(){
-        load('scripts/site-copy-fix-20260821.js?v=20260821copy1',loadAuditFixes);
+        load('scripts/site-copy-fix-20260821.js?v=20260821copy1',function(){
+          load('scripts/site-color-interior-guide-20260822.js?v=20260822a',loadAuditFixes);
+        });
       });
     });
   });
