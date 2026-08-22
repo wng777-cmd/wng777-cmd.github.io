@@ -34,7 +34,7 @@
     if(document.querySelector('link[data-interior-guide-css]')) return;
     var l=document.createElement('link');
     l.rel='stylesheet';
-    l.href='scripts/site-interior-guide-layout-20260822.css?v=20260822h';
+    l.href='scripts/site-interior-guide-layout-20260822.css?v=20260822j';
     l.setAttribute('data-interior-guide-css','1');
     document.head.appendChild(l);
   }
@@ -57,7 +57,7 @@
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
-    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822h"><\/script>');
+    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822j"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
@@ -66,7 +66,7 @@
     load('scripts/site-dark-guide.js?v=20260821dark5',function(){
       load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5',function(){
         load('scripts/site-copy-fix-20260821.js?v=20260821copy1',function(){
-          load('scripts/site-color-interior-guide-20260822.js?v=20260822h',loadAuditFixes);
+          load('scripts/site-color-interior-guide-20260822.js?v=20260822j',loadAuditFixes);
         });
       });
     });
