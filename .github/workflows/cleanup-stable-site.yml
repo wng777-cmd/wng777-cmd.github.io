@@ -1,0 +1,37 @@
+name: Cleanup stable site architecture
+on:
+  push:
+    branches: [stabilize-20260822]
+    paths: ['.github/workflows/cleanup-stable-site.yml']
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove retired patches and refresh browser cache keys
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html'); s=p.read_text(encoding='utf-8')
+          s=s.replace('scripts/site-pdf-refresh.js?v=20260821final1','scripts/site-pdf-refresh.js?v=20260822stable2')
+          s=s.replace('scripts/site-interior-ui-v1.js?v=20260820interior3','scripts/site-interior-ui-v1.js?v=20260822analytics2')
+          p.write_text(s,encoding='utf-8')
+          PY
+          rm -f scripts/site-color-interior-guide-20260822.js
+          rm -f scripts/site-interior-xc90-hq-20260822.js
+          rm -f scripts/site-interior-guide-layout-20260822.css
+          rm -f .github/workflows/interior-guide-qa.yml
+          rm -f .github/workflows/xc90-interior-hq-qa.yml
+          rm -f .github/workflows/build-stable-interior-atlas.yml
+          rm -rf tmp-interior-hi
+          rm -f .github/workflows/cleanup-stable-site.yml
+      - name: Commit cleanup
+        run: |
+          git config user.name "site-stabilizer"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Consolidate interior architecture and remove retired patches [skip ci]"
+          git pull --rebase origin stabilize-20260822
+          git push origin stabilize-20260822
