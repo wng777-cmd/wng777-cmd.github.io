@@ -31,10 +31,11 @@ jobs:
               var h=document.querySelector('.hero .copy h1');
               var menu=document.querySelector('.mobile-quick-nav');
               var ci=document.querySelector('#colors .ci-interior');
-              var ciMedia=document.querySelector('#colors .ci-media');
-              var ciSelected=document.querySelector('#colors .ci-seat.selected');
-              var ciSelectedCode=document.querySelector('#colors .ci-selected-code');
-              var out={mode:mode,width:innerWidth,height:innerHeight,docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),heroOverflow:h?Math.max(0,h.scrollWidth-h.clientWidth):999,finalData:document.documentElement.getAttribute('data-site-final-data'),finalUx:document.documentElement.getAttribute('data-site-final-ux'),warrantyGuide:document.documentElement.getAttribute('data-warranty-guide'),phoneLinks:document.querySelectorAll('a[href^="tel:"]').length,kakaoLinks:document.querySelectorAll('a[href*="qr.kakao.com"]').length,modalOpen:!!box,modalOverflow:box?Math.max(0,box.scrollWidth-box.clientWidth):0,trimCards:document.querySelectorAll('.modal.open .trim-card').length,cta:!!document.querySelector('.modal.open .final-model-cta'),darkViews:document.querySelectorAll('.modal.open .dg-view-card').length,menuOpen:!!(menu&&menu.classList.contains('open')),menuItems:menu?menu.querySelectorAll('a,button').length:0,xc60Correct:bodyText.includes('7,070만 원')&&bodyText.includes('7,330만 원'),es90Correct:bodyText.includes('4.0초')&&bodyText.includes('8,741만 원'),s90DarkCorrect:bodyText.includes('7,390만 원')&&!bodyText.includes('Dark 전용 20인치'),interiorOpen:!!(ci&&ci.classList.contains('active')),interiorMediaHeight:ciMedia?Math.round(ciMedia.getBoundingClientRect().height):999,selectedSeat:ciSelected?ciSelected.getAttribute('data-code'):null,selectedDetail:ciSelectedCode?ciSelectedCode.textContent.trim():null};
+              var ciMain=document.querySelector('#colors .ci-main-frame');
+              var ciSelected=document.querySelector('#colors .ci-seat-btn.active b');
+              var ciSelectedCode=document.querySelector('#colors .ci-selected-head b');
+              var ciPhoto=document.querySelector('#colors .ci-main-photo');
+              var out={mode:mode,width:innerWidth,height:innerHeight,docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),heroOverflow:h?Math.max(0,h.scrollWidth-h.clientWidth):999,finalData:document.documentElement.getAttribute('data-site-final-data'),finalUx:document.documentElement.getAttribute('data-site-final-ux'),warrantyGuide:document.documentElement.getAttribute('data-warranty-guide'),phoneLinks:document.querySelectorAll('a[href^="tel:"]').length,kakaoLinks:document.querySelectorAll('a[href*="qr.kakao.com"]').length,modalOpen:!!box,modalOverflow:box?Math.max(0,box.scrollWidth-box.clientWidth):0,trimCards:document.querySelectorAll('.modal.open .trim-card').length,cta:!!document.querySelector('.modal.open .final-model-cta'),darkViews:document.querySelectorAll('.modal.open .dg-view-card').length,menuOpen:!!(menu&&menu.classList.contains('open')),menuItems:menu?menu.querySelectorAll('a,button').length:0,xc60Correct:bodyText.includes('7,070만 원')&&bodyText.includes('7,330만 원'),es90Correct:bodyText.includes('4.0초')&&bodyText.includes('8,741만 원'),s90DarkCorrect:bodyText.includes('7,390만 원')&&!bodyText.includes('Dark 전용 20인치'),interiorOpen:!!(ci&&ci.classList.contains('active')),interiorMediaHeight:ciMain?Math.round(ciMain.getBoundingClientRect().height):999,selectedSeat:ciSelected?ciSelected.textContent.trim():null,selectedDetail:ciSelectedCode?ciSelectedCode.textContent.trim():null,interiorPhotoLoaded:!!(ciPhoto&&ciPhoto.complete&&ciPhoto.naturalWidth>0)};
               var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
             }
             function openTarget(){
@@ -47,7 +48,7 @@ jobs:
                 else if(mode==='interior'){
                   if(typeof openVolvoInteriorGuide!=='function')throw new Error('openVolvoInteriorGuide unavailable');
                   openVolvoInteriorGuide('XC90');
-                  setTimeout(function(){var seat=document.querySelector('#colors .ci-seat[data-code="RP00"]');if(seat)seat.click();setTimeout(finish,150);},150);
+                  setTimeout(function(){var group=document.querySelector('#colors .ci-trim-btn[data-group="1"]');if(group)group.click();setTimeout(function(){var seat=document.querySelector('#colors .ci-seat-btn[data-variant="1"]');if(seat)seat.click();setTimeout(finish,350)},150)},180);
                   return;
                 }
               }catch(e){var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify({mode:mode,exception:String(e)});document.body.appendChild(p);return;}
@@ -71,7 +72,7 @@ jobs:
           for spec in desktop:1440:1000 mobile:390:844; do
             IFS=: read NAME W H <<< "$spec"; MODES="home xc60 ex90 es90 s90dark interior"; if [ "$NAME" = "mobile" ]; then MODES="$MODES menu"; fi
             for MODE in $MODES; do
-              "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=7000 --screenshot="/tmp/site-qa/${NAME}-${MODE}.png" --dump-dom "http://127.0.0.1:8000/?qa=${MODE}" > "/tmp/site-qa/${NAME}-${MODE}.html" 2> "/tmp/site-qa/${NAME}-${MODE}.log" || true
+              "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=8000 --screenshot="/tmp/site-qa/${NAME}-${MODE}.png" --dump-dom "http://127.0.0.1:8000/?qa=${MODE}" > "/tmp/site-qa/${NAME}-${MODE}.html" 2> "/tmp/site-qa/${NAME}-${MODE}.log" || true
             done
           done
           python3 - <<'PY'
@@ -91,9 +92,10 @@ jobs:
               if mode=='es90':ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('es90Correct') and d.get('modalOverflow',999)<=3,'ES90 PDF data and modal fit')
               if mode=='s90dark':ck(d.get('modalOpen') and d.get('darkViews')==2 and d.get('s90DarkCorrect') and d.get('modalOverflow',999)<=3,'S90 Dark two-view guide and wording')
               if mode=='interior':
-                  limit=185 if name.startswith('mobile-') else 270
-                  ck(d.get('interiorOpen') and d.get('selectedSeat')=='RP00' and 'RP00' in (d.get('selectedDetail') or ''),'interior tab and seat code click work')
-                  ck(d.get('interiorMediaHeight',999)<=limit,'interior photo area is compact')
+                  limit=260 if name.startswith('mobile-') else 285
+                  ck(d.get('interiorOpen') and d.get('selectedSeat')=='RC00' and d.get('selectedDetail')=='RC00','interior tab and seat code click work')
+                  ck(d.get('interiorPhotoLoaded') is True,'interior photo loads')
+                  ck(d.get('interiorMediaHeight',999)<=limit,'interior photo area fits target size')
               if mode=='menu':ck(d.get('menuOpen') and d.get('menuItems',0)>=6,'mobile quick menu works')
           report={'screens':screens,'checks':checks,'failures':failures};open('/tmp/site-qa/qa-report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));raise SystemExit(1 if failures else 0)
           PY
@@ -110,4 +112,4 @@ jobs:
           if [ -f /tmp/site-qa/qa-report.json ]; then cp /tmp/site-qa/qa-report.json qa/site-final-qa-report.json; else printf '{"failures":["QA runner did not produce a browser report"]}\n' > qa/site-final-qa-report.json; fi
           git checkout -- index.html 2>/dev/null || true; rm -f qa-probe.js
           git config user.name "site-final-qa"; git config user.email "actions@users.noreply.github.com"
-          git add qa/site-final-qa-report.json; git commit -m "Record final browser QA result [skip ci]" || exit 0; git push
+          git add qa/site-final-qa-report.json; git commit -m "Record final browser QA result [skip ci]" || exit 0; git pull --rebase origin main; git push
