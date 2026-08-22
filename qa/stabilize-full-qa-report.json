@@ -10,7 +10,7 @@
           "label": "all site functions ready"
         },
         {
-          "ok": false,
+          "ok": true,
           "label": "stable loader complete"
         },
         {
@@ -838,9 +838,7 @@
           "label": "46 interior combinations"
         }
       ],
-      "failures": [
-        "stable loader complete"
-      ]
+      "failures": []
     },
     "mobile": {
       "width": 500,
@@ -852,7 +850,7 @@
           "label": "all site functions ready"
         },
         {
-          "ok": false,
+          "ok": true,
           "label": "stable loader complete"
         },
         {
@@ -1684,13 +1682,8 @@
           "label": "mobile menu"
         }
       ],
-      "failures": [
-        "stable loader complete"
-      ]
+      "failures": []
     }
   },
-  "failures": [
-    "desktop: stable loader complete",
-    "mobile: stable loader complete"
-  ]
+  "failures": []
 }
