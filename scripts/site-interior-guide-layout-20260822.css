@@ -1,0 +1,13 @@
+/* Compact photo placement for the customer-facing interior guide. */
+#colors .ci-photo-title,
+#colors .ci-photo-frame,
+#colors .ci-photo-caption,
+#colors .ci-selected,
+#colors .ci-note{width:min(100%,640px)}
+@media(max-width:700px){
+  #colors .ci-photo-title,
+  #colors .ci-photo-frame,
+  #colors .ci-photo-caption,
+  #colors .ci-selected,
+  #colors .ci-note{width:100%}
+}
