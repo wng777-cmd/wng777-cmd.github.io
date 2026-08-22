@@ -23,7 +23,7 @@
     addScript('scripts/site-internal-test-filter-20260821.js?v=20260821internal1','data-internal-test-filter').catch(function(){});
     addCss('scripts/site-audit-fixes-20260821.css?v=20260821audit1','data-site-audit-css');
     addCss('scripts/site-hero-title-fix-20260821.css?v=20260821hero1','data-hero-title-css');
-    addCss('scripts/site-interior-stable-20260822.css?v=20260822stable3','data-interior-stable-css');
+    addCss('scripts/site-interior-stable-20260822.css?v=20260822stable4','data-interior-stable-css');
   }
   function loadAuditFixes(){
     if(document.querySelector('script[data-site-audit-fixes]'))return Promise.resolve();
@@ -35,9 +35,8 @@
       .then(function(){return addScript('scripts/site-dark-guide.js?v=20260821dark5','data-dark-guide');})
       .then(function(){return addScript('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5','data-dark-guide-refine');})
       .then(function(){return addScript('scripts/site-copy-fix-20260821.js?v=20260821copy1','data-copy-fix');})
-      .then(function(){return addScript('scripts/site-color-interior-stable-20260822.js?v=20260822stable3','data-interior-stable-js');})
-      .then(loadAuditFixes)
-      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260822-1');})
+      .then(function(){return addScript('scripts/site-color-interior-stable-20260822.js?v=20260822stable4','data-interior-stable-js');})
+      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260822-1');return loadAuditFixes();})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
