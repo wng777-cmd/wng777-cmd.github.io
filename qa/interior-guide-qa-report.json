@@ -2,7 +2,7 @@
   "screens": {
     "desktop": {
       "width": 1440,
-      "docOverflow": 3087,
+      "docOverflow": 0,
       "interiorOpen": true,
       "selectedSeat": "RC00",
       "photoCode": null,
@@ -15,7 +15,7 @@
     },
     "mobile": {
       "width": 500,
-      "docOverflow": 1106,
+      "docOverflow": 0,
       "interiorOpen": true,
       "selectedSeat": "RC00",
       "photoCode": null,
@@ -32,13 +32,11 @@
     "desktop actual atlas changes",
     "desktop correct image asset",
     "desktop image loads",
-    "desktop no horizontal overflow",
     "desktop photo is compact",
     "mobile photo follows RC00",
     "mobile actual atlas changes",
     "mobile correct image asset",
     "mobile image loads",
-    "mobile no horizontal overflow",
     "mobile photo is compact"
   ]
 }
