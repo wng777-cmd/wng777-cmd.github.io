@@ -5,38 +5,85 @@
       "docOverflow": 0,
       "interiorOpen": true,
       "selectedSeat": "RC00",
-      "photoCode": null,
-      "photoKey": null,
-      "photoSrc": null,
-      "photoLoaded": false,
-      "photoHeight": 999,
-      "initialPhotoKey": null,
-      "initialPhotoSrc": null
+      "photoCode": "RC00",
+      "mainKey": "XC90-1-RC00-7",
+      "detailKey": "XC90-1-RC00-7",
+      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822j",
+      "mainLoaded": true,
+      "detailLoaded": true,
+      "mainFrame": {
+        "x": 371,
+        "y": 2165,
+        "w": 510,
+        "h": 266,
+        "bottom": 2431
+      },
+      "detailFrame": {
+        "x": 891,
+        "y": 2165,
+        "w": 178,
+        "h": 208,
+        "bottom": 2373
+      },
+      "visual": {
+        "x": 360,
+        "y": 2154,
+        "w": 720,
+        "h": 404,
+        "bottom": 2558
+      },
+      "side": {
+        "x": 891,
+        "y": 2165,
+        "w": 178,
+        "h": 382,
+        "bottom": 2547
+      },
+      "initialPhotoKey": "XC90-0-RP00-4",
+      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822j"
     },
     "mobile": {
       "width": 500,
       "docOverflow": 0,
       "interiorOpen": true,
       "selectedSeat": "RC00",
-      "photoCode": null,
-      "photoKey": null,
-      "photoSrc": null,
-      "photoLoaded": false,
-      "photoHeight": 999,
-      "initialPhotoKey": null,
-      "initialPhotoSrc": null
+      "photoCode": "RC00",
+      "mainKey": "XC90-1-RC00-7",
+      "detailKey": "XC90-1-RC00-7",
+      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822j",
+      "mainLoaded": true,
+      "detailLoaded": true,
+      "mainFrame": {
+        "x": 23,
+        "y": 4044,
+        "w": 454,
+        "h": 237,
+        "bottom": 4281
+      },
+      "detailFrame": {
+        "x": 23,
+        "y": 4289,
+        "w": 92,
+        "h": 108,
+        "bottom": 4396
+      },
+      "visual": {
+        "x": 14,
+        "y": 4035,
+        "w": 472,
+        "h": 393,
+        "bottom": 4428
+      },
+      "side": {
+        "x": 23,
+        "y": 4289,
+        "w": 454,
+        "h": 130,
+        "bottom": 4419
+      },
+      "initialPhotoKey": "XC90-0-RP00-4",
+      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822j"
     }
   },
-  "failures": [
-    "desktop photo follows RC00",
-    "desktop actual atlas changes",
-    "desktop correct image asset",
-    "desktop image loads",
-    "desktop photo is compact",
-    "mobile photo follows RC00",
-    "mobile actual atlas changes",
-    "mobile correct image asset",
-    "mobile image loads",
-    "mobile photo is compact"
-  ]
+  "failures": []
 }
