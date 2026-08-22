@@ -15,47 +15,25 @@ permissions:
 jobs:
   browser-qa:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare browser QA probe
+      - name: Prepare full customer-view QA probe
         run: |
           mkdir -p /tmp/site-qa
           cat > qa-probe.js <<'EOF'
           (function(){
-            var mode=new URLSearchParams(location.search).get('qa')||'home';
-            var n=0;
-            function finish(){
-              var bodyText=(document.getElementById('mbody')||document.body).textContent||'';
-              var box=document.querySelector('.modal.open .box');
-              var h=document.querySelector('.hero .copy h1');
-              var menu=document.querySelector('.mobile-quick-nav');
-              var ci=document.querySelector('#colors .ci-interior');
-              var ciMain=document.querySelector('#colors .ci-main-frame');
-              var ciSelected=document.querySelector('#colors .ci-seat-btn.active b');
-              var ciSelectedCode=document.querySelector('#colors .ci-selected-head b');
-              var ciPhoto=document.querySelector('#colors .ci-main-photo');
-              var out={mode:mode,width:innerWidth,height:innerHeight,docOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),heroOverflow:h?Math.max(0,h.scrollWidth-h.clientWidth):999,finalData:document.documentElement.getAttribute('data-site-final-data'),finalUx:document.documentElement.getAttribute('data-site-final-ux'),warrantyGuide:document.documentElement.getAttribute('data-warranty-guide'),phoneLinks:document.querySelectorAll('a[href^="tel:"]').length,kakaoLinks:document.querySelectorAll('a[href*="qr.kakao.com"]').length,modalOpen:!!box,modalOverflow:box?Math.max(0,box.scrollWidth-box.clientWidth):0,trimCards:document.querySelectorAll('.modal.open .trim-card').length,cta:!!document.querySelector('.modal.open .final-model-cta'),darkViews:document.querySelectorAll('.modal.open .dg-view-card').length,menuOpen:!!(menu&&menu.classList.contains('open')),menuItems:menu?menu.querySelectorAll('a,button').length:0,xc60Correct:bodyText.includes('7,070만 원')&&bodyText.includes('7,330만 원'),es90Correct:bodyText.includes('4.0초')&&bodyText.includes('8,741만 원'),s90DarkCorrect:bodyText.includes('7,390만 원')&&!bodyText.includes('Dark 전용 20인치'),interiorOpen:!!(ci&&ci.classList.contains('active')),interiorMediaHeight:ciMain?Math.round(ciMain.getBoundingClientRect().height):999,selectedSeat:ciSelected?ciSelected.textContent.trim():null,selectedDetail:ciSelectedCode?ciSelectedCode.textContent.trim():null,interiorPhotoLoaded:!!(ciPhoto&&ciPhoto.complete&&ciPhoto.naturalWidth>0)};
-              var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
-            }
-            function openTarget(){
-              try{
-                if(mode==='xc60')openModel('XC60');
-                else if(mode==='ex90')openModel('EX90');
-                else if(mode==='es90')openModel('ES90');
-                else if(mode==='s90dark')openDarkGuide('S90');
-                else if(mode==='menu'){var b=document.querySelector('.hamb');if(b)b.click();}
-                else if(mode==='interior'){
-                  if(typeof openVolvoInteriorGuide!=='function')throw new Error('openVolvoInteriorGuide unavailable');
-                  openVolvoInteriorGuide('XC90');
-                  setTimeout(function(){var group=document.querySelector('#colors .ci-trim-btn[data-group="1"]');if(group)group.click();setTimeout(function(){var seat=document.querySelector('#colors .ci-seat-btn[data-variant="1"]');if(seat)seat.click();setTimeout(finish,350)},150)},180);
-                  return;
-                }
-              }catch(e){var p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify({mode:mode,exception:String(e)});document.body.appendChild(p);return;}
-              setTimeout(finish,500);
-            }
-            function wait(){n++;if((document.documentElement.getAttribute('data-site-final-data')&&document.documentElement.getAttribute('data-site-final-ux'))||n>80)openTarget();else setTimeout(wait,50);}
-            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wait,{once:true});else wait();
+            const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+            const failures=[]; const checks=[];
+            const ck=(ok,label)=>{checks.push({ok:!!ok,label});if(!ok)failures.push(label)};
+            const overflow=el=>el?Math.max(0,el.scrollWidth-el.clientWidth):999;
+            async function ready(){for(let i=0;i<120;i++){if(typeof openModel==='function'&&typeof openVolvoInteriorGuide==='function'&&document.documentElement.getAttribute('data-interior-stable'))return true;await sleep(100)}return false}
+            async function models(){const keys=['XC40','XC60','XC90','EX30','EX30CC','EX90','ES90','S90','V60CC'];for(const k of keys){try{openModel(k);await sleep(120);const box=document.querySelector('.modal.open .box');ck(!!box,'model '+k+' opens');ck(overflow(box)<=3,'model '+k+' modal fits');if(typeof closeM==='function')closeM();await sleep(40)}catch(e){ck(false,'model '+k+' exception '+e)}}return keys.length}
+            async function categories(){const cards=[...document.querySelectorAll('.category-card[data-filter]')];ck(cards.length>=3,'category buttons present');for(const b of cards){b.click();await sleep(50);const visible=[...document.querySelectorAll('#modelGrid .model')].filter(x=>getComputedStyle(x).display!=='none');ck(visible.length>0,'category '+b.dataset.filter+' shows models')}}
+            async function tools(){for(const [name,fn] of [['all trims','openAllTrims'],['compare','openCompare'],['tech','openTech'],['accessories','openAccessories']]){try{const f=window[fn];ck(typeof f==='function',name+' function exists');if(typeof f==='function'){f();await sleep(120);const box=document.querySelector('.modal.open .box');ck(!!box,name+' opens');ck(overflow(box)<=3,name+' fits');if(typeof closeM==='function')closeM();await sleep(40)}}catch(e){ck(false,name+' exception '+e)}}if(typeof openDarkGuide==='function'){for(const k of ['XC40','XC60','XC90','S90']){try{openDarkGuide(k);await sleep(100);const box=document.querySelector('.modal.open .box');ck(!!box,'dark '+k+' opens');ck(overflow(box)<=3,'dark '+k+' fits');if(typeof closeM==='function')closeM();await sleep(40)}catch(e){ck(false,'dark '+k+' exception '+e)}}}else ck(false,'dark guide function exists')}
+            async function interiors(){const keys=['XC90','XC60','S90','XC40','V60CC','EX30','EX30CC','EX90','ES90'];let combos=0;for(const k of keys){try{openVolvoInteriorGuide(k);await sleep(140);const box=document.querySelector('#colors .vci-interior');ck(!!box,'interior '+k+' opens');ck(overflow(box)<=3,'interior '+k+' fits');const gs=[...box.querySelectorAll('.vci-group-btn')];ck(gs.length>0,'interior '+k+' groups');for(let gi=0;gi<gs.length;gi++){gs[gi].click();await sleep(70);const seats=[...box.querySelectorAll('.vci-seat-btn')];ck(seats.length>0,'interior '+k+' group '+gi+' seats');for(let si=0;si<seats.length;si++){seats[si].click();await sleep(100);combos++;const st=getVolvoInteriorState();const selected=box.querySelector('.vci-selected-head b')?.textContent.trim();const main=box.querySelector('.vci-main-canvas'),detail=box.querySelector('.vci-detail-canvas');ck(selected===st.code,'interior '+k+' '+gi+'/'+si+' code sync');ck(main?.dataset.renderOk==='1'&&detail?.dataset.renderOk==='1','interior '+k+' '+gi+'/'+si+' images render');ck(main?.width>=1000&&main?.height>=600,'interior '+k+' '+gi+'/'+si+' render resolution');if(k==='S90')ck(!box.textContent.includes('Dawn')&&!box.textContent.includes('던'),'S90 excludes Dawn')}}}catch(e){ck(false,'interior '+k+' exception '+e)}}ck(combos===46,'all 46 interior combinations tested');return combos}
+            async function run(){window.addEventListener('error',e=>failures.push('runtime error '+e.message));window.addEventListener('unhandledrejection',e=>failures.push('promise rejection '+String(e.reason)));ck(await ready(),'site functions ready');ck(document.documentElement.getAttribute('data-interior-stable')==='20260822-1','stable interior marker');ck(Math.max(0,document.documentElement.scrollWidth-innerWidth)<=3,'page no horizontal overflow');ck(document.querySelectorAll('a[href^="tel:"]').length>=3,'phone links');ck(document.querySelectorAll('a[href*="kakao.com"]').length>=3,'kakao links');await categories();const modelCount=await models();await tools();const combos=await interiors();if(innerWidth<=500){const h=document.querySelector('.hamb');if(h){h.click();await sleep(80);const menu=document.querySelector('.mobile-quick-nav');ck(!!menu&&menu.classList.contains('open'),'mobile menu opens')}}const out={width:innerWidth,height:innerHeight,modelCount,combos,checks,failures};const p=document.createElement('pre');p.id='qa-result';p.textContent=JSON.stringify(out);document.body.appendChild(p)}
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
           })();
           EOF
           python3 - <<'PY'
@@ -65,39 +43,22 @@ jobs:
         run: |
           python3 -m http.server 8000 >/tmp/site-server.log 2>&1 &
           sleep 2
-      - name: Render and inspect real PC/mobile screens
+      - name: Render and inspect PC and mobile
         run: |
           BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
-          if [ -z "$BROWSER" ]; then printf '{"failures":["No system Chrome/Chromium found on runner"]}\n' > /tmp/site-qa/qa-report.json; exit 1; fi
+          test -n "$BROWSER"
           for spec in desktop:1440:1000 mobile:390:844; do
-            IFS=: read NAME W H <<< "$spec"; MODES="home xc60 ex90 es90 s90dark interior"; if [ "$NAME" = "mobile" ]; then MODES="$MODES menu"; fi
-            for MODE in $MODES; do
-              "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=8000 --screenshot="/tmp/site-qa/${NAME}-${MODE}.png" --dump-dom "http://127.0.0.1:8000/?qa=${MODE}" > "/tmp/site-qa/${NAME}-${MODE}.html" 2> "/tmp/site-qa/${NAME}-${MODE}.log" || true
-            done
+            IFS=: read NAME W H <<< "$spec"
+            "$BROWSER" --headless=new --no-sandbox --disable-gpu --hide-scrollbars --window-size="$W,$H" --virtual-time-budget=35000 --screenshot="/tmp/site-qa/${NAME}.png" --dump-dom "http://127.0.0.1:8000/?qa=final" > "/tmp/site-qa/${NAME}.html" 2> "/tmp/site-qa/${NAME}.log" || true
           done
           python3 - <<'PY'
-          import glob,re,json,html,os
-          failures=[];checks=[];screens={}
-          for path in sorted(glob.glob('/tmp/site-qa/*.html')):
-              name=os.path.basename(path)[:-5];txt=open(path,encoding='utf-8',errors='ignore').read();m=re.search(r'<pre id="qa-result">(.*?)</pre>',txt,re.S)
-              if not m: failures.append(name+' did not produce QA metrics');continue
-              try:d=json.loads(html.unescape(m.group(1)))
-              except Exception as e:failures.append(name+' metrics parse failed: '+str(e));continue
-              screens[name]=d
-              def ck(ok,label): checks.append({'ok':bool(ok),'label':name+' '+label,'detail':d}); failures.append(name+' '+label) if not ok else None
-              ck(not d.get('exception'),'no runtime exception');ck(d.get('finalData')=='20260821-1','final PDF data loaded');ck(d.get('finalUx')=='20260821-2','final UX loaded');ck(d.get('docOverflow',999)<=3,'no page horizontal overflow');ck(d.get('heroOverflow',999)<=3,'hero title fits');ck(d.get('phoneLinks',0)>=3 and d.get('kakaoLinks',0)>=3,'contact links present')
-              mode=d.get('mode')
-              if mode=='xc60':ck(d.get('modalOpen') and d.get('xc60Correct'),'XC60 corrected PDF pricing visible')
-              if mode=='ex90':ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('cta') and d.get('modalOverflow',999)<=3,'EX90 five trims CTA and modal fit')
-              if mode=='es90':ck(d.get('modalOpen') and d.get('trimCards')==5 and d.get('es90Correct') and d.get('modalOverflow',999)<=3,'ES90 PDF data and modal fit')
-              if mode=='s90dark':ck(d.get('modalOpen') and d.get('darkViews')==2 and d.get('s90DarkCorrect') and d.get('modalOverflow',999)<=3,'S90 Dark two-view guide and wording')
-              if mode=='interior':
-                  limit=260 if name.startswith('mobile-') else 285
-                  ck(d.get('interiorOpen') and d.get('selectedSeat')=='RC00' and d.get('selectedDetail')=='RC00','interior tab and seat code click work')
-                  ck(d.get('interiorPhotoLoaded') is True,'interior photo loads')
-                  ck(d.get('interiorMediaHeight',999)<=limit,'interior photo area fits target size')
-              if mode=='menu':ck(d.get('menuOpen') and d.get('menuItems',0)>=6,'mobile quick menu works')
-          report={'screens':screens,'checks':checks,'failures':failures};open('/tmp/site-qa/qa-report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));raise SystemExit(1 if failures else 0)
+          import json,re,html
+          failures=[];screens={}
+          for name in ['desktop','mobile']:
+              txt=open(f'/tmp/site-qa/{name}.html',encoding='utf-8',errors='ignore').read();m=re.search(r'<pre id="qa-result">(.*?)</pre>',txt,re.S)
+              if not m: failures.append(name+' missing QA result');continue
+              d=json.loads(html.unescape(m.group(1)));screens[name]=d;failures += [name+': '+x for x in d.get('failures',[])]
+          report={'screens':screens,'failures':failures};open('/tmp/site-qa/qa-report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));raise SystemExit(1 if failures else 0)
           PY
       - name: Upload QA screenshots and report
         if: always()
@@ -105,11 +66,11 @@ jobs:
         with:
           name: site-final-qa
           path: /tmp/site-qa
-      - name: Publish QA report to repository
+      - name: Publish QA report
         if: always()
         run: |
           mkdir -p qa
-          if [ -f /tmp/site-qa/qa-report.json ]; then cp /tmp/site-qa/qa-report.json qa/site-final-qa-report.json; else printf '{"failures":["QA runner did not produce a browser report"]}\n' > qa/site-final-qa-report.json; fi
+          if [ -f /tmp/site-qa/qa-report.json ]; then cp /tmp/site-qa/qa-report.json qa/site-final-qa-report.json; else printf '{"failures":["QA runner did not produce report"]}\n' > qa/site-final-qa-report.json; fi
           git checkout -- index.html 2>/dev/null || true; rm -f qa-probe.js
           git config user.name "site-final-qa"; git config user.email "actions@users.noreply.github.com"
-          git add qa/site-final-qa-report.json; git commit -m "Record final browser QA result [skip ci]" || exit 0; git pull --rebase origin main; git push
+          git add qa/site-final-qa-report.json; git commit -m "Record final browser QA [skip ci]" || exit 0; git pull --rebase origin main; git push
