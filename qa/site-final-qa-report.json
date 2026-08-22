@@ -22,9 +22,10 @@
       "es90Correct": true,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "desktop-ex90": {
       "mode": "ex90",
@@ -48,9 +49,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "desktop-home": {
       "mode": "home",
@@ -74,9 +76,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "desktop-interior": {
       "mode": "interior",
@@ -100,9 +103,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": true,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 266,
+      "selectedSeat": "RC00",
+      "selectedDetail": "RC00",
+      "interiorPhotoLoaded": true
     },
     "desktop-s90dark": {
       "mode": "s90dark",
@@ -126,9 +130,10 @@
       "es90Correct": false,
       "s90DarkCorrect": true,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "desktop-xc60": {
       "mode": "xc60",
@@ -152,9 +157,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-es90": {
       "mode": "es90",
@@ -178,9 +184,10 @@
       "es90Correct": true,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-ex90": {
       "mode": "ex90",
@@ -204,9 +211,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-home": {
       "mode": "home",
@@ -230,9 +238,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-interior": {
       "mode": "interior",
@@ -256,9 +265,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": true,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 237,
+      "selectedSeat": "RC00",
+      "selectedDetail": "RC00",
+      "interiorPhotoLoaded": true
     },
     "mobile-menu": {
       "mode": "menu",
@@ -282,9 +292,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-s90dark": {
       "mode": "s90dark",
@@ -308,9 +319,10 @@
       "es90Correct": false,
       "s90DarkCorrect": true,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     },
     "mobile-xc60": {
       "mode": "xc60",
@@ -334,9 +346,10 @@
       "es90Correct": false,
       "s90DarkCorrect": false,
       "interiorOpen": false,
-      "interiorMediaHeight": 999,
-      "selectedSeat": null,
-      "selectedDetail": "RP00"
+      "interiorMediaHeight": 0,
+      "selectedSeat": "RP00",
+      "selectedDetail": "RP00",
+      "interiorPhotoLoaded": true
     }
   },
   "checks": [
@@ -365,9 +378,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -395,9 +409,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -425,9 +440,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -455,9 +471,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -485,9 +502,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -515,9 +533,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -545,9 +564,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -575,9 +595,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -605,9 +626,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -635,9 +657,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -665,9 +688,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -695,9 +719,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -725,9 +750,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -755,9 +781,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -785,9 +812,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -815,9 +843,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -845,9 +874,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -875,9 +905,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -905,9 +936,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -935,9 +967,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -965,9 +998,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -995,9 +1029,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1025,9 +1060,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1055,9 +1091,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1085,9 +1122,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1115,13 +1153,14 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
-      "ok": false,
+      "ok": true,
       "label": "desktop-interior interior tab and seat code click work",
       "detail": {
         "mode": "interior",
@@ -1145,14 +1184,15 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
-      "ok": false,
-      "label": "desktop-interior interior photo area is compact",
+      "ok": true,
+      "label": "desktop-interior interior photo loads",
       "detail": {
         "mode": "interior",
         "width": 1440,
@@ -1175,9 +1215,41 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
+      }
+    },
+    {
+      "ok": true,
+      "label": "desktop-interior interior photo area fits target size",
+      "detail": {
+        "mode": "interior",
+        "width": 1440,
+        "height": 913,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 266,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1205,9 +1277,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1235,9 +1308,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1265,9 +1339,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1295,9 +1370,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1325,9 +1401,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1355,9 +1432,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1385,9 +1463,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1415,9 +1494,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1445,9 +1525,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1475,9 +1556,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1505,9 +1587,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1535,9 +1618,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1565,9 +1649,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1595,9 +1680,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1625,9 +1711,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1655,9 +1742,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1685,9 +1773,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1715,9 +1804,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1745,9 +1835,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1775,9 +1866,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1805,9 +1897,10 @@
         "es90Correct": true,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1835,9 +1928,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1865,9 +1959,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1895,9 +1990,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1925,9 +2021,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1955,9 +2052,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -1985,9 +2083,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2015,9 +2114,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2045,9 +2145,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2075,9 +2176,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2105,9 +2207,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2135,9 +2238,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2165,9 +2269,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2195,9 +2300,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2225,9 +2331,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2255,9 +2362,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2285,9 +2393,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2315,9 +2424,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2345,9 +2455,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2375,13 +2486,14 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
-      "ok": false,
+      "ok": true,
       "label": "mobile-interior interior tab and seat code click work",
       "detail": {
         "mode": "interior",
@@ -2405,14 +2517,15 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
-      "ok": false,
-      "label": "mobile-interior interior photo area is compact",
+      "ok": true,
+      "label": "mobile-interior interior photo loads",
       "detail": {
         "mode": "interior",
         "width": 500,
@@ -2435,9 +2548,41 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": true,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
+      }
+    },
+    {
+      "ok": true,
+      "label": "mobile-interior interior photo area fits target size",
+      "detail": {
+        "mode": "interior",
+        "width": 500,
+        "height": 757,
+        "docOverflow": 0,
+        "heroOverflow": 0,
+        "finalData": "20260821-1",
+        "finalUx": "20260821-2",
+        "warrantyGuide": "20260821-3",
+        "phoneLinks": 3,
+        "kakaoLinks": 3,
+        "modalOpen": false,
+        "modalOverflow": 0,
+        "trimCards": 0,
+        "cta": false,
+        "darkViews": 0,
+        "menuOpen": false,
+        "menuItems": 7,
+        "xc60Correct": false,
+        "es90Correct": false,
+        "s90DarkCorrect": false,
+        "interiorOpen": true,
+        "interiorMediaHeight": 237,
+        "selectedSeat": "RC00",
+        "selectedDetail": "RC00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2465,9 +2610,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2495,9 +2641,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2525,9 +2672,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2555,9 +2703,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2585,9 +2734,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2615,9 +2765,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2645,9 +2796,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2675,9 +2827,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2705,9 +2858,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2735,9 +2889,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2765,9 +2920,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2795,9 +2951,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2825,9 +2982,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2855,9 +3013,10 @@
         "es90Correct": false,
         "s90DarkCorrect": true,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2885,9 +3044,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2915,9 +3075,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2945,9 +3106,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -2975,9 +3137,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -3005,9 +3168,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -3035,9 +3199,10 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     },
     {
@@ -3065,16 +3230,12 @@
         "es90Correct": false,
         "s90DarkCorrect": false,
         "interiorOpen": false,
-        "interiorMediaHeight": 999,
-        "selectedSeat": null,
-        "selectedDetail": "RP00"
+        "interiorMediaHeight": 0,
+        "selectedSeat": "RP00",
+        "selectedDetail": "RP00",
+        "interiorPhotoLoaded": true
       }
     }
   ],
-  "failures": [
-    "desktop-interior interior tab and seat code click work",
-    "desktop-interior interior photo area is compact",
-    "mobile-interior interior tab and seat code click work",
-    "mobile-interior interior photo area is compact"
-  ]
+  "failures": []
 }
