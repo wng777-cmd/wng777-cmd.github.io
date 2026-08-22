@@ -13,31 +13,31 @@
       "detailLoaded": true,
       "mainFrame": {
         "x": 371,
-        "y": 694,
+        "y": 491,
         "w": 510,
         "h": 266,
-        "bottom": 960
+        "bottom": 757
       },
       "detailFrame": {
         "x": 891,
-        "y": 694,
+        "y": 491,
         "w": 178,
         "h": 208,
-        "bottom": 902
+        "bottom": 699
       },
       "visual": {
         "x": 360,
-        "y": 683,
+        "y": 480,
         "w": 720,
         "h": 404,
-        "bottom": 1087
+        "bottom": 884
       },
       "side": {
         "x": 891,
-        "y": 694,
+        "y": 491,
         "w": 178,
         "h": 382,
-        "bottom": 1076
+        "bottom": 873
       },
       "initialPhotoKey": "XC90-0-RP00-4",
       "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822j"
@@ -55,31 +55,31 @@
       "detailLoaded": true,
       "mainFrame": {
         "x": 23,
-        "y": 3387,
+        "y": 1515,
         "w": 454,
         "h": 237,
-        "bottom": 3624
+        "bottom": 1752
       },
       "detailFrame": {
         "x": 23,
-        "y": 3632,
+        "y": 1760,
         "w": 92,
         "h": 108,
-        "bottom": 3739
+        "bottom": 1867
       },
       "visual": {
         "x": 14,
-        "y": 3378,
+        "y": 1506,
         "w": 472,
         "h": 393,
-        "bottom": 3771
+        "bottom": 1899
       },
       "side": {
         "x": 23,
-        "y": 3632,
+        "y": 1760,
         "w": 454,
         "h": 130,
-        "bottom": 3762
+        "bottom": 1890
       },
       "initialPhotoKey": "XC90-0-RP00-4",
       "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822j"
