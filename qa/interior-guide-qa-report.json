@@ -1,0 +1,31 @@
+{
+  "screens": {
+    "desktop": {
+      "width": 1440,
+      "docOverflow": 0,
+      "interiorOpen": true,
+      "selectedSeat": "RC00",
+      "photoCode": "RC00",
+      "photoKey": "XC90-1-RC00-7",
+      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822g",
+      "photoLoaded": true,
+      "photoHeight": 267,
+      "initialPhotoKey": "XC90-0-RP00-4",
+      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822g"
+    },
+    "mobile": {
+      "width": 500,
+      "docOverflow": 0,
+      "interiorOpen": true,
+      "selectedSeat": "RC00",
+      "photoCode": "RC00",
+      "photoKey": "XC90-1-RC00-7",
+      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822g",
+      "photoLoaded": true,
+      "photoHeight": 189,
+      "initialPhotoKey": "XC90-0-RP00-4",
+      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822g"
+    }
+  },
+  "failures": []
+}
