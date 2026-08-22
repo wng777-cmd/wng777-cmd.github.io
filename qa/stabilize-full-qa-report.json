@@ -1,0 +1,490 @@
+{
+  "screens": {
+    "desktop": {
+      "width": 1440,
+      "height": 913,
+      "modelCount": 9,
+      "combos": 0,
+      "checks": [
+        {
+          "ok": true,
+          "label": "core model function ready"
+        },
+        {
+          "ok": false,
+          "label": "stable interior function ready"
+        },
+        {
+          "ok": false,
+          "label": "stable interior marker ready"
+        },
+        {
+          "ok": true,
+          "label": "page has no horizontal overflow"
+        },
+        {
+          "ok": true,
+          "label": "phone links present"
+        },
+        {
+          "ok": true,
+          "label": "kakao links present"
+        },
+        {
+          "ok": true,
+          "label": "category buttons present"
+        },
+        {
+          "ok": true,
+          "label": "category suv shows models"
+        },
+        {
+          "ok": true,
+          "label": "category electric shows models"
+        },
+        {
+          "ok": true,
+          "label": "category sedan shows models"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model S90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "all trims function exists"
+        },
+        {
+          "ok": true,
+          "label": "all trims opens"
+        },
+        {
+          "ok": true,
+          "label": "all trims modal fits"
+        },
+        {
+          "ok": true,
+          "label": "compare function exists"
+        },
+        {
+          "ok": true,
+          "label": "compare opens"
+        },
+        {
+          "ok": true,
+          "label": "compare modal fits"
+        },
+        {
+          "ok": true,
+          "label": "tech function exists"
+        },
+        {
+          "ok": true,
+          "label": "tech opens"
+        },
+        {
+          "ok": true,
+          "label": "tech modal fits"
+        },
+        {
+          "ok": true,
+          "label": "accessories function exists"
+        },
+        {
+          "ok": true,
+          "label": "accessories opens"
+        },
+        {
+          "ok": true,
+          "label": "accessories modal fits"
+        },
+        {
+          "ok": false,
+          "label": "dark guide function exists"
+        },
+        {
+          "ok": false,
+          "label": "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "all 46 interior combinations tested"
+        }
+      ],
+      "failures": [
+        "stable interior function ready",
+        "stable interior marker ready",
+        "dark guide function exists",
+        "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "all 46 interior combinations tested"
+      ]
+    },
+    "mobile": {
+      "width": 500,
+      "height": 757,
+      "modelCount": 9,
+      "combos": 0,
+      "checks": [
+        {
+          "ok": true,
+          "label": "core model function ready"
+        },
+        {
+          "ok": false,
+          "label": "stable interior function ready"
+        },
+        {
+          "ok": false,
+          "label": "stable interior marker ready"
+        },
+        {
+          "ok": true,
+          "label": "page has no horizontal overflow"
+        },
+        {
+          "ok": true,
+          "label": "phone links present"
+        },
+        {
+          "ok": true,
+          "label": "kakao links present"
+        },
+        {
+          "ok": true,
+          "label": "category buttons present"
+        },
+        {
+          "ok": true,
+          "label": "category suv shows models"
+        },
+        {
+          "ok": true,
+          "label": "category electric shows models"
+        },
+        {
+          "ok": true,
+          "label": "category sedan shows models"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model S90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "all trims function exists"
+        },
+        {
+          "ok": true,
+          "label": "all trims opens"
+        },
+        {
+          "ok": true,
+          "label": "all trims modal fits"
+        },
+        {
+          "ok": true,
+          "label": "compare function exists"
+        },
+        {
+          "ok": true,
+          "label": "compare opens"
+        },
+        {
+          "ok": true,
+          "label": "compare modal fits"
+        },
+        {
+          "ok": true,
+          "label": "tech function exists"
+        },
+        {
+          "ok": true,
+          "label": "tech opens"
+        },
+        {
+          "ok": true,
+          "label": "tech modal fits"
+        },
+        {
+          "ok": true,
+          "label": "accessories function exists"
+        },
+        {
+          "ok": true,
+          "label": "accessories opens"
+        },
+        {
+          "ok": true,
+          "label": "accessories modal fits"
+        },
+        {
+          "ok": false,
+          "label": "dark guide function exists"
+        },
+        {
+          "ok": false,
+          "label": "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+        },
+        {
+          "ok": false,
+          "label": "all 46 interior combinations tested"
+        },
+        {
+          "ok": true,
+          "label": "mobile menu opens"
+        }
+      ],
+      "failures": [
+        "stable interior function ready",
+        "stable interior marker ready",
+        "dark guide function exists",
+        "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+        "all 46 interior combinations tested"
+      ]
+    }
+  },
+  "failures": [
+    "desktop: stable interior function ready",
+    "desktop: stable interior marker ready",
+    "desktop: dark guide function exists",
+    "desktop: interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "desktop: all 46 interior combinations tested",
+    "mobile: stable interior function ready",
+    "mobile: stable interior marker ready",
+    "mobile: dark guide function exists",
+    "mobile: interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
+    "mobile: all 46 interior combinations tested"
+  ]
+}
