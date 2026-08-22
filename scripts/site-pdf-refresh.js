@@ -34,7 +34,7 @@
     if(document.querySelector('link[data-interior-guide-css]')) return;
     var l=document.createElement('link');
     l.rel='stylesheet';
-    l.href='scripts/site-interior-guide-layout-20260822.css?v=20260822k';
+    l.href='scripts/site-interior-guide-layout-20260822.css?v=20260822m';
     l.setAttribute('data-interior-guide-css','1');
     document.head.appendChild(l);
   }
@@ -47,6 +47,14 @@
     s.setAttribute('data-site-audit-fixes','1');
     document.body.appendChild(s);
   }
+  function loadXc90Hq(done){
+    if(document.querySelector('script[data-xc90-hq-interior]')){if(done)done();return;}
+    var s=document.createElement('script');
+    s.src='scripts/site-interior-xc90-hq-20260822.js?v=20260822m';
+    s.setAttribute('data-xc90-hq-interior','1');
+    s.onload=done||null;
+    document.head.appendChild(s);
+  }
 
   installInternalTestFilter();
   installAuditCss();
@@ -57,7 +65,8 @@
     document.write('<script src="scripts/site-dark-guide.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-dark-guide-refine-20260821.js?v=20260821dark5"><\/script>');
     document.write('<script src="scripts/site-copy-fix-20260821.js?v=20260821copy1"><\/script>');
-    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822k"><\/script>');
+    document.write('<script src="scripts/site-color-interior-guide-20260822.js?v=20260822m"><\/script>');
+    document.write('<script src="scripts/site-interior-xc90-hq-20260822.js?v=20260822m"><\/script>');
     document.addEventListener('DOMContentLoaded',loadAuditFixes,{once:true});
     return;
   }
@@ -66,7 +75,7 @@
     load('scripts/site-dark-guide.js?v=20260821dark5',function(){
       load('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5',function(){
         load('scripts/site-copy-fix-20260821.js?v=20260821copy1',function(){
-          load('scripts/site-color-interior-guide-20260822.js?v=20260822k',loadAuditFixes);
+          load('scripts/site-color-interior-guide-20260822.js?v=20260822m',function(){loadXc90Hq(loadAuditFixes)});
         });
       });
     });
