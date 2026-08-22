@@ -3,48 +3,43 @@
     "desktop": {
       "width": 1440,
       "height": 913,
-      "modelCount": 9,
-      "combos": 0,
+      "combos": 46,
       "checks": [
         {
           "ok": true,
-          "label": "core model function ready"
+          "label": "all site functions ready"
         },
         {
           "ok": false,
-          "label": "stable interior function ready"
-        },
-        {
-          "ok": false,
-          "label": "stable interior marker ready"
+          "label": "stable loader complete"
         },
         {
           "ok": true,
-          "label": "page has no horizontal overflow"
+          "label": "page fits"
         },
         {
           "ok": true,
-          "label": "phone links present"
+          "label": "phone links"
         },
         {
           "ok": true,
-          "label": "kakao links present"
+          "label": "kakao links"
         },
         {
           "ok": true,
-          "label": "category buttons present"
+          "label": "categories present"
         },
         {
           "ok": true,
-          "label": "category suv shows models"
+          "label": "category suv"
         },
         {
           "ok": true,
-          "label": "category electric shows models"
+          "label": "category electric"
         },
         {
           "ok": true,
-          "label": "category sedan shows models"
+          "label": "category sedan"
         },
         {
           "ok": true,
@@ -52,7 +47,7 @@
         },
         {
           "ok": true,
-          "label": "model XC40 modal fits"
+          "label": "model XC40 fits"
         },
         {
           "ok": true,
@@ -60,7 +55,7 @@
         },
         {
           "ok": true,
-          "label": "model XC60 modal fits"
+          "label": "model XC60 fits"
         },
         {
           "ok": true,
@@ -68,7 +63,7 @@
         },
         {
           "ok": true,
-          "label": "model XC90 modal fits"
+          "label": "model XC90 fits"
         },
         {
           "ok": true,
@@ -76,7 +71,7 @@
         },
         {
           "ok": true,
-          "label": "model EX30 modal fits"
+          "label": "model EX30 fits"
         },
         {
           "ok": true,
@@ -84,7 +79,7 @@
         },
         {
           "ok": true,
-          "label": "model EX30CC modal fits"
+          "label": "model EX30CC fits"
         },
         {
           "ok": true,
@@ -92,7 +87,7 @@
         },
         {
           "ok": true,
-          "label": "model EX90 modal fits"
+          "label": "model EX90 fits"
         },
         {
           "ok": true,
@@ -100,7 +95,7 @@
         },
         {
           "ok": true,
-          "label": "model ES90 modal fits"
+          "label": "model ES90 fits"
         },
         {
           "ok": true,
@@ -108,7 +103,7 @@
         },
         {
           "ok": true,
-          "label": "model S90 modal fits"
+          "label": "model S90 fits"
         },
         {
           "ok": true,
@@ -116,11 +111,11 @@
         },
         {
           "ok": true,
-          "label": "model V60CC modal fits"
+          "label": "model V60CC fits"
         },
         {
           "ok": true,
-          "label": "all trims function exists"
+          "label": "all trims exists"
         },
         {
           "ok": true,
@@ -128,11 +123,11 @@
         },
         {
           "ok": true,
-          "label": "all trims modal fits"
+          "label": "all trims fits"
         },
         {
           "ok": true,
-          "label": "compare function exists"
+          "label": "compare exists"
         },
         {
           "ok": true,
@@ -140,11 +135,11 @@
         },
         {
           "ok": true,
-          "label": "compare modal fits"
+          "label": "compare fits"
         },
         {
           "ok": true,
-          "label": "tech function exists"
+          "label": "tech exists"
         },
         {
           "ok": true,
@@ -152,11 +147,11 @@
         },
         {
           "ok": true,
-          "label": "tech modal fits"
+          "label": "tech fits"
         },
         {
           "ok": true,
-          "label": "accessories function exists"
+          "label": "accessories exists"
         },
         {
           "ok": true,
@@ -164,114 +159,729 @@
         },
         {
           "ok": true,
-          "label": "accessories modal fits"
+          "label": "accessories fits"
         },
         {
-          "ok": false,
-          "label": "dark guide function exists"
+          "ok": true,
+          "label": "dark XC40 opens"
         },
         {
-          "ok": false,
-          "label": "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark XC40 fits"
         },
         {
-          "ok": false,
-          "label": "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark XC60 opens"
         },
         {
-          "ok": false,
-          "label": "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark XC60 fits"
         },
         {
-          "ok": false,
-          "label": "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark XC90 opens"
         },
         {
-          "ok": false,
-          "label": "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark XC90 fits"
         },
         {
-          "ok": false,
-          "label": "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark S90 opens"
         },
         {
-          "ok": false,
-          "label": "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "dark S90 fits"
         },
         {
-          "ok": false,
-          "label": "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "interior XC90 opens"
         },
         {
-          "ok": false,
-          "label": "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined"
+          "ok": true,
+          "label": "interior XC90 fits"
         },
         {
-          "ok": false,
-          "label": "all 46 interior combinations tested"
+          "ok": true,
+          "label": "interior XC90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "46 interior combinations"
         }
       ],
       "failures": [
-        "stable interior function ready",
-        "stable interior marker ready",
-        "dark guide function exists",
-        "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "all 46 interior combinations tested"
+        "stable loader complete"
       ]
     },
     "mobile": {
       "width": 500,
       "height": 757,
-      "modelCount": 9,
-      "combos": 0,
+      "combos": 46,
       "checks": [
         {
           "ok": true,
-          "label": "core model function ready"
+          "label": "all site functions ready"
         },
         {
           "ok": false,
-          "label": "stable interior function ready"
-        },
-        {
-          "ok": false,
-          "label": "stable interior marker ready"
+          "label": "stable loader complete"
         },
         {
           "ok": true,
-          "label": "page has no horizontal overflow"
+          "label": "page fits"
         },
         {
           "ok": true,
-          "label": "phone links present"
+          "label": "phone links"
         },
         {
           "ok": true,
-          "label": "kakao links present"
+          "label": "kakao links"
         },
         {
           "ok": true,
-          "label": "category buttons present"
+          "label": "categories present"
         },
         {
           "ok": true,
-          "label": "category suv shows models"
+          "label": "category suv"
         },
         {
           "ok": true,
-          "label": "category electric shows models"
+          "label": "category electric"
         },
         {
           "ok": true,
-          "label": "category sedan shows models"
+          "label": "category sedan"
         },
         {
           "ok": true,
@@ -279,7 +889,7 @@
         },
         {
           "ok": true,
-          "label": "model XC40 modal fits"
+          "label": "model XC40 fits"
         },
         {
           "ok": true,
@@ -287,7 +897,7 @@
         },
         {
           "ok": true,
-          "label": "model XC60 modal fits"
+          "label": "model XC60 fits"
         },
         {
           "ok": true,
@@ -295,7 +905,7 @@
         },
         {
           "ok": true,
-          "label": "model XC90 modal fits"
+          "label": "model XC90 fits"
         },
         {
           "ok": true,
@@ -303,7 +913,7 @@
         },
         {
           "ok": true,
-          "label": "model EX30 modal fits"
+          "label": "model EX30 fits"
         },
         {
           "ok": true,
@@ -311,7 +921,7 @@
         },
         {
           "ok": true,
-          "label": "model EX30CC modal fits"
+          "label": "model EX30CC fits"
         },
         {
           "ok": true,
@@ -319,7 +929,7 @@
         },
         {
           "ok": true,
-          "label": "model EX90 modal fits"
+          "label": "model EX90 fits"
         },
         {
           "ok": true,
@@ -327,7 +937,7 @@
         },
         {
           "ok": true,
-          "label": "model ES90 modal fits"
+          "label": "model ES90 fits"
         },
         {
           "ok": true,
@@ -335,7 +945,7 @@
         },
         {
           "ok": true,
-          "label": "model S90 modal fits"
+          "label": "model S90 fits"
         },
         {
           "ok": true,
@@ -343,11 +953,11 @@
         },
         {
           "ok": true,
-          "label": "model V60CC modal fits"
+          "label": "model V60CC fits"
         },
         {
           "ok": true,
-          "label": "all trims function exists"
+          "label": "all trims exists"
         },
         {
           "ok": true,
@@ -355,11 +965,11 @@
         },
         {
           "ok": true,
-          "label": "all trims modal fits"
+          "label": "all trims fits"
         },
         {
           "ok": true,
-          "label": "compare function exists"
+          "label": "compare exists"
         },
         {
           "ok": true,
@@ -367,11 +977,11 @@
         },
         {
           "ok": true,
-          "label": "compare modal fits"
+          "label": "compare fits"
         },
         {
           "ok": true,
-          "label": "tech function exists"
+          "label": "tech exists"
         },
         {
           "ok": true,
@@ -379,11 +989,11 @@
         },
         {
           "ok": true,
-          "label": "tech modal fits"
+          "label": "tech fits"
         },
         {
           "ok": true,
-          "label": "accessories function exists"
+          "label": "accessories exists"
         },
         {
           "ok": true,
@@ -391,100 +1001,696 @@
         },
         {
           "ok": true,
-          "label": "accessories modal fits"
-        },
-        {
-          "ok": false,
-          "label": "dark guide function exists"
-        },
-        {
-          "ok": false,
-          "label": "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined"
-        },
-        {
-          "ok": false,
-          "label": "all 46 interior combinations tested"
+          "label": "accessories fits"
         },
         {
           "ok": true,
-          "label": "mobile menu opens"
+          "label": "dark XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 code"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 code"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 resolution"
+        },
+        {
+          "ok": true,
+          "label": "46 interior combinations"
+        },
+        {
+          "ok": true,
+          "label": "mobile menu"
         }
       ],
       "failures": [
-        "stable interior function ready",
-        "stable interior marker ready",
-        "dark guide function exists",
-        "interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-        "all 46 interior combinations tested"
+        "stable loader complete"
       ]
     }
   },
   "failures": [
-    "desktop: stable interior function ready",
-    "desktop: stable interior marker ready",
-    "desktop: dark guide function exists",
-    "desktop: interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "desktop: all 46 interior combinations tested",
-    "mobile: stable interior function ready",
-    "mobile: stable interior marker ready",
-    "mobile: dark guide function exists",
-    "mobile: interior XC90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior XC60 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior S90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior XC40 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior V60CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior EX30 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior EX30CC exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior EX90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: interior ES90 exception ReferenceError: openVolvoInteriorGuide is not defined",
-    "mobile: all 46 interior combinations tested"
+    "desktop: stable loader complete",
+    "mobile: stable loader complete"
   ]
 }
