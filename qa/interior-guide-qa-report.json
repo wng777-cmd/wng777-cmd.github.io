@@ -2,30 +2,43 @@
   "screens": {
     "desktop": {
       "width": 1440,
-      "docOverflow": 0,
+      "docOverflow": 3087,
       "interiorOpen": true,
       "selectedSeat": "RC00",
-      "photoCode": "RC00",
-      "photoKey": "XC90-1-RC00-7",
-      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822g",
-      "photoLoaded": true,
-      "photoHeight": 267,
-      "initialPhotoKey": "XC90-0-RP00-4",
-      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822g"
+      "photoCode": null,
+      "photoKey": null,
+      "photoSrc": null,
+      "photoLoaded": false,
+      "photoHeight": 999,
+      "initialPhotoKey": null,
+      "initialPhotoSrc": null
     },
     "mobile": {
       "width": 500,
-      "docOverflow": 0,
+      "docOverflow": 1106,
       "interiorOpen": true,
       "selectedSeat": "RC00",
-      "photoCode": "RC00",
-      "photoKey": "XC90-1-RC00-7",
-      "photoSrc": "assets/interiors/my26-c2.webp?v=20260822g",
-      "photoLoaded": true,
-      "photoHeight": 189,
-      "initialPhotoKey": "XC90-0-RP00-4",
-      "initialPhotoSrc": "assets/interiors/my26-c1.webp?v=20260822g"
+      "photoCode": null,
+      "photoKey": null,
+      "photoSrc": null,
+      "photoLoaded": false,
+      "photoHeight": 999,
+      "initialPhotoKey": null,
+      "initialPhotoSrc": null
     }
   },
-  "failures": []
+  "failures": [
+    "desktop photo follows RC00",
+    "desktop actual atlas changes",
+    "desktop correct image asset",
+    "desktop image loads",
+    "desktop no horizontal overflow",
+    "desktop photo is compact",
+    "mobile photo follows RC00",
+    "mobile actual atlas changes",
+    "mobile correct image asset",
+    "mobile image loads",
+    "mobile no horizontal overflow",
+    "mobile photo is compact"
+  ]
 }
