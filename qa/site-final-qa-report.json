@@ -1,1 +1,1915 @@
-{"failures":["QA runner did not produce a browser report"]}
+{
+  "screens": {
+    "desktop": {
+      "width": 1440,
+      "height": 913,
+      "modelCount": 9,
+      "combos": 46,
+      "checks": [
+        {
+          "ok": true,
+          "label": "site functions ready"
+        },
+        {
+          "ok": true,
+          "label": "stable interior marker"
+        },
+        {
+          "ok": true,
+          "label": "page no horizontal overflow"
+        },
+        {
+          "ok": true,
+          "label": "phone links"
+        },
+        {
+          "ok": true,
+          "label": "kakao links"
+        },
+        {
+          "ok": true,
+          "label": "category buttons present"
+        },
+        {
+          "ok": true,
+          "label": "category suv shows models"
+        },
+        {
+          "ok": true,
+          "label": "category electric shows models"
+        },
+        {
+          "ok": true,
+          "label": "category sedan shows models"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model S90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "all trims function exists"
+        },
+        {
+          "ok": true,
+          "label": "all trims opens"
+        },
+        {
+          "ok": true,
+          "label": "all trims fits"
+        },
+        {
+          "ok": true,
+          "label": "compare function exists"
+        },
+        {
+          "ok": true,
+          "label": "compare opens"
+        },
+        {
+          "ok": true,
+          "label": "compare fits"
+        },
+        {
+          "ok": true,
+          "label": "tech function exists"
+        },
+        {
+          "ok": true,
+          "label": "tech opens"
+        },
+        {
+          "ok": true,
+          "label": "tech fits"
+        },
+        {
+          "ok": true,
+          "label": "accessories function exists"
+        },
+        {
+          "ok": true,
+          "label": "accessories opens"
+        },
+        {
+          "ok": true,
+          "label": "accessories fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC groups"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 2 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 3 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 4 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "all 46 interior combinations tested"
+        }
+      ],
+      "failures": []
+    },
+    "mobile": {
+      "width": 500,
+      "height": 757,
+      "modelCount": 9,
+      "combos": 46,
+      "checks": [
+        {
+          "ok": true,
+          "label": "site functions ready"
+        },
+        {
+          "ok": true,
+          "label": "stable interior marker"
+        },
+        {
+          "ok": true,
+          "label": "page no horizontal overflow"
+        },
+        {
+          "ok": true,
+          "label": "phone links"
+        },
+        {
+          "ok": true,
+          "label": "kakao links"
+        },
+        {
+          "ok": true,
+          "label": "category buttons present"
+        },
+        {
+          "ok": true,
+          "label": "category suv shows models"
+        },
+        {
+          "ok": true,
+          "label": "category electric shows models"
+        },
+        {
+          "ok": true,
+          "label": "category sedan shows models"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC40 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC60 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model XC90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX30CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model EX90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model ES90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "model S90 modal fits"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "model V60CC modal fits"
+        },
+        {
+          "ok": true,
+          "label": "all trims function exists"
+        },
+        {
+          "ok": true,
+          "label": "all trims opens"
+        },
+        {
+          "ok": true,
+          "label": "all trims fits"
+        },
+        {
+          "ok": true,
+          "label": "compare function exists"
+        },
+        {
+          "ok": true,
+          "label": "compare opens"
+        },
+        {
+          "ok": true,
+          "label": "compare fits"
+        },
+        {
+          "ok": true,
+          "label": "tech function exists"
+        },
+        {
+          "ok": true,
+          "label": "tech opens"
+        },
+        {
+          "ok": true,
+          "label": "tech fits"
+        },
+        {
+          "ok": true,
+          "label": "accessories function exists"
+        },
+        {
+          "ok": true,
+          "label": "accessories opens"
+        },
+        {
+          "ok": true,
+          "label": "accessories fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "dark S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "S90 excludes Dawn"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC groups"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 2 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 3 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 group 4 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 opens"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 groups"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 group 0 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 group 1 seats"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 images render"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 render resolution"
+        },
+        {
+          "ok": true,
+          "label": "all 46 interior combinations tested"
+        },
+        {
+          "ok": true,
+          "label": "mobile menu opens"
+        }
+      ],
+      "failures": []
+    }
+  },
+  "failures": []
+}
