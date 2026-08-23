@@ -7,12 +7,12 @@
       "combos": 46,
       "checks": [
         {
-          "ok": false,
+          "ok": true,
           "label": "site functions ready"
         },
         {
-          "ok": false,
-          "label": "stable interior marker"
+          "ok": true,
+          "label": "material-card interior marker"
         },
         {
           "ok": true,
@@ -204,6 +204,14 @@
         },
         {
           "ok": true,
+          "label": "interior XC90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 has no canvas"
+        },
+        {
+          "ok": true,
           "label": "interior XC90 groups"
         },
         {
@@ -215,24 +223,32 @@
           "label": "interior XC90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/0 images render"
+          "ok": true,
+          "label": "interior XC90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/1 images render"
+          "ok": true,
+          "label": "interior XC90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -243,36 +259,48 @@
           "label": "interior XC90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/0 images render"
+          "ok": true,
+          "label": "interior XC90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/1 images render"
+          "ok": true,
+          "label": "interior XC90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/2 images render"
+          "ok": true,
+          "label": "interior XC90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/2 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -281,6 +309,14 @@
         {
           "ok": true,
           "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 has no canvas"
         },
         {
           "ok": true,
@@ -295,24 +331,32 @@
           "label": "interior XC60 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/0 images render"
+          "ok": true,
+          "label": "interior XC60 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC60 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC60 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/1 images render"
+          "ok": true,
+          "label": "interior XC60 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC60 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -323,24 +367,32 @@
           "label": "interior XC60 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/0 images render"
+          "ok": true,
+          "label": "interior XC60 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC60 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC60 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/1 images render"
+          "ok": true,
+          "label": "interior XC60 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC60 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -349,6 +401,14 @@
         {
           "ok": true,
           "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 has no canvas"
         },
         {
           "ok": true,
@@ -363,12 +423,16 @@
           "label": "interior S90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 0/0 images render"
+          "ok": true,
+          "label": "interior S90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 0/0 render resolution"
+          "ok": true,
+          "label": "interior S90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -383,12 +447,16 @@
           "label": "interior S90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/0 images render"
+          "ok": true,
+          "label": "interior S90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/0 render resolution"
+          "ok": true,
+          "label": "interior S90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 deco sample styled"
         },
         {
           "ok": true,
@@ -399,12 +467,16 @@
           "label": "interior S90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/1 images render"
+          "ok": true,
+          "label": "interior S90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/1 render resolution"
+          "ok": true,
+          "label": "interior S90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -415,12 +487,16 @@
           "label": "interior S90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/2 images render"
+          "ok": true,
+          "label": "interior S90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/2 render resolution"
+          "ok": true,
+          "label": "interior S90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -436,6 +512,14 @@
         },
         {
           "ok": true,
+          "label": "interior XC40 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 has no canvas"
+        },
+        {
+          "ok": true,
           "label": "interior XC40 groups"
         },
         {
@@ -447,24 +531,32 @@
           "label": "interior XC40 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/0 images render"
+          "ok": true,
+          "label": "interior XC40 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC40 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC40 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/1 images render"
+          "ok": true,
+          "label": "interior XC40 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC40 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -475,24 +567,32 @@
           "label": "interior XC40 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/0 images render"
+          "ok": true,
+          "label": "interior XC40 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC40 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC40 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/1 images render"
+          "ok": true,
+          "label": "interior XC40 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC40 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -501,6 +601,14 @@
         {
           "ok": true,
           "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC has no canvas"
         },
         {
           "ok": true,
@@ -515,48 +623,64 @@
           "label": "interior V60CC 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/0 images render"
+          "ok": true,
+          "label": "interior V60CC 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/0 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/1 images render"
+          "ok": true,
+          "label": "interior V60CC 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/1 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/2 images render"
+          "ok": true,
+          "label": "interior V60CC 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/2 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/3 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/3 images render"
+          "ok": true,
+          "label": "interior V60CC 0/3 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/3 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/3 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 deco sample styled"
         },
         {
           "ok": true,
@@ -565,6 +689,14 @@
         {
           "ok": true,
           "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 has no canvas"
         },
         {
           "ok": true,
@@ -579,12 +711,16 @@
           "label": "interior EX30 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 0/0 images render"
+          "ok": true,
+          "label": "interior EX30 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX30 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -595,24 +731,32 @@
           "label": "interior EX30 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/0 images render"
+          "ok": true,
+          "label": "interior EX30 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/0 render resolution"
+          "ok": true,
+          "label": "interior EX30 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX30 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/1 images render"
+          "ok": true,
+          "label": "interior EX30 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/1 render resolution"
+          "ok": true,
+          "label": "interior EX30 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -621,6 +765,14 @@
         {
           "ok": true,
           "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC has no canvas"
         },
         {
           "ok": true,
@@ -635,12 +787,16 @@
           "label": "interior EX30CC 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30CC 0/0 images render"
+          "ok": true,
+          "label": "interior EX30CC 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30CC 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX30CC 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -649,6 +805,14 @@
         {
           "ok": true,
           "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 has no canvas"
         },
         {
           "ok": true,
@@ -663,36 +827,48 @@
           "label": "interior EX90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/0 images render"
+          "ok": true,
+          "label": "interior EX90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/1 images render"
+          "ok": true,
+          "label": "interior EX90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/2 images render"
+          "ok": true,
+          "label": "interior EX90 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 deco sample styled"
         },
         {
           "ok": true,
@@ -703,36 +879,48 @@
           "label": "interior EX90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/0 images render"
+          "ok": true,
+          "label": "interior EX90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/1 images render"
+          "ok": true,
+          "label": "interior EX90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/2 images render"
+          "ok": true,
+          "label": "interior EX90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -743,36 +931,48 @@
           "label": "interior EX90 2/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/0 images render"
+          "ok": true,
+          "label": "interior EX90 2/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 2/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/1 images render"
+          "ok": true,
+          "label": "interior EX90 2/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 2/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/2 images render"
+          "ok": true,
+          "label": "interior EX90 2/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 deco sample styled"
         },
         {
           "ok": true,
@@ -783,36 +983,48 @@
           "label": "interior EX90 3/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/0 images render"
+          "ok": true,
+          "label": "interior EX90 3/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 3/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/1 images render"
+          "ok": true,
+          "label": "interior EX90 3/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 3/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/2 images render"
+          "ok": true,
+          "label": "interior EX90 3/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 deco sample styled"
         },
         {
           "ok": true,
@@ -823,36 +1035,48 @@
           "label": "interior EX90 4/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/0 images render"
+          "ok": true,
+          "label": "interior EX90 4/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 4/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/1 images render"
+          "ok": true,
+          "label": "interior EX90 4/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 4/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/2 images render"
+          "ok": true,
+          "label": "interior EX90 4/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 deco sample styled"
         },
         {
           "ok": true,
@@ -861,6 +1085,14 @@
         {
           "ok": true,
           "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 has no canvas"
         },
         {
           "ok": true,
@@ -875,36 +1107,48 @@
           "label": "interior ES90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/0 images render"
+          "ok": true,
+          "label": "interior ES90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/0 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/1 images render"
+          "ok": true,
+          "label": "interior ES90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/1 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/2 images render"
+          "ok": true,
+          "label": "interior ES90 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/2 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 deco sample styled"
         },
         {
           "ok": true,
@@ -915,138 +1159,55 @@
           "label": "interior ES90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/0 images render"
+          "ok": true,
+          "label": "interior ES90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/0 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/1 images render"
+          "ok": true,
+          "label": "interior ES90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/1 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/2 images render"
+          "ok": true,
+          "label": "interior ES90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/2 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 deco sample styled"
         },
         {
           "ok": true,
           "label": "all 46 interior combinations tested"
         }
       ],
-      "failures": [
-        "site functions ready",
-        "stable interior marker",
-        "interior XC90 0/0 images render",
-        "interior XC90 0/0 render resolution",
-        "interior XC90 0/1 images render",
-        "interior XC90 0/1 render resolution",
-        "interior XC90 1/0 images render",
-        "interior XC90 1/0 render resolution",
-        "interior XC90 1/1 images render",
-        "interior XC90 1/1 render resolution",
-        "interior XC90 1/2 images render",
-        "interior XC90 1/2 render resolution",
-        "interior XC60 0/0 images render",
-        "interior XC60 0/0 render resolution",
-        "interior XC60 0/1 images render",
-        "interior XC60 0/1 render resolution",
-        "interior XC60 1/0 images render",
-        "interior XC60 1/0 render resolution",
-        "interior XC60 1/1 images render",
-        "interior XC60 1/1 render resolution",
-        "interior S90 0/0 images render",
-        "interior S90 0/0 render resolution",
-        "interior S90 1/0 images render",
-        "interior S90 1/0 render resolution",
-        "interior S90 1/1 images render",
-        "interior S90 1/1 render resolution",
-        "interior S90 1/2 images render",
-        "interior S90 1/2 render resolution",
-        "interior XC40 0/0 images render",
-        "interior XC40 0/0 render resolution",
-        "interior XC40 0/1 images render",
-        "interior XC40 0/1 render resolution",
-        "interior XC40 1/0 images render",
-        "interior XC40 1/0 render resolution",
-        "interior XC40 1/1 images render",
-        "interior XC40 1/1 render resolution",
-        "interior V60CC 0/0 images render",
-        "interior V60CC 0/0 render resolution",
-        "interior V60CC 0/1 images render",
-        "interior V60CC 0/1 render resolution",
-        "interior V60CC 0/2 images render",
-        "interior V60CC 0/2 render resolution",
-        "interior V60CC 0/3 images render",
-        "interior V60CC 0/3 render resolution",
-        "interior EX30 0/0 images render",
-        "interior EX30 0/0 render resolution",
-        "interior EX30 1/0 images render",
-        "interior EX30 1/0 render resolution",
-        "interior EX30 1/1 images render",
-        "interior EX30 1/1 render resolution",
-        "interior EX30CC 0/0 images render",
-        "interior EX30CC 0/0 render resolution",
-        "interior EX90 0/0 images render",
-        "interior EX90 0/0 render resolution",
-        "interior EX90 0/1 images render",
-        "interior EX90 0/1 render resolution",
-        "interior EX90 0/2 images render",
-        "interior EX90 0/2 render resolution",
-        "interior EX90 1/0 images render",
-        "interior EX90 1/0 render resolution",
-        "interior EX90 1/1 images render",
-        "interior EX90 1/1 render resolution",
-        "interior EX90 1/2 images render",
-        "interior EX90 1/2 render resolution",
-        "interior EX90 2/0 images render",
-        "interior EX90 2/0 render resolution",
-        "interior EX90 2/1 images render",
-        "interior EX90 2/1 render resolution",
-        "interior EX90 2/2 images render",
-        "interior EX90 2/2 render resolution",
-        "interior EX90 3/0 images render",
-        "interior EX90 3/0 render resolution",
-        "interior EX90 3/1 images render",
-        "interior EX90 3/1 render resolution",
-        "interior EX90 3/2 images render",
-        "interior EX90 3/2 render resolution",
-        "interior EX90 4/0 images render",
-        "interior EX90 4/0 render resolution",
-        "interior EX90 4/1 images render",
-        "interior EX90 4/1 render resolution",
-        "interior EX90 4/2 images render",
-        "interior EX90 4/2 render resolution",
-        "interior ES90 0/0 images render",
-        "interior ES90 0/0 render resolution",
-        "interior ES90 0/1 images render",
-        "interior ES90 0/1 render resolution",
-        "interior ES90 0/2 images render",
-        "interior ES90 0/2 render resolution",
-        "interior ES90 1/0 images render",
-        "interior ES90 1/0 render resolution",
-        "interior ES90 1/1 images render",
-        "interior ES90 1/1 render resolution",
-        "interior ES90 1/2 images render",
-        "interior ES90 1/2 render resolution"
-      ]
+      "failures": []
     },
     "mobile": {
       "width": 500,
@@ -1055,12 +1216,12 @@
       "combos": 46,
       "checks": [
         {
-          "ok": false,
+          "ok": true,
           "label": "site functions ready"
         },
         {
-          "ok": false,
-          "label": "stable interior marker"
+          "ok": true,
+          "label": "material-card interior marker"
         },
         {
           "ok": true,
@@ -1252,6 +1413,14 @@
         },
         {
           "ok": true,
+          "label": "interior XC90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 has no canvas"
+        },
+        {
+          "ok": true,
           "label": "interior XC90 groups"
         },
         {
@@ -1263,24 +1432,32 @@
           "label": "interior XC90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/0 images render"
+          "ok": true,
+          "label": "interior XC90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/1 images render"
+          "ok": true,
+          "label": "interior XC90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1291,36 +1468,48 @@
           "label": "interior XC90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/0 images render"
+          "ok": true,
+          "label": "interior XC90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/1 images render"
+          "ok": true,
+          "label": "interior XC90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/2 images render"
+          "ok": true,
+          "label": "interior XC90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC90 1/2 render resolution"
+          "ok": true,
+          "label": "interior XC90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1329,6 +1518,14 @@
         {
           "ok": true,
           "label": "interior XC60 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 has no canvas"
         },
         {
           "ok": true,
@@ -1343,24 +1540,32 @@
           "label": "interior XC60 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/0 images render"
+          "ok": true,
+          "label": "interior XC60 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC60 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC60 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/1 images render"
+          "ok": true,
+          "label": "interior XC60 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC60 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1371,24 +1576,32 @@
           "label": "interior XC60 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/0 images render"
+          "ok": true,
+          "label": "interior XC60 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC60 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC60 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/1 images render"
+          "ok": true,
+          "label": "interior XC60 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC60 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC60 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC60 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1397,6 +1610,14 @@
         {
           "ok": true,
           "label": "interior S90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 has no canvas"
         },
         {
           "ok": true,
@@ -1411,12 +1632,16 @@
           "label": "interior S90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 0/0 images render"
+          "ok": true,
+          "label": "interior S90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 0/0 render resolution"
+          "ok": true,
+          "label": "interior S90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -1431,12 +1656,16 @@
           "label": "interior S90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/0 images render"
+          "ok": true,
+          "label": "interior S90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/0 render resolution"
+          "ok": true,
+          "label": "interior S90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/0 deco sample styled"
         },
         {
           "ok": true,
@@ -1447,12 +1676,16 @@
           "label": "interior S90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/1 images render"
+          "ok": true,
+          "label": "interior S90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/1 render resolution"
+          "ok": true,
+          "label": "interior S90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1463,12 +1696,16 @@
           "label": "interior S90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/2 images render"
+          "ok": true,
+          "label": "interior S90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior S90 1/2 render resolution"
+          "ok": true,
+          "label": "interior S90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior S90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1484,6 +1721,14 @@
         },
         {
           "ok": true,
+          "label": "interior XC40 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 has no canvas"
+        },
+        {
+          "ok": true,
           "label": "interior XC40 groups"
         },
         {
@@ -1495,24 +1740,32 @@
           "label": "interior XC40 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/0 images render"
+          "ok": true,
+          "label": "interior XC40 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/0 render resolution"
+          "ok": true,
+          "label": "interior XC40 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC40 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/1 images render"
+          "ok": true,
+          "label": "interior XC40 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 0/1 render resolution"
+          "ok": true,
+          "label": "interior XC40 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 0/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1523,24 +1776,32 @@
           "label": "interior XC40 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/0 images render"
+          "ok": true,
+          "label": "interior XC40 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/0 render resolution"
+          "ok": true,
+          "label": "interior XC40 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior XC40 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/1 images render"
+          "ok": true,
+          "label": "interior XC40 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior XC40 1/1 render resolution"
+          "ok": true,
+          "label": "interior XC40 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior XC40 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1549,6 +1810,14 @@
         {
           "ok": true,
           "label": "interior V60CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC has no canvas"
         },
         {
           "ok": true,
@@ -1563,48 +1832,64 @@
           "label": "interior V60CC 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/0 images render"
+          "ok": true,
+          "label": "interior V60CC 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/0 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/1 images render"
+          "ok": true,
+          "label": "interior V60CC 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/1 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/2 images render"
+          "ok": true,
+          "label": "interior V60CC 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/2 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/2 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior V60CC 0/3 code sync"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/3 images render"
+          "ok": true,
+          "label": "interior V60CC 0/3 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior V60CC 0/3 render resolution"
+          "ok": true,
+          "label": "interior V60CC 0/3 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior V60CC 0/3 deco sample styled"
         },
         {
           "ok": true,
@@ -1613,6 +1898,14 @@
         {
           "ok": true,
           "label": "interior EX30 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 has no canvas"
         },
         {
           "ok": true,
@@ -1627,12 +1920,16 @@
           "label": "interior EX30 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 0/0 images render"
+          "ok": true,
+          "label": "interior EX30 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX30 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -1643,24 +1940,32 @@
           "label": "interior EX30 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/0 images render"
+          "ok": true,
+          "label": "interior EX30 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/0 render resolution"
+          "ok": true,
+          "label": "interior EX30 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX30 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/1 images render"
+          "ok": true,
+          "label": "interior EX30 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30 1/1 render resolution"
+          "ok": true,
+          "label": "interior EX30 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/1 deco sample styled"
         },
         {
           "ok": true,
@@ -1669,6 +1974,14 @@
         {
           "ok": true,
           "label": "interior EX30CC fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC has no canvas"
         },
         {
           "ok": true,
@@ -1683,12 +1996,16 @@
           "label": "interior EX30CC 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX30CC 0/0 images render"
+          "ok": true,
+          "label": "interior EX30CC 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX30CC 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX30CC 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30CC 0/0 deco sample styled"
         },
         {
           "ok": true,
@@ -1697,6 +2014,14 @@
         {
           "ok": true,
           "label": "interior EX90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 has no canvas"
         },
         {
           "ok": true,
@@ -1711,36 +2036,48 @@
           "label": "interior EX90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/0 images render"
+          "ok": true,
+          "label": "interior EX90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/1 images render"
+          "ok": true,
+          "label": "interior EX90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/2 images render"
+          "ok": true,
+          "label": "interior EX90 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 0/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 0/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1751,36 +2088,48 @@
           "label": "interior EX90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/0 images render"
+          "ok": true,
+          "label": "interior EX90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/1 images render"
+          "ok": true,
+          "label": "interior EX90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/2 images render"
+          "ok": true,
+          "label": "interior EX90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 1/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1791,36 +2140,48 @@
           "label": "interior EX90 2/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/0 images render"
+          "ok": true,
+          "label": "interior EX90 2/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 2/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/1 images render"
+          "ok": true,
+          "label": "interior EX90 2/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 2/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/2 images render"
+          "ok": true,
+          "label": "interior EX90 2/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 2/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 2/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 2/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1831,36 +2192,48 @@
           "label": "interior EX90 3/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/0 images render"
+          "ok": true,
+          "label": "interior EX90 3/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 3/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/1 images render"
+          "ok": true,
+          "label": "interior EX90 3/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 3/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/2 images render"
+          "ok": true,
+          "label": "interior EX90 3/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 3/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 3/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 3/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1871,36 +2244,48 @@
           "label": "interior EX90 4/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/0 images render"
+          "ok": true,
+          "label": "interior EX90 4/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/0 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 4/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/1 images render"
+          "ok": true,
+          "label": "interior EX90 4/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/1 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior EX90 4/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/2 images render"
+          "ok": true,
+          "label": "interior EX90 4/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior EX90 4/2 render resolution"
+          "ok": true,
+          "label": "interior EX90 4/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX90 4/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1909,6 +2294,14 @@
         {
           "ok": true,
           "label": "interior ES90 fits"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 material-card mode"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 has no canvas"
         },
         {
           "ok": true,
@@ -1923,36 +2316,48 @@
           "label": "interior ES90 0/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/0 images render"
+          "ok": true,
+          "label": "interior ES90 0/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/0 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 0/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/1 images render"
+          "ok": true,
+          "label": "interior ES90 0/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/1 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 0/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/2 images render"
+          "ok": true,
+          "label": "interior ES90 0/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 0/2 render resolution"
+          "ok": true,
+          "label": "interior ES90 0/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 0/2 deco sample styled"
         },
         {
           "ok": true,
@@ -1963,36 +2368,48 @@
           "label": "interior ES90 1/0 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/0 images render"
+          "ok": true,
+          "label": "interior ES90 1/0 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/0 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/0 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/0 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 1/1 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/1 images render"
+          "ok": true,
+          "label": "interior ES90 1/1 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/1 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/1 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/1 deco sample styled"
         },
         {
           "ok": true,
           "label": "interior ES90 1/2 code sync"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/2 images render"
+          "ok": true,
+          "label": "interior ES90 1/2 material board renders"
         },
         {
-          "ok": false,
-          "label": "interior ES90 1/2 render resolution"
+          "ok": true,
+          "label": "interior ES90 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior ES90 1/2 deco sample styled"
         },
         {
           "ok": true,
@@ -2003,292 +2420,8 @@
           "label": "mobile menu opens"
         }
       ],
-      "failures": [
-        "site functions ready",
-        "stable interior marker",
-        "interior XC90 0/0 images render",
-        "interior XC90 0/0 render resolution",
-        "interior XC90 0/1 images render",
-        "interior XC90 0/1 render resolution",
-        "interior XC90 1/0 images render",
-        "interior XC90 1/0 render resolution",
-        "interior XC90 1/1 images render",
-        "interior XC90 1/1 render resolution",
-        "interior XC90 1/2 images render",
-        "interior XC90 1/2 render resolution",
-        "interior XC60 0/0 images render",
-        "interior XC60 0/0 render resolution",
-        "interior XC60 0/1 images render",
-        "interior XC60 0/1 render resolution",
-        "interior XC60 1/0 images render",
-        "interior XC60 1/0 render resolution",
-        "interior XC60 1/1 images render",
-        "interior XC60 1/1 render resolution",
-        "interior S90 0/0 images render",
-        "interior S90 0/0 render resolution",
-        "interior S90 1/0 images render",
-        "interior S90 1/0 render resolution",
-        "interior S90 1/1 images render",
-        "interior S90 1/1 render resolution",
-        "interior S90 1/2 images render",
-        "interior S90 1/2 render resolution",
-        "interior XC40 0/0 images render",
-        "interior XC40 0/0 render resolution",
-        "interior XC40 0/1 images render",
-        "interior XC40 0/1 render resolution",
-        "interior XC40 1/0 images render",
-        "interior XC40 1/0 render resolution",
-        "interior XC40 1/1 images render",
-        "interior XC40 1/1 render resolution",
-        "interior V60CC 0/0 images render",
-        "interior V60CC 0/0 render resolution",
-        "interior V60CC 0/1 images render",
-        "interior V60CC 0/1 render resolution",
-        "interior V60CC 0/2 images render",
-        "interior V60CC 0/2 render resolution",
-        "interior V60CC 0/3 images render",
-        "interior V60CC 0/3 render resolution",
-        "interior EX30 0/0 images render",
-        "interior EX30 0/0 render resolution",
-        "interior EX30 1/0 images render",
-        "interior EX30 1/0 render resolution",
-        "interior EX30 1/1 images render",
-        "interior EX30 1/1 render resolution",
-        "interior EX30CC 0/0 images render",
-        "interior EX30CC 0/0 render resolution",
-        "interior EX90 0/0 images render",
-        "interior EX90 0/0 render resolution",
-        "interior EX90 0/1 images render",
-        "interior EX90 0/1 render resolution",
-        "interior EX90 0/2 images render",
-        "interior EX90 0/2 render resolution",
-        "interior EX90 1/0 images render",
-        "interior EX90 1/0 render resolution",
-        "interior EX90 1/1 images render",
-        "interior EX90 1/1 render resolution",
-        "interior EX90 1/2 images render",
-        "interior EX90 1/2 render resolution",
-        "interior EX90 2/0 images render",
-        "interior EX90 2/0 render resolution",
-        "interior EX90 2/1 images render",
-        "interior EX90 2/1 render resolution",
-        "interior EX90 2/2 images render",
-        "interior EX90 2/2 render resolution",
-        "interior EX90 3/0 images render",
-        "interior EX90 3/0 render resolution",
-        "interior EX90 3/1 images render",
-        "interior EX90 3/1 render resolution",
-        "interior EX90 3/2 images render",
-        "interior EX90 3/2 render resolution",
-        "interior EX90 4/0 images render",
-        "interior EX90 4/0 render resolution",
-        "interior EX90 4/1 images render",
-        "interior EX90 4/1 render resolution",
-        "interior EX90 4/2 images render",
-        "interior EX90 4/2 render resolution",
-        "interior ES90 0/0 images render",
-        "interior ES90 0/0 render resolution",
-        "interior ES90 0/1 images render",
-        "interior ES90 0/1 render resolution",
-        "interior ES90 0/2 images render",
-        "interior ES90 0/2 render resolution",
-        "interior ES90 1/0 images render",
-        "interior ES90 1/0 render resolution",
-        "interior ES90 1/1 images render",
-        "interior ES90 1/1 render resolution",
-        "interior ES90 1/2 images render",
-        "interior ES90 1/2 render resolution"
-      ]
+      "failures": []
     }
   },
-  "failures": [
-    "desktop: site functions ready",
-    "desktop: stable interior marker",
-    "desktop: interior XC90 0/0 images render",
-    "desktop: interior XC90 0/0 render resolution",
-    "desktop: interior XC90 0/1 images render",
-    "desktop: interior XC90 0/1 render resolution",
-    "desktop: interior XC90 1/0 images render",
-    "desktop: interior XC90 1/0 render resolution",
-    "desktop: interior XC90 1/1 images render",
-    "desktop: interior XC90 1/1 render resolution",
-    "desktop: interior XC90 1/2 images render",
-    "desktop: interior XC90 1/2 render resolution",
-    "desktop: interior XC60 0/0 images render",
-    "desktop: interior XC60 0/0 render resolution",
-    "desktop: interior XC60 0/1 images render",
-    "desktop: interior XC60 0/1 render resolution",
-    "desktop: interior XC60 1/0 images render",
-    "desktop: interior XC60 1/0 render resolution",
-    "desktop: interior XC60 1/1 images render",
-    "desktop: interior XC60 1/1 render resolution",
-    "desktop: interior S90 0/0 images render",
-    "desktop: interior S90 0/0 render resolution",
-    "desktop: interior S90 1/0 images render",
-    "desktop: interior S90 1/0 render resolution",
-    "desktop: interior S90 1/1 images render",
-    "desktop: interior S90 1/1 render resolution",
-    "desktop: interior S90 1/2 images render",
-    "desktop: interior S90 1/2 render resolution",
-    "desktop: interior XC40 0/0 images render",
-    "desktop: interior XC40 0/0 render resolution",
-    "desktop: interior XC40 0/1 images render",
-    "desktop: interior XC40 0/1 render resolution",
-    "desktop: interior XC40 1/0 images render",
-    "desktop: interior XC40 1/0 render resolution",
-    "desktop: interior XC40 1/1 images render",
-    "desktop: interior XC40 1/1 render resolution",
-    "desktop: interior V60CC 0/0 images render",
-    "desktop: interior V60CC 0/0 render resolution",
-    "desktop: interior V60CC 0/1 images render",
-    "desktop: interior V60CC 0/1 render resolution",
-    "desktop: interior V60CC 0/2 images render",
-    "desktop: interior V60CC 0/2 render resolution",
-    "desktop: interior V60CC 0/3 images render",
-    "desktop: interior V60CC 0/3 render resolution",
-    "desktop: interior EX30 0/0 images render",
-    "desktop: interior EX30 0/0 render resolution",
-    "desktop: interior EX30 1/0 images render",
-    "desktop: interior EX30 1/0 render resolution",
-    "desktop: interior EX30 1/1 images render",
-    "desktop: interior EX30 1/1 render resolution",
-    "desktop: interior EX30CC 0/0 images render",
-    "desktop: interior EX30CC 0/0 render resolution",
-    "desktop: interior EX90 0/0 images render",
-    "desktop: interior EX90 0/0 render resolution",
-    "desktop: interior EX90 0/1 images render",
-    "desktop: interior EX90 0/1 render resolution",
-    "desktop: interior EX90 0/2 images render",
-    "desktop: interior EX90 0/2 render resolution",
-    "desktop: interior EX90 1/0 images render",
-    "desktop: interior EX90 1/0 render resolution",
-    "desktop: interior EX90 1/1 images render",
-    "desktop: interior EX90 1/1 render resolution",
-    "desktop: interior EX90 1/2 images render",
-    "desktop: interior EX90 1/2 render resolution",
-    "desktop: interior EX90 2/0 images render",
-    "desktop: interior EX90 2/0 render resolution",
-    "desktop: interior EX90 2/1 images render",
-    "desktop: interior EX90 2/1 render resolution",
-    "desktop: interior EX90 2/2 images render",
-    "desktop: interior EX90 2/2 render resolution",
-    "desktop: interior EX90 3/0 images render",
-    "desktop: interior EX90 3/0 render resolution",
-    "desktop: interior EX90 3/1 images render",
-    "desktop: interior EX90 3/1 render resolution",
-    "desktop: interior EX90 3/2 images render",
-    "desktop: interior EX90 3/2 render resolution",
-    "desktop: interior EX90 4/0 images render",
-    "desktop: interior EX90 4/0 render resolution",
-    "desktop: interior EX90 4/1 images render",
-    "desktop: interior EX90 4/1 render resolution",
-    "desktop: interior EX90 4/2 images render",
-    "desktop: interior EX90 4/2 render resolution",
-    "desktop: interior ES90 0/0 images render",
-    "desktop: interior ES90 0/0 render resolution",
-    "desktop: interior ES90 0/1 images render",
-    "desktop: interior ES90 0/1 render resolution",
-    "desktop: interior ES90 0/2 images render",
-    "desktop: interior ES90 0/2 render resolution",
-    "desktop: interior ES90 1/0 images render",
-    "desktop: interior ES90 1/0 render resolution",
-    "desktop: interior ES90 1/1 images render",
-    "desktop: interior ES90 1/1 render resolution",
-    "desktop: interior ES90 1/2 images render",
-    "desktop: interior ES90 1/2 render resolution",
-    "mobile: site functions ready",
-    "mobile: stable interior marker",
-    "mobile: interior XC90 0/0 images render",
-    "mobile: interior XC90 0/0 render resolution",
-    "mobile: interior XC90 0/1 images render",
-    "mobile: interior XC90 0/1 render resolution",
-    "mobile: interior XC90 1/0 images render",
-    "mobile: interior XC90 1/0 render resolution",
-    "mobile: interior XC90 1/1 images render",
-    "mobile: interior XC90 1/1 render resolution",
-    "mobile: interior XC90 1/2 images render",
-    "mobile: interior XC90 1/2 render resolution",
-    "mobile: interior XC60 0/0 images render",
-    "mobile: interior XC60 0/0 render resolution",
-    "mobile: interior XC60 0/1 images render",
-    "mobile: interior XC60 0/1 render resolution",
-    "mobile: interior XC60 1/0 images render",
-    "mobile: interior XC60 1/0 render resolution",
-    "mobile: interior XC60 1/1 images render",
-    "mobile: interior XC60 1/1 render resolution",
-    "mobile: interior S90 0/0 images render",
-    "mobile: interior S90 0/0 render resolution",
-    "mobile: interior S90 1/0 images render",
-    "mobile: interior S90 1/0 render resolution",
-    "mobile: interior S90 1/1 images render",
-    "mobile: interior S90 1/1 render resolution",
-    "mobile: interior S90 1/2 images render",
-    "mobile: interior S90 1/2 render resolution",
-    "mobile: interior XC40 0/0 images render",
-    "mobile: interior XC40 0/0 render resolution",
-    "mobile: interior XC40 0/1 images render",
-    "mobile: interior XC40 0/1 render resolution",
-    "mobile: interior XC40 1/0 images render",
-    "mobile: interior XC40 1/0 render resolution",
-    "mobile: interior XC40 1/1 images render",
-    "mobile: interior XC40 1/1 render resolution",
-    "mobile: interior V60CC 0/0 images render",
-    "mobile: interior V60CC 0/0 render resolution",
-    "mobile: interior V60CC 0/1 images render",
-    "mobile: interior V60CC 0/1 render resolution",
-    "mobile: interior V60CC 0/2 images render",
-    "mobile: interior V60CC 0/2 render resolution",
-    "mobile: interior V60CC 0/3 images render",
-    "mobile: interior V60CC 0/3 render resolution",
-    "mobile: interior EX30 0/0 images render",
-    "mobile: interior EX30 0/0 render resolution",
-    "mobile: interior EX30 1/0 images render",
-    "mobile: interior EX30 1/0 render resolution",
-    "mobile: interior EX30 1/1 images render",
-    "mobile: interior EX30 1/1 render resolution",
-    "mobile: interior EX30CC 0/0 images render",
-    "mobile: interior EX30CC 0/0 render resolution",
-    "mobile: interior EX90 0/0 images render",
-    "mobile: interior EX90 0/0 render resolution",
-    "mobile: interior EX90 0/1 images render",
-    "mobile: interior EX90 0/1 render resolution",
-    "mobile: interior EX90 0/2 images render",
-    "mobile: interior EX90 0/2 render resolution",
-    "mobile: interior EX90 1/0 images render",
-    "mobile: interior EX90 1/0 render resolution",
-    "mobile: interior EX90 1/1 images render",
-    "mobile: interior EX90 1/1 render resolution",
-    "mobile: interior EX90 1/2 images render",
-    "mobile: interior EX90 1/2 render resolution",
-    "mobile: interior EX90 2/0 images render",
-    "mobile: interior EX90 2/0 render resolution",
-    "mobile: interior EX90 2/1 images render",
-    "mobile: interior EX90 2/1 render resolution",
-    "mobile: interior EX90 2/2 images render",
-    "mobile: interior EX90 2/2 render resolution",
-    "mobile: interior EX90 3/0 images render",
-    "mobile: interior EX90 3/0 render resolution",
-    "mobile: interior EX90 3/1 images render",
-    "mobile: interior EX90 3/1 render resolution",
-    "mobile: interior EX90 3/2 images render",
-    "mobile: interior EX90 3/2 render resolution",
-    "mobile: interior EX90 4/0 images render",
-    "mobile: interior EX90 4/0 render resolution",
-    "mobile: interior EX90 4/1 images render",
-    "mobile: interior EX90 4/1 render resolution",
-    "mobile: interior EX90 4/2 images render",
-    "mobile: interior EX90 4/2 render resolution",
-    "mobile: interior ES90 0/0 images render",
-    "mobile: interior ES90 0/0 render resolution",
-    "mobile: interior ES90 0/1 images render",
-    "mobile: interior ES90 0/1 render resolution",
-    "mobile: interior ES90 0/2 images render",
-    "mobile: interior ES90 0/2 render resolution",
-    "mobile: interior ES90 1/0 images render",
-    "mobile: interior ES90 1/0 render resolution",
-    "mobile: interior ES90 1/1 images render",
-    "mobile: interior ES90 1/1 render resolution",
-    "mobile: interior ES90 1/2 images render",
-    "mobile: interior ES90 1/2 render resolution"
-  ]
+  "failures": []
 }
