@@ -1,0 +1,89 @@
+name: Interior PDF Audit QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/interior-pdf-audit-qa.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject PDF audit probe
+        run: |
+          cat > qa-pdf-probe.js <<'EOF'
+          (function(){
+            const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+            async function run(){
+              const failures=[];const checks=[];const ck=(ok,label)=>{checks.push({ok:!!ok,label});if(!ok)failures.push(label)};
+              for(let i=0;i<120;i++){if(typeof openVolvoInteriorGuide==='function'&&typeof getVolvoInteriorState==='function'&&document.documentElement.getAttribute('data-interior-pdf-audit'))break;await sleep(100)}
+              ck(document.documentElement.getAttribute('data-interior-pdf-audit')==='20260823-2','PDF audit script ready');
+              const keys=['XC90','XC60','S90','XC40','V60CC','EX30','EX30CC','EX90','ES90'];let combos=0;
+              for(const k of keys){
+                openVolvoInteriorGuide(k);await sleep(100);
+                const box=document.querySelector('#colors .vci-interior');
+                ck(!!box,k+' interior opens');
+                const groups=[...box.querySelectorAll('.vci-group-btn')];
+                for(let gi=0;gi<groups.length;gi++){
+                  groups[gi].click();await sleep(40);
+                  const seats=[...box.querySelectorAll('.vci-seat-btn')];
+                  for(let si=0;si<seats.length;si++){
+                    seats[si].click();await sleep(35);combos++;
+                    const st=getVolvoInteriorState();
+                    const seat=box.querySelector('.vci-seat-sample');const deco=box.querySelector('.vci-deco-sample');
+                    ck(box.dataset.pdfVerified==='1',k+' '+st.code+' PDF verified');
+                    ck(box.dataset.currentModel===k,k+' '+st.code+' model sync');
+                    ck(box.dataset.visualKey===k+'|'+st.code,k+' '+st.code+' visual key');
+                    ck(seat?.dataset.pdfCode===st.code,k+' '+st.code+' seat mapping');
+                    ck(deco?.dataset.pdfCode===st.code,k+' '+st.code+' deco mapping');
+                    ck((seat?.style.getPropertyValue('--seat-paint')||'').includes('linear-gradient'),k+' '+st.code+' seat tone');
+                    ck((deco?.style.getPropertyValue('--deco-paint')||'').includes('linear-gradient'),k+' '+st.code+' deco tone');
+                  }
+                }
+              }
+              ck(combos===46,'all 46 combinations audited');
+              ck((document.querySelector('#colors .vci-method')?.textContent||'').includes('PDF'),'PDF verified label visible');
+              const out={width:innerWidth,height:innerHeight,combos,checks,failures};const p=document.createElement('pre');p.id='pdf-qa-result';p.textContent=JSON.stringify(out);document.body.appendChild(p);
+            }
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
+          })();
+          EOF
+          python3 - <<'PY'
+          p='index.html';s=open(p,encoding='utf-8').read();s=s.replace('</body>','<script src="qa-pdf-probe.js"></script>\n</body>');open(p,'w',encoding='utf-8').write(s)
+          PY
+      - name: Start local site
+        run: |
+          python3 -m http.server 8000 >/tmp/site-server.log 2>&1 &
+          sleep 2
+      - name: Verify desktop and mobile
+        run: |
+          mkdir -p /tmp/pdf-audit-qa
+          BROWSER="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          test -n "$BROWSER"
+          for spec in desktop:1440:1000 mobile:390:844; do
+            IFS=: read NAME W H <<< "$spec"
+            "$BROWSER" --headless=new --no-sandbox --disable-gpu --window-size="$W,$H" --virtual-time-budget=18000 --dump-dom "http://127.0.0.1:8000/?qa=pdf-audit" > "/tmp/pdf-audit-qa/${NAME}.html" 2> "/tmp/pdf-audit-qa/${NAME}.log" || true
+          done
+          python3 - <<'PY'
+          import json,re,html
+          failures=[];screens={}
+          for name in ['desktop','mobile']:
+              txt=open(f'/tmp/pdf-audit-qa/{name}.html',encoding='utf-8',errors='ignore').read();m=re.search(r'<pre id="pdf-qa-result">(.*?)</pre>',txt,re.S)
+              if not m: failures.append(name+' missing result');continue
+              d=json.loads(html.unescape(m.group(1)));screens[name]=d;failures += [name+': '+x for x in d.get('failures',[])]
+          report={'screens':screens,'failures':failures};open('/tmp/pdf-audit-qa/report.json','w',encoding='utf-8').write(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False,indent=2));raise SystemExit(1 if failures else 0)
+          PY
+      - name: Publish PDF audit report
+        if: always()
+        run: |
+          mkdir -p qa
+          if [ -f /tmp/pdf-audit-qa/report.json ]; then cp /tmp/pdf-audit-qa/report.json qa/interior-pdf-audit-report.json; else printf '{"failures":["PDF audit runner did not produce report"]}\n' > qa/interior-pdf-audit-report.json; fi
+          git checkout -- index.html 2>/dev/null || true; rm -f qa-pdf-probe.js
+          git config user.name "interior-pdf-audit-qa"; git config user.email "actions@users.noreply.github.com"
+          git add qa/interior-pdf-audit-report.json; git commit -m "Record interior PDF audit QA [skip ci]" || exit 0; git pull --rebase origin main; git push
