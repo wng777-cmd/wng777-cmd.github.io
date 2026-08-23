@@ -1,6 +1,6 @@
 /* Customer-friendly Volvo accessories UI v2
-   Keeps official package names/prices from the existing acc data,
-   but explains what each accessory is for in plain Korean.
+   Keeps source package names/prices internally,
+   while customer-facing package names and guidance stay in Korean.
 */
 (function(){
   const categoryLabels={
@@ -18,7 +18,7 @@
 
   function metaFor(name){
     const n=name.toLowerCase();
-    const base={category:'comfort',title:name,desc:'볼보 순정 액세서리 패키지입니다. 실제 구성과 적용 가능 차종은 상담 시 확인할 수 있습니다.'};
+    const base={category:'comfort',title:'볼보 순정 액세서리',desc:'볼보 순정 액세서리 패키지입니다. 실제 구성과 적용 가능 차종은 상담 시 확인할 수 있습니다.'};
 
     if(n.includes('roofbox 430')) return {category:'load',title:'프리미엄 루프박스 430',desc:'차량 루프 위에 추가 수납공간을 만드는 프리미엄 루프박스 구성입니다. 여행 가방이나 캠핑 장비처럼 트렁크에 다 넣기 어려운 짐을 싣기 좋습니다.'};
     if(n.includes('roofbox 400')) return {category:'load',title:'루프박스 400',desc:'루프 위에 추가 수납공간을 만드는 루프박스 구성입니다. 가족 여행이나 캠핑처럼 짐이 많을 때 트렁크 공간을 여유롭게 쓸 수 있습니다.'};
@@ -72,7 +72,6 @@
       '<div class="acc2-card-top"><span class="acc2-use">'+categoryLabels[meta.category][0]+'</span>'+
       (parsed.price?'<b class="acc2-price">'+parsed.price+'</b>':'')+'</div>'+
       '<h4>'+meta.title+'</h4>'+
-      '<small class="acc2-original">'+parsed.name+'</small>'+
       '<p>'+meta.desc+'</p>'+
       '</article>';
   }
@@ -91,21 +90,35 @@
       '<div class="acc2-grid">'+buckets[k].map(card).join('')+'</div></section>'
     ).join('');
     const target=document.getElementById('acc2-content');
-    if(target) target.innerHTML='<div class="acc2-model-title"><span>선택 차량</span><h2>'+modelLabel(key)+'</h2><p>영문 패키지명보다 먼저 “어디에 쓰는 액세서리인지”를 확인하세요.</p></div>'+sections;
+    if(target) target.innerHTML='<div class="acc2-model-title"><span>선택 차량</span><h2>'+modelLabel(key)+'</h2><p>한글 이름과 용도 설명으로 필요한 액세서리를 빠르게 확인하세요.</p></div>'+sections;
   }
 
-  window.renderAccessoryModel=renderModel;
-
-  window.openAccessories=function(){
+  function openAccessoriesV2(){
     const data=(typeof acc!=='undefined')?acc:{};
     const keys=Object.keys(data);
     const tabs=keys.map((k,i)=>'<button class="'+(i===0?'active':'')+'" onclick="renderAccessoryModel(\''+k.replace(/'/g,"\\'")+'\',this)">'+modelLabel(k)+'</button>').join('');
-    const h='<div class="acc2-intro"><b>액세서리, 이름보다 용도로 보세요.</b><p>같은 영어 패키지명이라도 실제로는 짐을 더 싣는 용품인지, 차를 보호하는 용품인지, 가족·반려동물용인지가 중요합니다.</p></div>'+
+    const h='<div class="acc2-intro"><b>액세서리, 용도별로 쉽게 확인하세요.</b><p>짐·레저, 차량 보호, 가족·반려동물, 외관·승하차 등 필요한 목적에 맞춰 한글로 정리했습니다.</p></div>'+
       '<div class="acc2-tabs" id="acc2-model-tabs">'+tabs+'</div><div id="acc2-content"></div>'+
       '<div class="alert">액세서리 명칭과 가격은 제공된 Volvo The ONE MY26 Full Ver + Accessories 자료를 기준으로 표시합니다. 차량 연식·트림·장착 조건에 따라 적용 여부와 최종 금액이 달라질 수 있으니 실제 주문 전 확인이 필요합니다.</div>';
-    openM('VOLVO ACCESSORIES','순정 액세서리 쉽게 보기','차량을 고른 뒤, 필요한 용도만 골라보세요.',h);
+    openM('볼보 순정 액세서리','순정 액세서리 쉽게 보기','차량을 고른 뒤, 필요한 용도만 골라보세요.',h);
     if(keys.length) renderModel(keys[0],document.querySelector('#acc2-model-tabs button'));
-  };
+  }
+
+  function installAccessoryUI(){
+    window.renderAccessoryModel=renderModel;
+    window.openAccessories=openAccessoriesV2;
+  }
+
+  installAccessoryUI();
+
+  /* The core bundle is loaded asynchronously after DOMContentLoaded and defines
+     its own fallback openAccessories(). Re-apply this Korean UI after the
+     stable loader finishes so the customer-facing version cannot be overwritten. */
+  const loaderObserver=new MutationObserver(function(){
+    if(document.documentElement.hasAttribute('data-stable-loader')) installAccessoryUI();
+  });
+  loaderObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-stable-loader']});
+  window.addEventListener('load',installAccessoryUI,{once:true});
 
   const style=document.createElement('style');
   style.id='accessory-ui-v2-style';
@@ -114,7 +127,7 @@
   .acc2-tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 0 11px;scrollbar-width:thin}.acc2-tabs button{white-space:nowrap;border:1px solid #d6dde1;background:#fff;border-radius:999px;padding:9px 12px;font-size:10px;font-weight:800;color:#53616a}.acc2-tabs button.active{background:#102430;color:#fff;border-color:#102430}
   .acc2-model-title{padding:12px 2px 15px;border-bottom:1px solid #e3e7e9}.acc2-model-title span{font-size:8px;letter-spacing:.15em;color:#7a858c;font-weight:800}.acc2-model-title h2{font-size:24px;margin:4px 0 5px}.acc2-model-title p{margin:0;color:#68757d;font-size:10px}
   .acc2-section{padding-top:19px}.acc2-section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:9px}.acc2-section-head span{font-size:9px;font-weight:900;color:#274a61}.acc2-section-head h3{font-size:12px;font-weight:500;color:#68757d;margin:3px 0 0}.acc2-section-head>b{font-size:9px;color:#879198}
-  .acc2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.acc2-card{border:1px solid #e0e5e7;background:#fff;border-radius:15px;padding:14px;min-height:155px}.acc2-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.acc2-use{font-size:8px;padding:4px 7px;border-radius:999px;background:#eef3f5;color:#304954;font-weight:900}.acc2-price{font-size:10px;white-space:nowrap}.acc2-card h4{font-size:16px;margin:13px 0 4px;line-height:1.25}.acc2-original{display:block;color:#8a9499;font-size:8px;letter-spacing:.01em}.acc2-card p{font-size:10px;line-height:1.65;color:#596870;margin:10px 0 0}
+  .acc2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.acc2-card{border:1px solid #e0e5e7;background:#fff;border-radius:15px;padding:14px;min-height:155px}.acc2-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.acc2-use{font-size:8px;padding:4px 7px;border-radius:999px;background:#eef3f5;color:#304954;font-weight:900}.acc2-price{font-size:10px;white-space:nowrap}.acc2-card h4{font-size:16px;margin:13px 0 4px;line-height:1.25}.acc2-card p{font-size:10px;line-height:1.65;color:#596870;margin:10px 0 0}
   @media(max-width:700px){.acc2-intro{padding:15px}.acc2-intro b{font-size:16px}.acc2-grid{grid-template-columns:1fr}.acc2-card{min-height:0;padding:14px}.acc2-card h4{font-size:15px}.acc2-card p{font-size:10px}.acc2-tabs{margin-right:-12px;padding-right:12px}}
   `;
   if(!document.getElementById(style.id)) document.head.appendChild(style);
