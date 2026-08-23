@@ -64,6 +64,7 @@ function profile(model,code){
   var s=SEAT[m[0]],d=DECO[m[1]];return s&&d?{seat:s,deco:d,key:model+'|'+code}:null;
 }
 function codeOfButton(btn){var b=btn&&btn.querySelector('b');return b?(b.textContent||'').trim():'';}
+function setText(el,value){if(el&&el.textContent!==value)el.textContent=value;}
 function apply(){
   if(typeof window.getVolvoInteriorState!=='function')return false;
   var st;try{st=window.getVolvoInteriorState();}catch(e){return false;}
@@ -75,9 +76,9 @@ function apply(){
   var deco=box.querySelector('.vci-deco-sample');if(deco){deco.style.setProperty('--deco-paint',p.deco.paint);deco.dataset.decoTone=p.deco.tone;deco.dataset.pdfCode=st.code;}
   box.querySelectorAll('.vci-seat-btn').forEach(function(btn){var q=profile(st.model,codeOfButton(btn));if(q){var dot=btn.querySelector('.vci-dot');if(dot)dot.style.setProperty('--dot',q.seat.dot);}});
   var selectedDot=box.querySelector('.vci-selected-head .vci-dot');if(selectedDot)selectedDot.style.setProperty('--dot',p.seat.dot);
-  var method=box.querySelector('.vci-method');if(method)method.textContent='PDF 대조 완료 · 코드별 색상';
-  var why=box.querySelector('.vci-why p');if(why)why.textContent='색상 코드별 시트와 데코를 Volvo The ONE '+(YEAR[st.model]||'')+' 자료의 시각 톤에 맞춰 각각 따로 표시합니다.';
-  var note=box.querySelector('.vci-note');if(note)note.textContent='※ 색상 코드·시트 소재·데코 명칭은 Volvo The ONE MY26/MY27 PDF와 대조했습니다. 화면의 색상 샘플은 PDF 이미지에서 보이는 톤을 단순화한 근사색이며, 실제 색감·질감은 조명과 디스플레이에 따라 달라질 수 있습니다.';
+  setText(box.querySelector('.vci-method'),'PDF 대조 완료 · 코드별 색상');
+  setText(box.querySelector('.vci-why p'),'색상 코드별 시트와 데코를 Volvo The ONE '+(YEAR[st.model]||'')+' 자료의 시각 톤에 맞춰 각각 따로 표시합니다.');
+  setText(box.querySelector('.vci-note'),'※ 색상 코드·시트 소재·데코 명칭은 Volvo The ONE MY26/MY27 PDF와 대조했습니다. 화면의 색상 샘플은 PDF 이미지에서 보이는 톤을 단순화한 근사색이며, 실제 색감·질감은 조명과 디스플레이에 따라 달라질 수 있습니다.');
   return true;
 }
 function install(){
@@ -86,7 +87,7 @@ function install(){
   var obs=new MutationObserver(function(list){for(var i=0;i<list.length;i++){if(list[i].type==='childList'){apply();break;}}});
   obs.observe(sec,{subtree:true,childList:true});
   var tries=0;(function wait(){if(apply())return;if(++tries<80)setTimeout(wait,75);})();
-  document.documentElement.setAttribute('data-interior-pdf-audit','20260823-1');
+  document.documentElement.setAttribute('data-interior-pdf-audit','20260823-2');
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();
