@@ -14,17 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Force fresh mobile document
+      - name: Force fresh interior loader on PC and mobile
         run: |
-          python - <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
+          import re
           p=Path('index.html')
           s=p.read_text(encoding='utf-8')
-          marker='<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-          inject='''<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">\n<meta http-equiv="Pragma" content="no-cache">\n<meta http-equiv="Expires" content="0">\n<script>(function(){var m=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);var v="20260815m2";if(m&&!location.search.includes("v="+v)){var q=location.search?location.search+"&v="+v:"?v="+v;location.replace(location.pathname+q+location.hash);}})();</script>'''
-          if '20260815m2' not in s:
-              if marker not in s: raise SystemExit('viewport marker not found')
-              s=s.replace(marker,inject,1)
+          old=s
+          s,n=re.subn(r'scripts/site-pdf-refresh\.js\?v=[^"\']+', 'scripts/site-pdf-refresh.js?v=20260823cards1', s, count=1)
+          if n!=1:
+              raise SystemExit('site-pdf-refresh loader reference not found')
+          if s!=old:
               p.write_text(s,encoding='utf-8')
           PY
       - name: Commit changes
@@ -33,5 +34,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
           git diff --cached --quiet && exit 0
-          git commit -m "Force fresh mobile layout [skip ci]"
+          git commit -m "Bust interior loader cache [skip ci]"
+          git pull --rebase origin main
           git push
