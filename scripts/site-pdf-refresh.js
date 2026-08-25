@@ -38,7 +38,8 @@
       .then(function(){return addScript('scripts/site-copy-fix-20260821.js?v=20260821copy1','data-copy-fix');})
       .then(function(){return addScript('scripts/site-interior-material-cards-20260823.js?v=20260823cards1','data-interior-material-js');})
       .then(function(){return addScript('scripts/site-interior-pdf-visual-audit-20260823.js?v=20260823pdf3','data-interior-pdf-visual-js');})
-      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260823-material-cards-pdf3');return loadAuditFixes();})
+      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260826-my26-v31');return loadAuditFixes();})
+      .then(function(){return addScript('scripts/site-my26-v31-20260826.js?v=20260826v31','data-my26-v31');})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
