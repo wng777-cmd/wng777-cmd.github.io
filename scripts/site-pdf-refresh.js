@@ -41,6 +41,7 @@
       .then(function(){document.documentElement.setAttribute('data-stable-loader','20260826-my26-v31');return loadAuditFixes();})
       .then(function(){return addScript('scripts/site-my26-v31-20260826.js?v=20260826v31','data-my26-v31');})
       .then(function(){return addScript('scripts/site-my26-v31-accessory-postload.js?v=20260826v31a','data-my26-v31-accessory-postload');})
+      .then(function(){return addScript('scripts/site-source-copy-cleanup-20260826.js?v=20260826source1','data-source-copy-cleanup');})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
