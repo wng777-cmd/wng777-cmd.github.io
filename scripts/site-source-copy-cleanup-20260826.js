@@ -27,42 +27,51 @@
       .replace(/\s{2,}/g,' ');
   }
 
+  function setText(el,value){
+    if(el&&el.textContent!==value) el.textContent=value;
+  }
+
   function cleanKnownCopy(root){
     root=root||document;
 
     const service=root.querySelector&&root.querySelector('#service .sh p');
-    if(service) service.textContent='전국 38개 서비스 네트워크 · 실제 운영정보는 공식 페이지에서 최종 확인';
+    setText(service,'전국 38개 서비스 네트워크 · 실제 운영정보는 공식 페이지에서 최종 확인');
 
     const color=root.querySelector&&root.querySelector('.color-head p');
-    if(color) color.textContent='주요 컬러를 한눈에 비교할 수 있도록 정리했습니다. 실제 적용 가능 컬러는 모델과 트림에 따라 달라집니다.';
+    setText(color,'주요 컬러를 한눈에 비교할 수 있도록 정리했습니다. 실제 적용 가능 컬러는 모델과 트림에 따라 달라집니다.');
 
     if(root.querySelectorAll){
       root.querySelectorAll('#tools .tile').forEach(function(tile){
         const btn=tile.querySelector('button');
         if(btn&&String(btn.getAttribute('onclick')).indexOf('openAccessories')>-1){
-          const p=tile.querySelector('p');
-          if(p) p.textContent='모델별 순정 액세서리를 목적별로 정리했습니다.';
+          setText(tile.querySelector('p'),'모델별 순정 액세서리를 목적별로 정리했습니다.');
         }
       });
 
-      root.querySelectorAll('[data-my26-v31-care] > small').forEach(function(el){el.style.display='none';});
+      root.querySelectorAll('[data-my26-v31-care] > small').forEach(function(el){
+        if(el.style.display!=='none') el.style.display='none';
+      });
 
       root.querySelectorAll('.acc2-intro p').forEach(function(el){
-        el.textContent='짐·레저, 차량 보호, 가족·반려동물, 외관·승하차 용도별로 정리했습니다.';
+        setText(el,'짐·레저, 차량 보호, 가족·반려동물, 외관·승하차 용도별로 정리했습니다.');
       });
 
       root.querySelectorAll('.alert').forEach(function(el){
         const txt=el.textContent||'';
         if(/액세서리 명칭과 가격/.test(txt) && /(Volvo The ONE|MY26 Full V3\.1|제공된)/.test(txt)){
-          el.innerHTML='액세서리 명칭과 가격은 차량 연식·트림·장착 조건에 따라 적용 여부와 최종 금액이 달라질 수 있으니 실제 주문 전 확인이 필요합니다.';
+          const next='액세서리 명칭과 가격은 차량 연식·트림·장착 조건에 따라 적용 여부와 최종 금액이 달라질 수 있으니 실제 주문 전 확인이 필요합니다.';
+          if(el.textContent!==next) el.textContent=next;
           return;
         }
         if(/Option List/.test(txt)){
-          el.innerHTML='주요 기본사양과 트림별 차이는 비교하기 쉬운 핵심 항목만 정리했습니다. 실제 출고 가능 사양과 세부 적용 여부는 상담 시 최종 확인해주세요.';
+          const next='주요 기본사양과 트림별 차이는 비교하기 쉬운 핵심 항목만 정리했습니다. 실제 출고 가능 사양과 세부 적용 여부는 상담 시 최종 확인해주세요.';
+          if(el.textContent!==next) el.textContent=next;
           return;
         }
         if(/가격은 제공된 Volvo The ONE 자료/.test(txt)){
-          el.innerHTML=el.innerHTML.replace('가격은 제공된 Volvo The ONE 자료의 소비자 판매가격 기준입니다.','가격은 소비자 판매가격 기준입니다.');
+          const before=el.innerHTML;
+          const after=before.replace('가격은 제공된 Volvo The ONE 자료의 소비자 판매가격 기준입니다.','가격은 소비자 판매가격 기준입니다.');
+          if(before!==after) el.innerHTML=after;
         }
         if(/Volvo The ONE|MY26 Full V3\.1|MY26 V3\.1 기준/.test(el.textContent||'')){
           const before=el.innerHTML;
@@ -72,7 +81,9 @@
       });
 
       root.querySelectorAll('.electric-range-panel p').forEach(function(el){
-        el.textContent=el.textContent.replace(/MY27 Light V3의 국내 인증 주행거리 항목은 TBD로 표기되어 있어 현재 Volvo Cars Korea 공식 발표 WLTP 최대값을 안내합니다\./g,'국내 인증 주행거리는 확정 전이며 현재 WLTP 최대값을 안내합니다.');
+        const before=el.textContent;
+        const after=before.replace(/MY27 Light V3의 국내 인증 주행거리 항목은 TBD로 표기되어 있어 현재 Volvo Cars Korea 공식 발표 WLTP 최대값을 안내합니다\./g,'국내 인증 주행거리는 확정 전이며 현재 WLTP 최대값을 안내합니다.');
+        if(before!==after) el.textContent=after;
       });
     }
   }
@@ -100,6 +111,7 @@
   function start(){
     apply(document);
     const observer=new MutationObserver(function(mutations){
+      let needsGlobal=false;
       mutations.forEach(function(m){
         if(m.type==='characterData'){
           const n=m.target;
@@ -108,10 +120,13 @@
             const after=cleanText(n.nodeValue);
             if(after!==n.nodeValue)n.nodeValue=after;
           }
+          needsGlobal=true;
         }
-        m.addedNodes&&m.addedNodes.forEach(function(n){if(n.nodeType===1)apply(n)});
+        m.addedNodes&&m.addedNodes.forEach(function(n){
+          if(n.nodeType===1){apply(n);needsGlobal=true;}
+        });
       });
-      cleanKnownCopy(document);
+      if(needsGlobal) cleanKnownCopy(document);
     });
     observer.observe(document.body,{subtree:true,childList:true,characterData:true});
     [300,1000,2000,3600].forEach(function(ms){setTimeout(function(){apply(document)},ms)});
