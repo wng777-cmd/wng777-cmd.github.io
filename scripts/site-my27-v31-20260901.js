@@ -98,22 +98,72 @@
     return true;
   }
 
-  function patchSourceName(){
-    try{
-      sourceName=function(d){
-        return d&&d.year==='MY27'?'Volvo The ONE MY27 Light V3.1':'Volvo The ONE MY26 Full Ver + Accessories V3.1';
+  function rangeCopy(key){
+    if(key==='EX90') return {
+      card:'Performance 448km',basis:'국내 복합',
+      value:'Performance 448 km',label:'국내 복합 인증',
+      detail:'Twin Motor Performance 7·6인승은 복합 448km(도심 471km · 고속 419km)로 확인되었습니다. Twin Motor 모델은 아직 TBD입니다.'
+    };
+    if(key==='ES90') return {
+      card:'Twin Motor 520km',basis:'국내 복합',
+      value:'Twin Motor 520 km',label:'국내 복합 인증',
+      detail:'Twin Motor PLUS·ULTRA는 복합 520km(도심 548km · 고속 486km)로 확인되었습니다. Single Motor Extended Range와 Performance는 아직 TBD입니다.'
+    };
+    return null;
+  }
+
+  function refreshRangeCard(key){
+    var d=rangeCopy(key); if(!d) return;
+    var card=document.querySelector('.model[data-model="'+key+'"] .electric-range-chip');
+    if(!card) return;
+    var strong=card.querySelector('strong'); var span=card.querySelector('span');
+    if(strong) strong.textContent=d.card;
+    if(span) span.textContent=d.basis;
+  }
+
+  function refreshRangePanel(key,root){
+    var d=rangeCopy(key); if(!d||!root) return;
+    var panel=root.querySelector('[data-electric-range="'+key+'"]');
+    if(!panel) return;
+    var value=panel.querySelector('.electric-range-main b');
+    var label=panel.querySelector('.electric-range-main span');
+    var detail=panel.querySelector('p');
+    if(value) value.textContent=d.value;
+    if(label) label.textContent=d.label;
+    if(detail) detail.textContent=d.detail;
+  }
+
+  function patchRangeUI(){
+    refreshRangeCard('EX90');
+    refreshRangeCard('ES90');
+
+    if(window.__VOLVO_MY27_V31_RANGE_WRAP__) return;
+    if(typeof window.openModel==='function'){
+      var oldOpen=window.openModel;
+      window.openModel=function(key){
+        oldOpen.apply(this,arguments);
+        requestAnimationFrame(function(){refreshRangePanel(key,document.getElementById('mbody'));});
       };
-    }catch(e){}
+    }
+    if(typeof window.renderTrim==='function'){
+      var oldRender=window.renderTrim;
+      window.renderTrim=function(key,b){
+        oldRender.apply(this,arguments);
+        requestAnimationFrame(function(){refreshRangePanel(key,document.getElementById('tc'));});
+      };
+    }
+    window.__VOLVO_MY27_V31_RANGE_WRAP__=true;
   }
 
   function apply(){
     patchModels();
     patchTrimGuides();
-    patchSourceName();
+    patchRangeUI();
     document.documentElement.setAttribute('data-my27-v31','20260901');
   }
 
   apply();
   setTimeout(apply,0);
   setTimeout(apply,300);
+  setTimeout(function(){refreshRangeCard('EX90');refreshRangeCard('ES90');},1000);
 })();
