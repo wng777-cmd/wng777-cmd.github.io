@@ -9,13 +9,14 @@ const assert=(condition,message)=>{if(!condition)throw new Error(message);};
 
 const index=read('index.html');
 const guide=read('guide.html');
+const mobileEntry=read('mobile-20260903-v2.html');
 const loader=read('scripts/site-pdf-refresh.js');
 const detail=read('scripts/site-trim-option-detail-20260903.js');
 const core=read('scripts/site-pdf-refresh-core.js');
 const versionGuard=read('scripts/site-version-guard.js');
 const release=JSON.parse(read('site-version.json')).version;
 
-assert(release==='20260903-mobile-1',`사이트 release 값 오류: ${release}`);
+assert(release==='20260903-mobile-2',`사이트 release 값 오류: ${release}`);
 assert(versionGuard.includes("fetch('/site-version.json?ts='"),'모바일 최신 버전 확인 요청 누락');
 assert(versionGuard.includes("window.addEventListener('pageshow'"),'모바일 bfcache 복귀 확인 누락');
 assert(versionGuard.includes("document.addEventListener('visibilitychange'"),'모바일 탭 복귀 확인 누락');
@@ -39,11 +40,12 @@ vm.runInContext(versionGuard,guardContext,{filename:'site-version-guard.js'});
 await new Promise((resolve)=>setImmediate(resolve));
 assert(redirectedTo&&redirectedTo.includes(`sitev=${release}`)&&redirectedTo.endsWith('#tools'),'모바일 최신 버전 이동 동작 오류');
 
-for(const [name,html] of [['index.html',index],['guide.html',guide]]){
+assert(mobileEntry===index,'새 모바일 진입 페이지가 index.html과 다름');
+for(const [name,html] of [['index.html',index],['guide.html',guide],['mobile-20260903-v2.html',mobileEntry]]){
   assert(html.includes(`<meta content="${release}" name="site-release"/>`),`${name}: site release 불일치`);
-  assert(html.includes('scripts/site-version-guard.js?v=20260903mobile1'),`${name}: 모바일 버전 확인 스크립트 누락`);
+  assert(html.includes('scripts/site-version-guard.js?v=20260903mobile2'),`${name}: 모바일 버전 확인 스크립트 누락`);
   assert(html.indexOf('site-version-guard.js')<html.indexOf('site-pdf-refresh.js'),`${name}: 모바일 버전 확인 스크립트 로드 순서 오류`);
-  assert(html.includes('scripts/site-pdf-refresh.js?v=20260903guard1'),`${name}: 최신 loader cache key 누락`);
+  assert(html.includes('scripts/site-pdf-refresh.js?v=20260903mobile2'),`${name}: 최신 loader cache key 누락`);
   assert(html.includes('tel:01026503211'),`${name}: 전화 상담 링크 누락`);
   assert(html.includes('qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-'),`${name}: 카카오톡 링크 누락`);
   for(const key of ['XC40','XC60','XC90','EX30','EX30CC','EX90','ES90','S90','V60CC']){
@@ -51,7 +53,8 @@ for(const [name,html] of [['index.html',index],['guide.html',guide]]){
   }
 }
 
-const detailLoad="scripts/site-trim-option-detail-20260903.js?v=20260903guard1";
+assert(loader.includes("scripts/site-pdf-refresh-core.js?v=20260903mobile2"),'loader: EX30 기본 렌더러 cache key 누락');
+const detailLoad="scripts/site-trim-option-detail-20260903.js?v=20260903mobile2";
 assert(loader.includes(detailLoad),'loader: 상세 옵션 스크립트 또는 cache key 누락');
 assert(loader.indexOf(detailLoad)>loader.indexOf('site-source-copy-cleanup-20260826.js'),'loader: 상세 옵션 렌더러가 마지막 데이터 패치보다 먼저 로드됨');
 assert(detail.includes('@media(max-width:700px)'),'상세 옵션 UI: 모바일 규칙 누락');
@@ -75,6 +78,14 @@ const context={
 context.window=context;
 vm.createContext(context);
 vm.runInContext(prefix,context,{filename:'site-pdf-refresh-core.js'});
+
+const coreEx30=vm.runInContext('models.EX30',context);
+const coreEx30Output=JSON.stringify(coreEx30);
+assert(!coreEx30Output.includes('편의사양 강화'),'EX30 기본 렌더러에 모호한 문구가 남아 있음');
+for(const exact of ['18인치 5-스포크 실버 에어로 휠 · 225/55R18','19인치 5-스포크 에어로 휠 · 245/45R19']){
+  assert(coreEx30Output.includes(exact),`EX30 기본 렌더러 휠 정보 누락: ${exact}`);
+}
+
 vm.runInContext(detail,context,{filename:'site-trim-option-detail-20260903.js'});
 
 const modelKeys=vm.runInContext('Object.keys(models)',context);

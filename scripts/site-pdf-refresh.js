@@ -32,7 +32,7 @@
   }
   function run(){
     installBase();
-    addScript('scripts/site-pdf-refresh-core.js?v=20260821audit1','data-volvo-core')
+    addScript('scripts/site-pdf-refresh-core.js?v=20260903mobile2','data-volvo-core')
       .then(function(){return addScript('scripts/site-dark-guide.js?v=20260821dark5','data-dark-guide');})
       .then(function(){return addScript('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5','data-dark-guide-refine');})
       .then(function(){return addScript('scripts/site-copy-fix-20260821.js?v=20260821copy1','data-copy-fix');})
@@ -44,7 +44,7 @@
       .then(function(){return addScript('scripts/site-my27-v31-20260901.js?v=20260901v31','data-my27-v31');})
       .then(function(){return addScript('scripts/site-aurora-silver-tone-20260901.js?v=20260901a1','data-aurora-silver-tone');})
       .then(function(){return addScript('scripts/site-source-copy-cleanup-20260826.js?v=20260826source2','data-source-copy-cleanup');})
-      .then(function(){return addScript('scripts/site-trim-option-detail-20260903.js?v=20260903guard1','data-trim-option-detail');})
+      .then(function(){return addScript('scripts/site-trim-option-detail-20260903.js?v=20260903mobile2','data-trim-option-detail');})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();

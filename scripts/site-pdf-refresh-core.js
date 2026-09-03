@@ -26,9 +26,9 @@ S90:{year:'MY26',power:'B5 Mild Hybrid / T8 AWD Plug-in Hybrid',note:'안락함�
 V60CC:{year:'MY26',power:'B5 AWD Mild Hybrid',note:'세단의 승차감과 SUV 활용성을 섞은 크로스컨트리',trims:[
 ['B5 AWD ULTRA','6,450만 원','단일 트림',['B5 AWD 마일드 하이브리드','ULTRA 구성','Cross Country 전용 스타일']]
 ]},
-EX30:{year:'MY26',power:'Single Motor Extended Range · RWD',note:'Core는 실속, Ultra는 편의·고급사양 강화 — 주행성능은 동일',trims:[
-['CORE','3,991만 원','실속형',['272마력 싱글모터 · 후륜구동(RWD)','0→100km/h 약 5.3초','주요 안전기술은 기본 · 가격 경쟁력 중심']],
-['ULTRA','4,479만 원','편의형',['272마력 싱글모터 · 후륜구동(RWD)','Core 대비 +488만 원','360° 카메라 · 파크 파일럿 · 하만카돈 · 파노라마 루프 등 편의사양 강화']]
+EX30:{year:'MY26',power:'Single Motor Extended Range · RWD',note:'Core·Ultra 모두 272마력 싱글모터 RWD로 주행성능은 동일 · Ultra의 실제 추가·변경 품목과 휠 차이를 표시했습니다.',trims:[
+['CORE','3,991만 원','실속형',['272마력 싱글모터 RWD · 0→100km/h 5.3초','어댑티브 크루즈 · 전/후방 센서 · 후방 카메라','앞/뒤 열선시트 · 히트펌프 · 전동식 트렁크','High Performance 사운드 · 5개 스피커 · 디지털 키','18인치 5-스포크 실버 에어로 휠 · 225/55R18']],
+['ULTRA','4,479만 원','편의형',['Core 대비 +488만 원 · 272마력 RWD 성능 동일','스티어링/교차로 긴급제동 · 파일럿/파크 파일럿','측방 센서 · 360° 카메라 · 눈부심 방지 미러','앞좌석 전동시트 · 운전석 메모리 · 전동 럼버','공기 청정 · 2-구역 공조 · 파노라마 글라스 루프','Harman/Kardon · 9개 스피커 · 서브우퍼 · 무선충전','Key Tag · 디지털 키 플러스 · 유광 블랙 리어 스포일러','19인치 5-스포크 에어로 휠 · 245/45R19']]
 ]},
 EX30CC:{year:'MY26',power:'Twin Motor Performance AWD',note:'기본 골격은 EX30과 같지만, 차고를 높이고 AWD·고성능·Cross Country 전용 세팅을 더한 모델',trims:[
 ['ULTRA','4,812만 원','고성능 AWD',['428마력 듀얼모터 · 사륜구동(AWD) · 0→100km/h 3.7초','전장·휠베이스 동일(4,233 / 2,650mm) · 지상고 190mm(EX30 171mm 대비 +19mm)','전용 컴포트 섀시 · 19인치 CC 휠 · 견고한 외관 · EX30 Ultra 대비 +333만 원']]
