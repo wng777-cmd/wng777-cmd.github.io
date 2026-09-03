@@ -23,8 +23,8 @@
     addScript('scripts/site-internal-test-filter-20260821.js?v=20260821internal1','data-internal-test-filter').catch(function(){});
     addCss('scripts/site-audit-fixes-20260821.css?v=20260821audit1','data-site-audit-css');
     addCss('scripts/site-hero-title-fix-20260821.css?v=20260821hero1','data-hero-title-css');
-    addCss('scripts/site-interior-material-cards-20260823.css?v=20260823cards1','data-interior-material-css');
-    addCss('scripts/site-interior-pdf-visual-audit-20260823.css?v=20260823pdf2','data-interior-pdf-visual-css');
+    addCss('scripts/site-interior-material-cards-20260823.css?v=20260903interior1','data-interior-material-css');
+    addCss('scripts/site-interior-pdf-visual-audit-20260823.css?v=20260903interior1','data-interior-pdf-visual-css');
   }
   function loadAuditFixes(){
     if(document.querySelector('script[data-site-audit-fixes]'))return Promise.resolve();
@@ -36,9 +36,10 @@
       .then(function(){return addScript('scripts/site-dark-guide.js?v=20260821dark5','data-dark-guide');})
       .then(function(){return addScript('scripts/site-dark-guide-refine-20260821.js?v=20260821dark5','data-dark-guide-refine');})
       .then(function(){return addScript('scripts/site-copy-fix-20260821.js?v=20260821copy1','data-copy-fix');})
-      .then(function(){return addScript('scripts/site-interior-material-cards-20260823.js?v=20260823cards1','data-interior-material-js');})
-      .then(function(){return addScript('scripts/site-interior-pdf-visual-audit-20260823.js?v=20260823pdf3','data-interior-pdf-visual-js');})
-      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260901-my27-v31');return loadAuditFixes();})
+      .then(function(){return addScript('scripts/site-interior-material-cards-20260823.js?v=20260903interior1','data-interior-material-js');})
+      .then(function(){return addScript('scripts/site-interior-pdf-visual-audit-20260823.js?v=20260903interior1','data-interior-pdf-visual-js');})
+      .then(function(){return addScript('scripts/site-interior-v31-sync-20260903.js?v=20260903interior1','data-interior-v31-sync');})
+      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260903-interior-v31');return loadAuditFixes();})
       .then(function(){return addScript('scripts/site-my26-v31-20260826.js?v=20260826v31','data-my26-v31');})
       .then(function(){return addScript('scripts/site-my26-v31-accessory-postload.js?v=20260826v31a','data-my26-v31-accessory-postload');})
       .then(function(){return addScript('scripts/site-my27-v31-20260901.js?v=20260901v31','data-my27-v31');})
