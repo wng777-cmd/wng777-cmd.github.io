@@ -44,6 +44,7 @@
       .then(function(){return addScript('scripts/site-my27-v31-20260901.js?v=20260901v31','data-my27-v31');})
       .then(function(){return addScript('scripts/site-aurora-silver-tone-20260901.js?v=20260901a1','data-aurora-silver-tone');})
       .then(function(){return addScript('scripts/site-source-copy-cleanup-20260826.js?v=20260826source2','data-source-copy-cleanup');})
+      .then(function(){return addScript('scripts/site-trim-option-detail-20260903.js?v=20260903trim1','data-trim-option-detail');})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
