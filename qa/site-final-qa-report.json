@@ -1205,6 +1205,34 @@
         {
           "ok": true,
           "label": "all 46 interior combinations tested"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detailed renderer active"
+        },
+        {
+          "ok": true,
+          "label": "EX30 has Core and Ultra detail cards"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detailed option rows visible"
+        },
+        {
+          "ok": true,
+          "label": "EX30 Core exact 18-inch wheel"
+        },
+        {
+          "ok": true,
+          "label": "EX30 Ultra exact 19-inch wheel"
+        },
+        {
+          "ok": true,
+          "label": "EX30 generic convenience copy removed"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detail modal fits"
         }
       ],
       "failures": []
@@ -2418,6 +2446,38 @@
         {
           "ok": true,
           "label": "mobile menu opens"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detailed renderer active"
+        },
+        {
+          "ok": true,
+          "label": "EX30 has Core and Ultra detail cards"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detailed option rows visible"
+        },
+        {
+          "ok": true,
+          "label": "EX30 Core exact 18-inch wheel"
+        },
+        {
+          "ok": true,
+          "label": "EX30 Ultra exact 19-inch wheel"
+        },
+        {
+          "ok": true,
+          "label": "EX30 generic convenience copy removed"
+        },
+        {
+          "ok": true,
+          "label": "EX30 detail modal fits"
+        },
+        {
+          "ok": true,
+          "label": "EX30 mobile cards use one column"
         }
       ],
       "failures": []
