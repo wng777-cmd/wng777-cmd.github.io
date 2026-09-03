@@ -340,7 +340,6 @@
   function esc(value){
     return String(value).replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];});
   }
-  function sourceName(d){return d.year==='MY27'?'Volvo The ONE MY27 Light V3.1':'Volvo The ONE MY26 자료';}
   function kindLabel(kind){return ({base:'기본 트림',upgrade:'추가 옵션',style:'스타일·휠 차이',power:'파워트레인 차이',seat:'좌석 구성 차이'})[kind]||'핵심 차이';}
   function optionPanel(key){
     var d=details[key];
@@ -361,7 +360,7 @@
     }).join('')+'</div>';
   }
   function notice(d){
-    return '<div class="alert"><b>'+esc(d.year)+' 기준 · '+esc(sourceName(d))+'</b><br>제공된 Option List에서 상담 시 비교가 필요한 주요 품목을 정리했습니다. 실제 출고 차량은 생산 시점과 세부 사양에 따라 차이가 있을 수 있으므로 최종 계약 전 확인해주세요.</div>';
+    return '<div class="alert"><b>'+esc(d.year)+' 국내 판매 기준</b><br>실제 출고 차량은 생산 시점과 세부 사양에 따라 차이가 있을 수 있으므로 최종 계약 전 확인해주세요.</div>';
   }
   function openModel(key){
     var d=models[key];var guide=details[key];
@@ -404,7 +403,7 @@
     window.openModel=openModel;
     window.openAllTrims=openAllTrims;
     window.renderTrim=renderTrim;
-    document.documentElement.setAttribute('data-trim-option-detail','20260903-1');
+    document.documentElement.setAttribute('data-trim-option-detail','20260903-2');
   }
   install();
 })();
