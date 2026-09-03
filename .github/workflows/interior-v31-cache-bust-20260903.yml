@@ -1,0 +1,46 @@
+name: Interior V3.1 cache bust 20260903
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/interior-v31-cache-bust-20260903.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point index to verified interior V3.1 loader
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          replacements=[
+              ('content="20260903-mobile-2" name="site-release"', 'content="20260903-interior-1" name="site-release"'),
+              ('scripts/site-version-guard.js?v=20260903mobile2', 'scripts/site-version-guard.js?v=20260903interior1'),
+              ('scripts/site-pdf-refresh.js?v=20260903mobile2', 'scripts/site-pdf-refresh.js?v=20260903interior1'),
+          ]
+          changed=False
+          for old,new in replacements:
+              if old in s:
+                  s=s.replace(old,new,1)
+                  changed=True
+              elif new not in s:
+                  raise SystemExit(f'expected marker not found: {old}')
+          if changed:
+              p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit cache update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Bust cache for verified interior V3.1 [skip ci]"
+          git pull --rebase origin main
+          git push
