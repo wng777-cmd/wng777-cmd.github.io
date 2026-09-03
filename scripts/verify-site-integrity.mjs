@@ -12,8 +12,37 @@ const guide=read('guide.html');
 const loader=read('scripts/site-pdf-refresh.js');
 const detail=read('scripts/site-trim-option-detail-20260903.js');
 const core=read('scripts/site-pdf-refresh-core.js');
+const versionGuard=read('scripts/site-version-guard.js');
+const release=JSON.parse(read('site-version.json')).version;
+
+assert(release==='20260903-mobile-1',`사이트 release 값 오류: ${release}`);
+assert(versionGuard.includes("fetch('/site-version.json?ts='"),'모바일 최신 버전 확인 요청 누락');
+assert(versionGuard.includes("window.addEventListener('pageshow'"),'모바일 bfcache 복귀 확인 누락');
+assert(versionGuard.includes("document.addEventListener('visibilitychange'"),'모바일 탭 복귀 확인 누락');
+
+let redirectedTo=null;
+const guardContext={
+  URL,
+  window:{
+    location:{href:'https://wng777-cmd.github.io/?sitev=old#tools',replace(value){redirectedTo=value;}},
+    addEventListener(){}
+  },
+  document:{
+    hidden:false,
+    querySelector(){return {content:'old'};},
+    addEventListener(){}
+  },
+  fetch(){return Promise.resolve({ok:true,json(){return Promise.resolve({version:release});}});}
+};
+vm.createContext(guardContext);
+vm.runInContext(versionGuard,guardContext,{filename:'site-version-guard.js'});
+await new Promise((resolve)=>setImmediate(resolve));
+assert(redirectedTo&&redirectedTo.includes(`sitev=${release}`)&&redirectedTo.endsWith('#tools'),'모바일 최신 버전 이동 동작 오류');
 
 for(const [name,html] of [['index.html',index],['guide.html',guide]]){
+  assert(html.includes(`<meta content="${release}" name="site-release"/>`),`${name}: site release 불일치`);
+  assert(html.includes('scripts/site-version-guard.js?v=20260903mobile1'),`${name}: 모바일 버전 확인 스크립트 누락`);
+  assert(html.indexOf('site-version-guard.js')<html.indexOf('site-pdf-refresh.js'),`${name}: 모바일 버전 확인 스크립트 로드 순서 오류`);
   assert(html.includes('scripts/site-pdf-refresh.js?v=20260903guard1'),`${name}: 최신 loader cache key 누락`);
   assert(html.includes('tel:01026503211'),`${name}: 전화 상담 링크 누락`);
   assert(html.includes('qr.kakao.com/talk/2LfLSm9DLJcfVv19vfXeS5R1AHQ-'),`${name}: 카카오톡 링크 누락`);

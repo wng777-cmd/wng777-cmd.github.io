@@ -26,6 +26,7 @@ These rules are mandatory for every change to this repository.
 - Do not remove or rename a public function used by inline `onclick` handlers unless every caller is updated and tested.
 - The site loads `site-pdf-refresh-core.js` asynchronously and it can overwrite earlier global render functions. Any final UI override must load after all data patches in `site-pdf-refresh.js`.
 - When a loaded JavaScript file changes, bump that file's cache query. When `site-pdf-refresh.js` changes, bump its query in both `index.html` and `guide.html`.
+- GitHub Pages serves HTML with a cache window, so every customer-facing release must update `site-version.json` and the matching `site-release` meta value in both `index.html` and `guide.html`. Keep `site-version-guard.js` loaded before the main site scripts so stale mobile tabs can move to the current versioned URL.
 
 ## Required workflow
 
@@ -37,5 +38,6 @@ These rules are mandatory for every change to this repository.
 6. Review the diff for unrelated changes.
 7. Deploy to remote `main` without force-pushing.
 8. Verify that the new HTML, loader, and changed asset are actually served by GitHub Pages.
+9. Verify the versioned public URL with a mobile user agent and confirm that the mobile media rules still expose the same data and functions as desktop.
 
 The user must not be used as the primary tester. Report completion only after these checks pass. If a check cannot be performed, say exactly which check remains instead of claiming the live site is complete.
