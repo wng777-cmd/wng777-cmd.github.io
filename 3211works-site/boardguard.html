@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BoardGuard for Jira — 3211 Works</title>
+  <meta name="description" content="BoardGuard is a read-only Jira administrator tool for board health, saved-filter dependencies, repeated configuration signals, and change impact awareness.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">3211 Works</span></a><nav class="nav-links"><a href="boardguard.html" aria-current="page">BoardGuard</a><a href="support.html">Support</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a class="nav-cta" href="mailto:support@3211works.com">Contact</a></nav></div></header>
+<main>
+  <section class="page-hero"><div class="container"><div class="eyebrow"><span class="eyebrow-dot"></span>BoardGuard for Jira</div><h1>See board risk and dependency impact before a change becomes an incident.</h1><p>BoardGuard gives Jira administrators a read-only view of board health signals, Saved Filter dependencies, repeated configuration issues, and potential blast radius.</p><div class="meta-row"><span class="meta-chip">Read-only workflow</span><span class="meta-chip">Atlassian Forge</span><span class="meta-chip">No external backend in current release</span></div></div></section>
+  <div class="container prose">
+    <h2>What BoardGuard checks</h2>
+    <div class="spec-grid">
+      <div class="spec"><strong>Board configuration</strong><span>Flags configuration signals such as invalid Kanban sub-filter JQL, Quick Filter JQL issues, and board filters that are not ordered by Rank where that can affect drag-and-drop behavior.</span></div>
+      <div class="spec"><strong>Saved Filter dependencies</strong><span>Groups boards by their underlying Saved Filter so an administrator can see when one filter is shared by multiple boards.</span></div>
+      <div class="spec"><strong>Change impact</strong><span>Shows the boards that depend on the same Saved Filter, together with owner, sharing scope, current JQL, and an impact indicator.</span></div>
+      <div class="spec"><strong>Repeated signals</strong><span>Groups the same issue across multiple boards so duplicated symptoms are easier to distinguish from a shared root cause.</span></div>
+    </div>
+
+    <h2>Designed for administrators</h2>
+    <p>BoardGuard is intentionally focused. It is not a general Jira management platform and it does not try to automate every administrative action. Its job is to make configuration risk easier to see before an administrator edits, removes, or hands over a shared object.</p>
+    <div class="notice"><strong>Read-only by design.</strong> The current BoardGuard release is designed to inspect Jira configuration and present findings without changing Jira settings on the administrator's behalf.</div>
+
+    <h2>Data path</h2>
+    <p>BoardGuard is built on Atlassian Forge. In the current release, BoardGuard does not use a separate application backend operated by 3211 Works and does not intentionally send Jira content to 3211 Works-operated servers. Jira API access is performed in the context of the signed-in Atlassian user and remains subject to Jira permissions.</p>
+    <p>For more detail, see our <a href="privacy.html">Privacy Policy</a> and <a href="security.html">Security</a> page.</p>
+
+    <h2>Current product status</h2>
+    <p>BoardGuard is being prepared for public distribution through the Atlassian Marketplace. Product availability, pricing, and Marketplace licensing are subject to the final Marketplace listing and Atlassian approval.</p>
+
+    <h2>Questions</h2>
+    <p>Product and support questions: <a href="mailto:support@3211works.com">support@3211works.com</a></p>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">3211 Works</span></a><p>Focused admin and governance software. Based in South Korea.</p></div><div class="footer-links"><a href="boardguard.html">BoardGuard</a><a href="support.html">Support</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div class="copyright">© 2026 3211 Works. All rights reserved.</div></div></footer>
+</body>
+</html>
