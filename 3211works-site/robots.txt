@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://3211works.com/sitemap.xml
