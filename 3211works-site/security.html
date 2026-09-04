@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security — 3211 Works</title>
+  <meta name="description" content="Security information and vulnerability reporting for 3211 Works and BoardGuard for Jira.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">3211 Works</span></a><nav class="nav-links"><a href="boardguard.html">BoardGuard</a><a href="support.html">Support</a><a href="security.html" aria-current="page">Security</a><a href="privacy.html">Privacy</a><a class="nav-cta" href="mailto:security@3211works.com">Report security issue</a></nav></div></header>
+<main>
+  <section class="page-hero"><div class="container"><div class="eyebrow"><span class="eyebrow-dot"></span>Security</div><h1>Reduce the data path. Keep the product focused.</h1><p>BoardGuard is designed around a small attack surface, a read-only workflow, and Atlassian-hosted execution.</p></div></section>
+  <div class="container prose">
+    <h2>BoardGuard architecture</h2>
+    <div class="spec-grid">
+      <div class="spec"><strong>Atlassian Forge</strong><span>The current release is built on Forge and has passed Forge Runs on Atlassian eligibility checks in development.</span></div>
+      <div class="spec"><strong>No external application backend</strong><span>The current release does not use a 3211 Works-operated remote application server for Jira data processing.</span></div>
+      <div class="spec"><strong>Read-only product intent</strong><span>BoardGuard is designed to inspect and report on Jira configuration rather than modify Jira settings automatically.</span></div>
+      <div class="spec"><strong>Permission-aware</strong><span>Jira API access remains subject to the permissions of the signed-in Atlassian user.</span></div>
+    </div>
+
+    <h2>Development and release controls</h2>
+    <p>BoardGuard release checks include dependency vulnerability scanning, Forge linting and deployment validation, Runs on Atlassian eligibility checking, and source-level guards intended to prevent Jira write operations from being introduced unnoticed.</p>
+    <p>These controls reduce risk but do not eliminate every possible vulnerability. We review credible reports and update the product when a security issue is confirmed.</p>
+
+    <h2>Report a vulnerability</h2>
+    <p>Email <a href="mailto:security@3211works.com">security@3211works.com</a> with a clear description of the issue, affected product, reproduction steps, and expected security impact.</p>
+    <div class="notice"><strong>Please do not include live credentials.</strong> Do not send passwords, API tokens, private keys, session cookies, or unnecessary customer data in an initial report.</div>
+
+    <h2>Coordinated handling</h2>
+    <p>We ask security researchers to avoid privacy violations, destructive testing, service disruption, or accessing data that does not belong to them. If a report is valid, we will work to understand scope and remediation before public disclosure.</p>
+
+    <h2>Urgent security contact</h2>
+    <p><a href="mailto:security@3211works.com">security@3211works.com</a></p>
+  </div>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">3211 Works</span></a><p>Focused admin and governance software. Based in South Korea.</p></div><div class="footer-links"><a href="boardguard.html">BoardGuard</a><a href="support.html">Support</a><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div class="copyright">© 2026 3211 Works. All rights reserved.</div></div></footer>
+</body>
+</html>
