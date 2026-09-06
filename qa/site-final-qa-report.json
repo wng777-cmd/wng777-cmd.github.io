@@ -4,7 +4,7 @@
       "width": 1440,
       "height": 913,
       "modelCount": 9,
-      "combos": 46,
+      "combos": 47,
       "checks": [
         {
           "ok": true,
@@ -760,6 +760,22 @@
         },
         {
           "ok": true,
+          "label": "interior EX30 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 material board renders"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 deco sample styled"
+        },
+        {
+          "ok": true,
           "label": "interior EX30CC opens"
         },
         {
@@ -1203,7 +1219,7 @@
           "label": "interior ES90 1/2 deco sample styled"
         },
         {
-          "ok": true,
+          "ok": false,
           "label": "all 46 interior combinations tested"
         },
         {
@@ -1235,13 +1251,15 @@
           "label": "EX30 detail modal fits"
         }
       ],
-      "failures": []
+      "failures": [
+        "all 46 interior combinations tested"
+      ]
     },
     "mobile": {
       "width": 500,
       "height": 757,
       "modelCount": 9,
-      "combos": 46,
+      "combos": 47,
       "checks": [
         {
           "ok": true,
@@ -1997,6 +2015,22 @@
         },
         {
           "ok": true,
+          "label": "interior EX30 1/2 code sync"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 material board renders"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 seat sample styled"
+        },
+        {
+          "ok": true,
+          "label": "interior EX30 1/2 deco sample styled"
+        },
+        {
+          "ok": true,
           "label": "interior EX30CC opens"
         },
         {
@@ -2440,7 +2474,7 @@
           "label": "interior ES90 1/2 deco sample styled"
         },
         {
-          "ok": true,
+          "ok": false,
           "label": "all 46 interior combinations tested"
         },
         {
@@ -2480,8 +2514,13 @@
           "label": "EX30 mobile cards use one column"
         }
       ],
-      "failures": []
+      "failures": [
+        "all 46 interior combinations tested"
+      ]
     }
   },
-  "failures": []
+  "failures": [
+    "desktop: all 46 interior combinations tested",
+    "mobile: all 46 interior combinations tested"
+  ]
 }
