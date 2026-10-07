@@ -60,13 +60,13 @@
 
   function install(){
     installStyle();
-    if(typeof window.openModel!=='function' || typeof window.openM!=='function' || typeof window.cardHTML!=='function' || typeof window.models==='undefined') {
+    if(typeof openModel!=='function' || typeof openM!=='function' || typeof cardHTML!=='function' || typeof models==='undefined' || typeof names==='undefined') {
       setTimeout(install,80); return;
     }
     if(window.openModel.__dimensions20261007) return;
     const enhanced=function(key){
-      const d=window.models[key];
-      window.openM(d.year+' · '+d.power,window.names[key],d.note,specHTML(key)+window.cardHTML(d)+'<div class="alert">가격은 제공된 Volvo The ONE 자료의 소비자 판매가격 기준입니다. 세부 옵션 적용 여부와 실제 출고 가능 사양은 상담 시 최종 확인해주세요.</div>');
+      const d=models[key];
+      openM(d.year+' · '+d.power,names[key],d.note,specHTML(key)+cardHTML(d)+'<div class="alert">가격은 제공된 Volvo The ONE 자료의 소비자 판매가격 기준입니다. 세부 옵션 적용 여부와 실제 출고 가능 사양은 상담 시 최종 확인해주세요.</div>');
     };
     enhanced.__dimensions20261007=true;
     window.openModel=enhanced;
