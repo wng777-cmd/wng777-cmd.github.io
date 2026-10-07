@@ -209,7 +209,29 @@ function toggleTrimCard(el){
   }
 }
 function modelNotice(d){return '<div class="alert"><b>'+d.year+' 기준</b> · '+sourceName(d)+'<br>기본사양과 트림별 추가·변경 항목은 제공된 Option List를 기준으로 고객이 비교하기 쉬운 핵심 항목만 추렸습니다. 실제 출고 가능 사양과 세부 적용 여부는 상담 시 최종 확인해주세요.</div>'}
-function openModel(key){const d=models[key];ensureTrimStyles();openM(d.year+' · '+d.power,names[key],d.note,basePanel(key)+cardHTML(d,key)+modelNotice(d))}
+const vehicleDimensions={
+  XC40:['4,440','1,873','1,652','2,702','205','Volvo Support KR'],
+  XC60:['4,708','1,902','1,655','2,865','209','Volvo Support KR'],
+  XC90:['4,953','1,923','1,767–1,771','2,984','205–216','Volvo Support KR'],
+  S90:['5,090','1,890','1,438','3,061','144','Volvo Support KR'],
+  V60CC:['4,787','1,893','1,499','2,875','197','Volvo Support KR'],
+  EX30:['4,233','1,838','1,550','2,650','171','Volvo Support KR'],
+  EX30CC:['4,235','1,840','1,575','2,650','190','Volvo The ONE MY26 V3.1'],
+  EX90:['5,037','1,964','1,741','2,985','213','Volvo Support KR'],
+  ES90:['5,000','1,940','1,555','3,102','177','Volvo The ONE MY27 V3.1 / Volvo Support KR']
+};
+function ensureVehicleSpecStyles(){
+  if(document.getElementById('vehicle-spec-direct-style'))return;
+  const s=document.createElement('style');s.id='vehicle-spec-direct-style';
+  s.textContent='.vehicle-spec-panel{margin:0 0 14px;padding:14px;border:1px solid #e3e8eb;border-radius:14px;background:#f8fafb}.vehicle-spec-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-end;margin-bottom:10px}.vehicle-spec-head h3{margin:0;font-size:14px;color:#142b38}.vehicle-spec-head small{font-size:8px;color:#74828a}.vehicle-spec-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.vehicle-spec-item{padding:10px 8px;border:1px solid #e7ecef;border-radius:10px;background:#fff;text-align:center}.vehicle-spec-item span{display:block;font-size:8px;color:#718089;font-weight:800;margin-bottom:4px}.vehicle-spec-item strong{display:block;font-size:12px;color:#152f3d;white-space:nowrap}.vehicle-spec-item em{font-style:normal;font-size:7px;color:#819099}@media(max-width:700px){.vehicle-spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vehicle-spec-item:last-child{grid-column:1/-1}.vehicle-spec-head{align-items:flex-start;flex-direction:column;gap:3px}}';
+  document.head.appendChild(s);
+}
+function vehicleSpecHTML(key){
+  const x=vehicleDimensions[key];if(!x)return '';
+  const item=(l,v)=>'<div class="vehicle-spec-item"><span>'+l+'</span><strong>'+v+'</strong><em>mm</em></div>';
+  return '<section class="vehicle-spec-panel"><div class="vehicle-spec-head"><h3>차량 제원</h3><small>'+x[5]+'</small></div><div class="vehicle-spec-grid">'+item('전장',x[0])+item('전폭',x[1])+item('전고',x[2])+item('휠베이스',x[3])+item('지상고',x[4])+'</div></section>';
+}
+function openModel(key){const d=models[key];ensureTrimStyles();ensureVehicleSpecStyles();openM(d.year+' · '+d.power,names[key],d.note,vehicleSpecHTML(key)+basePanel(key)+cardHTML(d,key)+modelNotice(d))}
 function openAllTrims(){
   ensureTrimStyles();
   let tabs=Object.keys(models).map((x,i)=>'<button class="'+(i?'':'active')+'" onclick="renderTrim(\''+x+'\',this)">'+names[x]+'</button>').join('');
