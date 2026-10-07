@@ -47,7 +47,8 @@
       .then(function(){return addScript('scripts/site-source-copy-cleanup-20260826.js?v=20260826source2','data-source-copy-cleanup');})
       .then(function(){return addScript('scripts/site-trim-option-detail-20260903.js?v=20260903mobile2','data-trim-option-detail');})
       .then(function(){return addScript('scripts/site-ex30-my27-interior-hotfix-20260906.js?v=20260906interior2','data-ex30-my27-interior-hotfix');})
-      .then(function(){document.documentElement.setAttribute('data-stable-loader','20260906-interior2');})
+      .then(function(){return addScript('scripts/site-vehicle-dimensions-20261007.js?v=20261007dims1','data-vehicle-dimensions');})
+      .then(function(){document.documentElement.setAttribute('data-stable-loader','20261007-dimensions1');})
       .catch(function(err){console.error('Volvo site loader error',err);document.documentElement.setAttribute('data-stable-loader','error');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
