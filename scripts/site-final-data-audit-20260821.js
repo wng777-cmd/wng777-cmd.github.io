@@ -19,11 +19,11 @@ function apply(){
     ]};
   }
   if(models.XC60){
-    models.XC60.note='PDF 기준 B5 Ultra는 7,070만 원, 에어 서스펜션 적용 시 7,330만 원 · Dark는 외관 테마 차이 · T8은 충전 가능한 PHEV';
+    models.XC60.note='B5 Ultra 에어 서스펜션 적용 차량가 7,330만 원 (기본 7,070만 원 + 옵션 260만 원) · Dark는 외관 테마 차이 · T8은 충전 가능한 PHEV';
     models.XC60.trims=[
       ['B5 AWD PLUS BRIGHT','6,570만 원','실속형',['250마력 B5 AWD · 48V 마일드 하이브리드','Plus 기본 편의·안전사양 · Bright 외관 테마','Ultra 대비 가격 경쟁력 중심']],
-      ['B5 AWD ULTRA BRIGHT','7,070만 원','추천',['Plus 대비 +500만 원','에어 서스펜션 선택 시 7,330만 원 (+260만 원)','Nappa · 마사지/통풍 · Bowers & Wilkins · 20인치 휠']],
-      ['B5 AWD ULTRA DARK','7,070만 원','스타일',['Ultra Bright와 기본 판매가 및 주요 편의사양 동일','에어 서스펜션 선택 시 7,330만 원 (+260만 원)','Dark 외관 테마 · 20인치 Ultra 휠 구성']],
+      ['B5 AWD ULTRA BRIGHT','7,330만 원','추천',['기본 7,070만 원 + 에어 서스펜션 260만 원 포함','에어 서스펜션 적용 사양','Nappa · 마사지/통풍 · Bowers & Wilkins · 20인치 휠']],
+      ['B5 AWD ULTRA DARK','7,330만 원','스타일',['기본 7,070만 원 + 에어 서스펜션 260만 원 포함','에어 서스펜션 적용 사양','Dark 외관 테마 · 20인치 Ultra 휠 구성']],
       ['T8 AWD ULTRA BRIGHT','9,120만 원','PHEV',['외부 충전 가능한 T8 AWD 플러그인 하이브리드','1회 충전 시 순수 전기모드 최대 61km','Ultra급 프리미엄 사양 · Bright 외관 테마']]
     ];
   }
