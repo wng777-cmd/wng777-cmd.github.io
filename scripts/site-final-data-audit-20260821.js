@@ -6,13 +6,13 @@ function apply(){
   if(trimGuides.XC60){
     trimGuides.XC60.trims['B5 AWD ULTRA BRIGHT']={kind:'upgrade',title:'PLUS BRIGHT 대비 추가·변경',items:[
       '기본 판매가 7,070만 원 · PLUS 대비 +500만 원',
-      '에어 서스펜션 + 어댑티브 샤시 선택 시 7,330만 원 (+260만 원)',
+      '에어 서스펜션 + 어댑티브 샤시 적용 차량가 7,330만 원 (기본가 +260만 원)',
       'Nappa 가죽 시트 · 앞좌석 전동 사이드 서포트 + 마사지 · 앞좌석 통풍시트',
       'Bowers & Wilkins 프리미엄 사운드 + 서브우퍼 · 20인치 휠'
     ]};
     trimGuides.XC60.trims['B5 AWD ULTRA DARK']={kind:'style',title:'ULTRA BRIGHT 대비 외관 테마 변경',items:[
       '기본 판매가 7,070만 원 · ULTRA BRIGHT와 동일',
-      '에어 서스펜션 + 어댑티브 샤시 선택 시 7,330만 원 (+260만 원)',
+      '에어 서스펜션 + 어댑티브 샤시 적용 차량가 7,330만 원 (기본가 +260만 원)',
       'ULTRA 주요 시트·오디오·편의사양 동일',
       'R-Design 범퍼 · 블랙 사이드미러 · 블랙 그릴 / 사이드 윈도 데코 · 블랙 루프 레일',
       '20인치 휠은 Bright/Dark 공통 Ultra 구성'
